@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React</title>
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/portfolio/react/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/portfolio/portfolio/react/css/style.css"/>
     <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/portfolio/react/js/layout.js"></script>
+    <script src="/portfolio/portfolio/react/js/jquery.min.js"></script>
+    <script src="/portfolio/portfolio/react/js/layout.js"></script>
     <!-- CodeMirror.js -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    <link rel="stylesheet" href="/portfolio/portfolio/react/css/codemirror.min.css"/>
+    <script src="/portfolio/portfolio/react/js/codemirror.min.js"></script>
     <!-- CodeMirror Mode & Theme -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/nord.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+    <link rel="stylesheet" href="/portfolio/portfolio/react/css/nord.min.css"/>
+    <script src="/portfolio/portfolio/react/js/javascript.min.js"></script>
 </head>
 <body>
     <div class="anchor">
@@ -195,7 +195,7 @@
             자동으로 렌더링 해준다. 이 경우 기존 HTML + CSS + JS 기반으로 한 진짜 돔과 비교했을 때 <span>메모리 사용량을 줄이고, 
             보안성을 높이는 효과</span>를 준다.
         </h4>
-        <img src="/portfolio/react/img/virtual_dom_exp.jpg"/>
+        <img src="/portfolio/portfolio/react/img/virtual_dom_exp.jpg"/>
         <h4>
             가상 돔은 State(이벤트 트리거)가 변했을 때, 가상 돔에 렌더링한 후 <span>기존의 DOM과 달라진 부분만 변경</span>한다.
         </h4>
@@ -212,7 +212,7 @@
             <span class="dot"></span>JS가 전부 다운로드 되어 리액트 어플리케이션이 정상 실행된 후, 화면이 보이면서 유저가
             인터렉션이 가능하다.
         </h4>
-        <img src="/portfolio/react/img/csr_exp.jpg"/>
+        <img src="/portfolio/portfolio/react/img/csr_exp.jpg"/>
         <h4 class="end">
             1. 서버가 빈 HTML을 response한다. (화면에 아무것도 보이지 않는다.) <br/>
             2. HTML안에 들어있는 JS파일을 서버로부터 다운로드한다. <br/>
@@ -226,7 +226,7 @@
             <span class="dot"></span>JS가 전부 다운로드 되지 않아도, 일단 화면은 보이지만 유저가 사용할 수 없다. <br/>
             <span class="dot"></span>JS가 전부 다운로드 되어 리액트 어플리케이션이 정상 실행된 후, 유저가 사용가능하다.
         </h4>
-        <img src="/portfolio/react/img/ssr_exp.jpg"/>
+        <img src="/portfolio/portfolio/react/img/ssr_exp.jpg"/>
         <h4 class="end">
             1. 서버에서 문자열로 표현된 HTML을 미리 받아온다. <br/>
             2. 이 HTML을 클라이언트가 받는 순간 화면에 문서가 나타난다. <br/>
