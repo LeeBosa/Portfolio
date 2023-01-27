@@ -3,10 +3,10 @@ $(document).ready(function(){
     $("body").prepend(
         '<header>'
             +'<a href="/vision_project/portfolio/react/index.html">1. React의 기본</a>'
-            +'<a href="/vision_project/portfolio/react//sub/jsx.html">2. JSX(JavaScript XML)</a>'
-            +'<a href="/vision_project/portfolio/react//sub/node.html">3. Node.js</a>'
-            +'<a href="/vision_project/portfolio/react//sub/react_install.html">4. React 설치</a>'
-            +'<a href="/vision_project/portfolio/react//sub/package.html">5. Package.json</a>'
+            +'<a href="/vision_project/portfolio/react/sub/jsx.html">2. JSX(JavaScript XML)</a>'
+            +'<a href="/vision_project/portfolio/react/sub/node.html">3. Node.js</a>'
+            +'<a href="/vision_project/portfolio/react/sub/react_install.html">4. React 설치</a>'
+            +'<a href="/vision_project/portfolio/react/sub/package.html">5. Package.json</a>'
         +'</header>'
     );
 
