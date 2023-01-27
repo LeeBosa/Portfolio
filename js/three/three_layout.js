@@ -237,7 +237,7 @@ var master1 = gsap.timeline({
     pin:true, // 고정/비고정
     scrub:0, // 모션 바운스
     start:'top top', // 트리거가 시작하는 위치 / top top : 트리거 객체가 화면의 맨위일 때 트리거 시작 / top 50% : 트리거 객체가 화면의 50% 위치일 때 트리거 시작
-    end:'+=150%', // 트리거가 끝나는 위치 / bottom bottom : 트리거 객체가 화면의 맨아래일 때 트리거 종료 / bottom 50% : 트리거 객체가 화면의 50% 위치일 때 트리거 종료
+    end:'+=200%', // 트리거가 끝나는 위치 / bottom bottom : 트리거 객체가 화면의 맨아래일 때 트리거 종료 / bottom 50% : 트리거 객체가 화면의 50% 위치일 때 트리거 종료
     onEnter: function(){
       check = false;
       if(window.innerWidth > 1080){
@@ -266,7 +266,7 @@ var master2 = gsap.timeline({
     pin:true,
     scrub:0,
     start:'top top',
-    end:'+=500%',
+    end:'+=800%',
     onEnter: function(){
       check = true;
       render();
