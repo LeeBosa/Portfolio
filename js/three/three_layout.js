@@ -266,7 +266,7 @@ var master2 = gsap.timeline({
     pin:true,
     scrub:0,
     start:'top top',
-    end:'+=800%',
+    end:'+=750%',
     onEnter: function(){
       check = true;
       render();
