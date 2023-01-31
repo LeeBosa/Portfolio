@@ -369,7 +369,6 @@ $(document).ready(function(){
             }
             init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
             init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','illustration', 'ai');
     
             function dataInit(name, item) { // 데이터 로딩
                 for(let i = item.length-1; i >= 0; i--) { // loop
@@ -485,7 +484,6 @@ $(document).ready(function(){
             }
             init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
             init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','illustration', 'ai');
     
             function dataInit(name, item) {
                 for(let i = item.length-1; i >= item.length-3; i--) { // 마지막에서 3번째까지 loop
