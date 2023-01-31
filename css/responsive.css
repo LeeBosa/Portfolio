@@ -24,7 +24,7 @@
         margin-bottom: 10px;
     }
     .index_intro_txt h3{
-        font-size: 20px;
+        font-size: 32px;
         margin-bottom: 6px;
     }
     .index_intro_txt h4 {
@@ -750,9 +750,6 @@
         margin-left: 0;
         margin-top: 40px;
     }
-    .skill_wrap .bg_txt h2 {
-        font-size: 20px;
-    }
     .skill_wrap .bg_txt h3 {
         font-size: 48px;
     }
@@ -833,9 +830,6 @@
     /* 스킬 */
     .skill_wrap .bg_wrap {
         padding: 0 20px;
-    }
-    .skill_wrap .bg_txt h2 {
-        font-size: 16px;
     }
     .skill_wrap .bg_txt h3 {
         font-size: 40px;

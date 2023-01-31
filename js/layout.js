@@ -130,7 +130,6 @@ $(document).ready(function(){
             }
             init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
             init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','illustration', 'ai');
     
             function dataInit(name, item) {
                 for(let i = item.length-1; i >= item.length-3; i--) { // 마지막에서 3번째까지 loop
@@ -162,13 +161,6 @@ $(document).ready(function(){
                 else if(name == "product") {
                     $(".index_portfolio_"+name).append(
                         '<a class="btn_two" href="./sub/portfolio.html?pageType=2">'
-                            +'<span>포트폴리오 더보기</span>'
-                        +'</a>'
-                    );
-                }
-                else if(name == "ai") {
-                    $(".index_portfolio_"+name).append(
-                        '<a class="btn_two" href="./sub/portfolio.html?pageType=3">'
                             +'<span>포트폴리오 더보기</span>'
                         +'</a>'
                     );

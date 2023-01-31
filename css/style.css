@@ -541,8 +541,8 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
 .index_scroll_vision span{
     display: block;
     font-size: 100px;
-    font-weight: 400;
-    letter-spacing: 2px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -551,6 +551,7 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     -webkit-text-fill-color: transparent;
 }
 .index_scroll_vision p{
+    letter-spacing: 0.5px;
     background: -webkit-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -615,7 +616,7 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     margin-bottom: 12px;
 }
 .index_intro_txt h3{
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 8px;
 }
@@ -682,7 +683,6 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     cursor: pointer;
     display: block;
     position: relative;
-    /* z-index: 9; */
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
@@ -703,16 +703,12 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     transition: 0.4s all;
 }
 .index_portfolio_title h4 label:nth-of-type(1)::before{
-    width: 90%;
-    left: -40%;
+    width: 100%;
+    left: -50%;
 }
 .index_portfolio_title h4 label:nth-of-type(2)::before{
     width: 75%;
     left: -25%;
-}
-.index_portfolio_title h4 label:nth-of-type(3)::before{
-    width: 90%;
-    left: -40%;
 }
 input[name=portfolio_skill]:checked + label{
     fill: #fff;
@@ -725,8 +721,8 @@ input[name=portfolio_skill]:checked + label::before{
     transform: scale(1) translateX(50%);
 }
 .index_portfolio_title h4 label:nth-of-type(2){
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 .index_portfolio_1{
     width: 100%;
@@ -1689,13 +1685,6 @@ input[name=portfolio_skill]:checked + label::before{
     align-items: flex-start;
     position: relative;
     z-index: 2;
-}
-.skill_wrap .bg_txt h2 {
-    font-size: 24px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    color: #ddd;
-    margin-left: 4px;
 }
 .skill_wrap .bg_txt h3 {
     font-size: 68px;

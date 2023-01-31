@@ -214,7 +214,7 @@ window.addEventListener("load", () => {
 function blockRefresh() {
   var indexBody = document.getElementById("indexBody");
   if(device == "PC") {
-    indexBody.style.width = "calc(100% + 18px)";
+    indexBody.style.width = "calc(100% + 16px)";
     ScrollTrigger.config({
       autoRefreshEvents: "visibilitychange, DOMContentLoaded, load, resize"
     });
