@@ -28,9 +28,6 @@ body,html{
 body::-webkit-scrollbar{ /* Chrome, Safari, Opera 스크롤바 숨김 */
     display: none;
 }
-#indexBody {
-    width: calc(100% + 18px);
-}
 ul,li{
     list-style: none;
 }
@@ -925,6 +922,25 @@ input[name=portfolio_skill]:checked + label::before{
     transition: 0.2s all;
 }
 
+/* 인덱스 - Copyright */
+.index_wrap .copyright {
+    width: 100%;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: rgba(255,255,255,0.6);
+}
+.index_wrap .copyright a {
+    display: inline-block;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.6);
+}
+
 /* COMING SOON */
 .coming_soon_m_banner{
     width: 100%;
@@ -1226,6 +1242,28 @@ input[name=portfolio_skill]:checked + label::before{
     padding: 20px 60px;
 }
 
+/* 연락처 - Copyright */
+.contacts_wrap .copyright {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: rgba(255,255,255,0.6);
+}
+.contacts_wrap .copyright a {
+    display: inline-block;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.6);
+}
+
 /* 소개 */
 .aboutme_wrap .bg {
     width: 100%;
@@ -1430,6 +1468,29 @@ input[name=portfolio_skill]:checked + label::before{
     font-weight: 700;
 }
 
+/* 소개 - Copyright */
+.aboutme_wrap .copyright {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: rgba(0,0,0,0.6);
+}
+.aboutme_wrap .copyright a {
+    display: inline-block;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+    color: rgba(0,0,0,0.6);
+}
+
 /* 포트폴리오 */
 .portfolio_wrap .nav {
     width: 100%;
@@ -1484,7 +1545,7 @@ input[name=portfolio_skill]:checked + label::before{
 .portfolio_wrap .portfolio_list a {
     display: block;
     width: 33%;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 .portfolio_wrap .portfolio_item {
     width: 100%;
@@ -1556,6 +1617,25 @@ input[name=portfolio_skill]:checked + label::before{
     width: 80%;
     height: 80%;
     object-fit: contain;
+}
+
+/* 포트폴리오 - Copyright */
+.portfolio_wrap .copyright {
+    width: 100%;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: rgba(0,0,0,0.6);
+}
+.portfolio_wrap .copyright a {
+    display: inline-block;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+    color: rgba(0,0,0,0.6);
 }
 
 /* 스킬 */
@@ -1847,4 +1927,23 @@ input[name=portfolio_skill]:checked + label::before{
     .skill_wrap .skill_slide_item_design:hover img {
         transform: scale(1.025);
     }
+}
+
+/* 스킬 - Copyright */
+.skill_wrap .copyright {
+    width: 100%;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: rgba(255,255,255,0.6);
+}
+.skill_wrap .copyright a {
+    display: inline-block;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.6);
 }
