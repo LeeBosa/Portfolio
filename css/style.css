@@ -1226,8 +1226,8 @@ input[name=portfolio_skill]:checked + label::before{
     padding: 20px 60px;
 }
 
-/* 커리어 */
-.career_wrap .bg {
+/* 소개 */
+.aboutme_wrap .bg {
     width: 100%;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
@@ -1237,7 +1237,7 @@ input[name=portfolio_skill]:checked + label::before{
     justify-content: center;
     align-items: center;
 }
-.career_wrap .img_wrap {
+.aboutme_wrap .img_wrap {
     width: 100%;
     height: 85%;
     position: absolute;
@@ -1248,13 +1248,13 @@ input[name=portfolio_skill]:checked + label::before{
     justify-content: center;
     align-items: center;
 }
-.career_wrap .img_wrap img {
+.aboutme_wrap .img_wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
 }
-.career_wrap .img_wrap .img_color {
+.aboutme_wrap .img_wrap .img_color {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1263,7 +1263,7 @@ input[name=portfolio_skill]:checked + label::before{
     top: 0;
     background-color: rgba(255, 255, 255, 0.3);
 }
-.career_wrap .bg_txt {
+.aboutme_wrap .bg_txt {
     width: 100%;
     position: absolute;
     z-index: 3;
@@ -1275,47 +1275,40 @@ input[name=portfolio_skill]:checked + label::before{
     justify-content: center;
     align-items: center;
 }
-.career_wrap .bg_txt h2 {
-    font-size: 80px;
+.aboutme_wrap .bg_txt h2 {
+    font-size: 100px;
     font-weight: 700;
-    letter-spacing: 4px;
-    color: #333333e6;
-}
-.career_wrap .bg_txt h3 {
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0px;
-    text-align: center;
+    letter-spacing: -2px;
     color: #333333e6;
 }
 
-/* 커리어 - 스크롤 애니메이션 */
-.career_wrap .scroll_animation {
+/* 소개 - 스크롤 애니메이션 */
+.aboutme_wrap .scroll_animation {
     position: absolute;
     bottom: 0;
     opacity: 1;
     transition: 0.4s;
 }
-.career_wrap .scroll_animation a {
+.aboutme_wrap .scroll_animation a {
     color: #333;
     transition: 0.4s;
 }
-.career_wrap .scroll_animation a span {
+.aboutme_wrap .scroll_animation a span {
     border-color: #333;
     transition: 0.4s;
 }
-.career_wrap .scroll_animation.hide {
+.aboutme_wrap .scroll_animation.hide {
     bottom: -7.5vh;
 }
-.career_wrap .scroll_animation.hide a {
+.aboutme_wrap .scroll_animation.hide a {
     opacity: 0;
 }
-.career_wrap .scroll_animation.hide a span {
+.aboutme_wrap .scroll_animation.hide a span {
     opacity: 0;
 }
 
-/* 커리어 - 프로필 */
-.career_wrap .profile {
+/* 소개 - 프로필 */
+.aboutme_wrap .profile {
     width: 100%;
     position: relative;
     top: 40vh;
@@ -1323,27 +1316,27 @@ input[name=portfolio_skill]:checked + label::before{
     transition: 1s;
     background-color: #EBF1FF;
 }
-.career_wrap .profile.show {
+.aboutme_wrap .profile.show {
     top: 0;
     opacity: 1;
 }
-.career_wrap .profile_side {
+.aboutme_wrap .profile_side {
     width: 50%;
 }
-.career_wrap .profile_img_wrap {
+.aboutme_wrap .profile_img_wrap {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     position: absolute;
     right: 0;
     top: 0;
 }
-.career_wrap .profile_img_wrap img {
+.aboutme_wrap .profile_img_wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0.9;
 }
-.career_wrap .profile_img_wrap div {
+.aboutme_wrap .profile_img_wrap div {
     width: 100%;
     height: 50%;
     position: absolute;
@@ -1352,43 +1345,43 @@ input[name=portfolio_skill]:checked + label::before{
     z-index: 2;
     background: linear-gradient(0deg, #EBF1FF 0%, #EBF1FF00 100%);
 }
-.career_wrap .profile_img_wrap.fixed {
+.aboutme_wrap .profile_img_wrap.fixed {
     position: fixed;
 }
-.career_wrap .profile_img_wrap.bottom {
+.aboutme_wrap .profile_img_wrap.bottom {
     position: absolute;
     top: auto;
     bottom: 0;
 }
-.career_wrap .profile_txt {
+.aboutme_wrap .profile_txt {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.career_wrap .profile_info {
+.aboutme_wrap .profile_info {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
-.career_wrap .profile_info_txt_wrap {
+.aboutme_wrap .profile_info_txt_wrap {
     padding: 40px;
     padding-top: 48px;
     background-color: #ccdcfd66;
     transition: 0.4s;
 }
-.career_wrap .profile_txt .profile_info:nth-of-type(1) .profile_info_txt_wrap {
+.aboutme_wrap .profile_txt .profile_info:nth-of-type(1) .profile_info_txt_wrap {
     width: 420px;
 }
-.career_wrap .profile_txt .profile_info:nth-of-type(2) .profile_info_txt_wrap {
+.aboutme_wrap .profile_txt .profile_info:nth-of-type(2) .profile_info_txt_wrap {
     width: 560px;
 }
-.career_wrap .profile_txt .profile_info:nth-of-type(3) .profile_info_txt_wrap {
+.aboutme_wrap .profile_txt .profile_info:nth-of-type(3) .profile_info_txt_wrap {
     width: 560px;
 }
-.career_wrap .profile_info_txt_wrap div {
+.aboutme_wrap .profile_info_txt_wrap div {
     width: 48px;
     height: 48px;
     display: flex;
@@ -1401,7 +1394,7 @@ input[name=portfolio_skill]:checked + label::before{
     border: 1px solid #333;
     margin-bottom: 20px;
 }
-.career_wrap .profile_info_txt_wrap .profile_line {
+.aboutme_wrap .profile_info_txt_wrap .profile_line {
     display: block;
     width: 20%;
     height: 1px;
@@ -1410,189 +1403,31 @@ input[name=portfolio_skill]:checked + label::before{
     transition: 0.4s;
 }
 @media (hover: hover) and (pointer: fine) {
-    .career_wrap .profile_info_txt_wrap:hover {
+    .aboutme_wrap .profile_info_txt_wrap:hover {
         transform: scale(1.025);
     }
-    .career_wrap .profile_info_txt_wrap:hover .profile_line {
+    .aboutme_wrap .profile_info_txt_wrap:hover .profile_line {
         width: 100%;
     }
 }
-.career_wrap .profile_info h2 {
+.aboutme_wrap .profile_info h2 {
     font-size: 20px;
     font-weight: 400;
 }
-.career_wrap .profile_info h2 span {
+.aboutme_wrap .profile_info h2 span {
     font-size: 28px;
     font-weight: 700;
 }
-.career_wrap .profile_info h3 {
+.aboutme_wrap .profile_info h3 {
     font-size: 44px;
     line-height: 64px;
     font-weight: 400;
     margin-top: 12px;
 }
-.career_wrap .profile_info h3 span {
+.aboutme_wrap .profile_info h3 span {
     font-size: 64px;
     line-height: 64px;
     font-weight: 700;
-}
-
-/* 커리어 - 커리어 */
-.career_wrap .career {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: #EBF1FF;
-}
-.career_wrap .career > img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    object-fit: cover;
-    object-position: center center;
-}
-.career_wrap .career_txt_wrap {
-    width: 100%;
-    padding: 0 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-}
-.career_wrap .sns_wrap {
-    margin-top: 32px;
-}
-.career_wrap .sns_wrap svg {
-    width: 24px;
-    height: 24px;
-    fill: #333;
-    margin-right: 8px;
-}
-.career_wrap .career_logo {
-    width: 44px;
-    height: 44px;
-    border: 2px solid #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.career_wrap .career_logo svg {
-    width: 32px;
-    height: 32px;
-    fill: #333;
-}
-.career_wrap .career_txt {
-    width: 400px;
-    height: 460px;
-    padding: 40px;
-    margin-right: 40px;
-    transition: 0.4s;
-    background-color: #ccdcfd66;
-}
-.career_wrap .career_txt:last-of-type {
-    margin-right: 0;
-}
-.career_wrap .career_txt .career_line {
-    width: 20%;
-    height: 1px;
-    margin-top: 16px;
-    margin-bottom: 32px;
-    transition: 0.4s;
-    background-color: #333;
-}
-@media (hover: hover) and (pointer: fine) {
-    .career_wrap .career_txt:hover {
-        transform: scale(1.025);
-    }
-    .career_wrap .career_txt:hover .career_line {
-        width: 100%;
-    }
-}
-.career_wrap .career_txt h2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
-.career_wrap .career_txt h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-.career_wrap .career_txt h4 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 16px;
-    color: #666;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.career_wrap .career_txt h4 svg {
-    fill: #666;
-    margin-right: 8px;
-}
-.career_wrap .career_txt h5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.career_wrap .career_txt h5:last-of-type {
-    margin-bottom: 0;
-}
-.career_wrap .career_txt h5 img {
-    width: 44px;
-    height: 44px;
-    margin-right: 20px;
-}
-.career_wrap .career_txt h5 img:nth-of-type(4) {
-    border-radius: 8px;
-}
-.career_wrap .career_txt .logo_wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-}
-.career_wrap .career_txt .logo_wrap:last-of-type {
-    margin-right: 0;
-}
-.career_wrap .career_txt .logo_wrap img {
-    width: 44px;
-    height: 44px;
-    margin-right: 0;
-}
-.career_wrap .career_txt .logo_wrap p {
-    font-size: 12px;
-    font-weight: 700;
-    margin-top: 4px;
-}
-.career_wrap .career_txt h6 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 16px;
-}
-.career_wrap .career_txt h6:last-of-type {
-    margin-bottom: 0;
-}
-.career_wrap .career_txt h6 span {
-    color: #666;
-    margin-right: 20px;
 }
 
 /* 포트폴리오 */
