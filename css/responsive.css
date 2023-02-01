@@ -577,10 +577,10 @@
 
     /* 인덱스 - 비전 */
     .index_scroll_vision span{
-        font-size: 32px;
+        font-size: 36px;
     }
     .index_scroll_vision_txt{
-        font-size: 12px;
+        font-size: 14px;
     }
 
     /* 인덱스 - 인트로 */
@@ -591,16 +591,15 @@
         display: none;
     }
     .index_intro_txt h2{
-        font-size: 40px;
+        font-size: 48px;
         margin-bottom: 8px;
     }
     .index_intro_txt h3{
-        width: 340px;
-        font-size: 16px;
+        width: 300px;
+        font-size: 24px;
     }
     .index_intro_txt h4 {
-        width: 340px;
-        text-align: left;
+        width: 300px;
     }
 
     /* 인덱스 - 포트폴리오 */
@@ -608,12 +607,11 @@
         margin-top: 30vh;
     }
     .index_portfolio_title h2{
-        font-size: 40px;
+        font-size: 48px;
         margin-bottom: 8px;
     }
     .index_portfolio_title h3{
         width: 340px;
-        text-align: left;
     }
     .index_portfolio_title h4{
         width: 340px;

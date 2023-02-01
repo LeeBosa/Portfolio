@@ -936,6 +936,11 @@ input[name=portfolio_skill]:checked + label::before{
     border-bottom: 1px solid rgba(255,255,255,0.6);
     color: rgba(255,255,255,0.6);
 }
+@media screen and (max-width: 1080px) {
+    #wrap .copyright {
+        font-size: 12px;
+    }
+}
 
 /* COMING SOON */
 .coming_soon_m_banner{
