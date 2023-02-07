@@ -395,7 +395,6 @@ $(document).ready(function(){
 
             function dataLink(name) { // 링크가 없을 경우 현재창 유지
                 $("."+name).find("a").each(function() {
-                    console.log("Y");
                     if($(this).attr("href") == "#") {
                         $(this).attr("target","_self");
                     }
