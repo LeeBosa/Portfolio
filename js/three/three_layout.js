@@ -438,6 +438,6 @@ function indexNavMove(){
 
 $("input[name=index_nav]").on("click",function(){
   indexNavMove();
-  scrollTrigger.refresh();
+  ScrollTrigger.refresh();
   indexNavCheck();
 });
