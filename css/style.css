@@ -1300,7 +1300,7 @@ input[name=portfolio_skill]:checked + label::before{
     z-index: 2;
     left: 0;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 .aboutme_wrap .bg_txt {
     width: 100%;
@@ -1318,7 +1318,7 @@ input[name=portfolio_skill]:checked + label::before{
     font-size: 100px;
     font-weight: 700;
     letter-spacing: -2px;
-    color: #333333e6;
+    color: #333333;
 }
 
 /* 소개 - 스크롤 애니메이션 */
@@ -1657,24 +1657,27 @@ input[name=portfolio_skill]:checked + label::before{
 }
 .skill_wrap .bg {
     width: 100%;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: #000;
+    padding-top: 128px;
+    padding-bottom: 80px;
+    overflow: hidden;
 }
 .skill_wrap .bg > img {
     width: 100%;
     height: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     object-fit: cover;
     object-position: center center;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    opacity: 0.4;
 }
 .skill_wrap .bg_wrap {
     width: 900px;
@@ -1698,7 +1701,6 @@ input[name=portfolio_skill]:checked + label::before{
     margin-bottom: 4px;
 }
 .skill_wrap .bg_txt h3 span {
-    font-weight: 300;
     color: #C2D1E9;
 }
 .skill_wrap .bg_txt h4 {
@@ -1729,7 +1731,6 @@ input[name=portfolio_skill]:checked + label::before{
     text-align: center;
     color: #fff;
     border: 1px solid #fff;
-    background-color: rgba(0,0,0,0.8);
     margin-bottom: 20px;
     transition: 0.4s;
 }

@@ -278,6 +278,34 @@ $(document).ready(function(){
                         let jsonItem = jsonData.table.rows;
     
                         dataInit(divName, jsonItem);
+                    })
+                    .then(() => { // Slick Slider 실행
+                        $("."+divName)
+                        .show()
+                        .slick({
+                            slidesToShow:3,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            arrows: false,
+                            autoplay: true,
+                            autoplayspeed: 200,
+                            responsive: [
+                                {
+                                    breakpoint: 1080,
+                                    settings: {
+                                        slidesToShow: 2,
+                                        autoplay: false
+                                    }
+                                },
+                                {
+                                    breakpoint: 720,
+                                    settings: {
+                                        slidesToShow: 1,
+                                        autoplay: false
+                                    }
+                                }
+                            ]
+                        });
                     });
             }
             init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
