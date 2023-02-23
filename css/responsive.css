@@ -44,7 +44,7 @@
 @media screen and (max-width: 1200px){
     /* 인덱스 - 비전 */
     .index_scroll_vision span {
-        font-size: 68px;
+        font-size: 88px;
     }
     .index_scroll_vision_txt{
         font-size: 14px;
@@ -271,10 +271,10 @@
         overflow: visible;
     }
     .index_scroll_vision span{
-        font-size: 60px;
+        font-size: 72px;
     }
     .index_scroll_vision_txt{
-        margin-top: 16px;
+        margin-top: 12px;
     }
 
     /* 인덱스 - 인트로 */
@@ -572,7 +572,7 @@
 
     /* 인덱스 - 비전 */
     .index_scroll_vision span{
-        font-size: 48px;
+        font-size: 60px;
     }
     .index_scroll_vision_txt{
         font-size: 14px;
@@ -777,7 +777,7 @@
 @media screen and (max-width: 480px) {
     /* 인덱스 - 비전 */
     .index_scroll_vision span{
-        font-size: 36px;
+        font-size: 48px;
     }
 
     /* 인덱스 - 포트폴리오 - 제품디자인 */
