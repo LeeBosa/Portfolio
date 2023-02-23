@@ -809,7 +809,7 @@
         right: auto;
     }
     .index_portfolio_product .index_portfolio_web_left img {
-        width: 80%;
+        transform: translateY(20px);
     }
     .index_portfolio_product .index_portfolio_web_right {
         top: auto;
