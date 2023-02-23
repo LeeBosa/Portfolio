@@ -457,7 +457,6 @@
     /* 소개 */
     .aboutme_wrap .img_wrap {
         height: 100%;
-        height: calc(var(--vh, 1vh) * 100);
     }
     .aboutme_wrap .img_copyright {
         left: 10px;
