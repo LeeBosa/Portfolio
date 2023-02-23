@@ -119,13 +119,13 @@ window.addEventListener("resize", () => {
     ScrollTrigger.config({
       autoRefreshEvents: "visibilitychange, DOMContentLoaded, load, resize"
     });
+    ScrollTrigger.refresh();
   }
   else {
     ScrollTrigger.config({
       autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
     });
   }
-  ScrollTrigger.refresh();
 });
 
 // 카메라
@@ -218,6 +218,7 @@ function blockRefresh() {
     ScrollTrigger.config({
       autoRefreshEvents: "visibilitychange, DOMContentLoaded, load, resize"
     });
+    ScrollTrigger.refresh();
   }
   else {
     indexBody.style.width = "100%"
@@ -225,7 +226,6 @@ function blockRefresh() {
       autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
     });
   }
-  ScrollTrigger.refresh();
   return;
 }
 blockRefresh();
