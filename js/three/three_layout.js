@@ -333,21 +333,27 @@ function t1(){ // duration:12
 
   if(windowWidth > 1080){ // PC
     t1
-    .fromTo(".index_scroll_vision span",{scale:3},{scale:1,duration:4})
+    .fromTo(".index_scroll_vision span",{scale:2.5},{scale:1,duration:4})
     .fromTo({},{},{duration:4})
-    .fromTo(".index_scroll_vision span",{opacity:1,scale:1},{opacity:0,scale:3,duration:4});
+    .fromTo(".index_scroll_vision span",{opacity:1,scale:1},{opacity:0,scale:2.5,duration:4});
   }
   else if(windowWidth <= 1080 && windowWidth > 720){ // TABLET
     t1
-    .fromTo(".index_scroll_vision span",{scale:3},{scale:1.5,duration:4})
+    .fromTo(".index_scroll_vision span",{scale:2},{scale:1,duration:4})
     .fromTo({},{},{duration:4})
-    .fromTo(".index_scroll_vision span",{opacity:1,scale:1.5},{opacity:0,scale:3,duration:4});
+    .fromTo(".index_scroll_vision span",{opacity:1,scale:1},{opacity:0,scale:2,duration:4});
   }
-  else{ // MOBILE
+  else if(windowWidth <= 720 && windowWidth > 480){ // MOBILE
     t1
-    .fromTo(".index_scroll_vision span",{scale:3},{scale:2,duration:4})
+    .fromTo(".index_scroll_vision span",{scale:1.75},{scale:1,duration:4})
     .fromTo({},{},{duration:4})
-    .fromTo(".index_scroll_vision span",{opacity:1,scale:2},{opacity:0,scale:3,duration:4});
+    .fromTo(".index_scroll_vision span",{opacity:1,scale:1},{opacity:0,scale:1.75,duration:4});
+  }
+  else {
+    t1
+    .fromTo(".index_scroll_vision span",{scale:1.75},{scale:1.25,duration:4})
+    .fromTo({},{},{duration:4})
+    .fromTo(".index_scroll_vision span",{opacity:1,scale:1.25},{opacity:0,scale:1.75,duration:4});
   }
   return t1;
 }

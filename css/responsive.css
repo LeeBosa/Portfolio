@@ -12,12 +12,6 @@
     }
 }
 @media screen and (max-width: 1400px){
-    /* 인덱스 - 비전 */
-    .index_scroll_vision span{
-        font-size: 88px;
-        line-height: 1.25;
-    }
-
     /* 인덱스 - 인트로 */
     .index_intro_txt h2{
         font-size: 68px;
@@ -50,7 +44,7 @@
 @media screen and (max-width: 1200px){
     /* 인덱스 - 비전 */
     .index_scroll_vision span {
-        font-size: 72px;
+        font-size: 68px;
     }
     .index_scroll_vision_txt{
         font-size: 14px;
@@ -430,7 +424,7 @@
         width: 100%;
     }
     .contacts_wrap .bg_txt h2 {
-        font-size: 28px;
+        font-size: 24px;
         color: #333;
     }
     .contacts_wrap .bg_txt input {
@@ -578,10 +572,11 @@
 
     /* 인덱스 - 비전 */
     .index_scroll_vision span{
-        font-size: 36px;
+        font-size: 48px;
     }
     .index_scroll_vision_txt{
         font-size: 14px;
+        margin-top: 8px;
     }
 
     /* 인덱스 - 인트로 */
@@ -780,6 +775,11 @@
 }
 
 @media screen and (max-width: 480px) {
+    /* 인덱스 - 비전 */
+    .index_scroll_vision span{
+        font-size: 36px;
+    }
+
     /* 인덱스 - 포트폴리오 - 제품디자인 */
     .index_portfolio_product .index_portfolio_web_left {
         top: 0%;
