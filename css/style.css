@@ -828,6 +828,9 @@ input[name=portfolio_skill]:checked + label::before{
 }
 .index_portfolio_product .index_portfolio_web_left img {
     width: 90%;
+    height: 360px;
+    object-fit: contain;
+    object-position: center center;
     transform: translateY(-40px);
 }
 
@@ -1031,6 +1034,16 @@ input[name=portfolio_skill]:checked + label::before{
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+.contacts_wrap .img_copyright {
+    position: absolute;
+    z-index: 2;
+    left: 14px;
+    bottom: 14px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.4)
 }
 .contacts_wrap .img .img_color {
     width: 100%;
@@ -1294,6 +1307,15 @@ input[name=portfolio_skill]:checked + label::before{
     height: 100%;
     object-fit: cover;
     object-position: center center;
+}
+.aboutme_wrap .img_copyright {
+    position: absolute;
+    z-index: 2;
+    left: 12px;
+    bottom: 12px;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.8);
 }
 .aboutme_wrap .img_wrap .img_color {
     width: 100%;
@@ -1680,6 +1702,14 @@ input[name=portfolio_skill]:checked + label::before{
     object-fit: cover;
     object-position: center center;
     opacity: 0.4;
+}
+.skill_wrap .img_copyright {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.4);
 }
 .skill_wrap .bg_wrap {
     width: 900px;
