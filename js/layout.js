@@ -338,6 +338,48 @@ $(document).ready(function(){
 
         // 소개 페이지
         else if(url.includes("aboutme.html")) {
+            function aboutMe_scrollAnimCheck() { // '스크롤하기' 숨기기
+                if(window.innerWidth > 1080) { $(".scroll_animation").show(); }
+                else { $(".scroll_animation").hide(); }
+            }
+
+            function aboutMe_scrollSetting() { // '스크롤하기' 숨기는 위치 설정
+                scrollTop = $(window).scrollTop();
+                profileTop = $(".profile").offset().top;
+
+                if(window.innerWidth > 1080) { // PC에서
+                    if(scrollTop <= 0) { // 맨위
+                        aboutme.find(".scroll_animation").removeClass("hide");
+                        aboutme.find(".profile").removeClass("show");
+                    }
+                    else { // 맨위가 아닐 때
+                        aboutme.find(".scroll_animation").addClass("hide");
+                        aboutme.find(".profile").addClass("show");
+                    }
+        
+                    if(profileTop > scrollTop) { // 프로필이 화면보다 위에 있을 때
+                        aboutme.find(".profile_img_wrap")
+                        .removeClass("fixed")
+                        .removeClass("bottom");
+                    }
+                    else if(profileTop <= scrollTop) { // 프로필이 화면보다 아래에 있을 때
+                        aboutme.find(".profile_img_wrap")
+                        .removeClass("bottom")
+                        .addClass("fixed");
+                    }
+                    else { // 그 외에
+                        aboutme.find(".profile_img_wrap")
+                        .removeClass("fixed")
+                        .addClass("bottom");
+                    }
+                }
+                else { // PC 이외에
+                    aboutme.find(".profile_img_wrap")
+                    .removeClass("fixed")
+                    .removeClass("bottom");
+                }
+            }
+
             $(window).resize(function() {  aboutMe_scrollAnimCheck(); });
             $(window).scroll(function() { aboutMe_scrollSetting(); });
 
@@ -347,7 +389,7 @@ $(document).ready(function(){
             // '스크롤하기' 숨기는 위치 설정
             aboutMe_scrollSetting();
         }
-        
+
         // 메인 페이지
         else {
             // 포트폴리오 데이터 연동
@@ -499,49 +541,5 @@ $(document).ready(function(){
     
                     if(window.innerWidth > 1080) { skill.find(".skill_web_box").css("margin-bottom",vw * 1.25); }
                     else { skill.find(".skill_web_box").css("margin-bottom",vw * 2.5); }
-                }
-
-            // 소개 페이지
-                function aboutMe_scrollAnimCheck() { // '스크롤하기' 숨기기
-                    if(window.innerWidth > 1080) { $(".scroll_animation").show(); }
-                    else { $(".scroll_animation").hide(); }
-                }
-
-                function aboutMe_scrollSetting() { // '스크롤하기' 숨기는 위치 설정
-                    scrollTop = $(window).scrollTop();
-                    scrollBottom = scrollTop + window.innerHeight;
-                    profileTop = $(".profile").offset().top;
-
-                    if(window.innerWidth > 1080) { // PC에서
-                        if(scrollTop <= 0) { // 맨위
-                            aboutme.find(".scroll_animation").removeClass("hide");
-                            aboutme.find(".profile").removeClass("show");
-                        }
-                        else { // 맨위가 아닐 때
-                            aboutme.find(".scroll_animation").addClass("hide");
-                            aboutme.find(".profile").addClass("show");
-                        }
-            
-                        if(profileTop > scrollTop) { // 프로필이 화면보다 위에 있을 때
-                            aboutme.find(".profile_img_wrap")
-                            .removeClass("fixed")
-                            .removeClass("bottom");
-                        }
-                        else if(profileTop <= scrollTop) { // 프로필이 화면보다 아래에 있을 때
-                            aboutme.find(".profile_img_wrap")
-                            .removeClass("bottom")
-                            .addClass("fixed");
-                        }
-                        else { // 그 외에
-                            aboutme.find(".profile_img_wrap")
-                            .removeClass("fixed")
-                            .addClass("bottom");
-                        }
-                    }
-                    else { // PC 이외에
-                        aboutme.find(".profile_img_wrap")
-                        .removeClass("fixed")
-                        .removeClass("bottom");
-                    }
                 }
 });
