@@ -90,406 +90,11 @@ $(document).ready(function(){
                 .removeClass('hidden')
                 .scrollTop(scrollTop);
             }
-            return;
         });
 
     // URL에 따라 다른 함수 실행
         // 메인 페이지
         if(url.includes("index.html")) {
-            $(window).resize(function(){ // 윈도우 리사이징
-                portfolioCheck();
-                return;
-            });
-
-            function introFadeIn(){ // 로딩 완료 시 인트로 페이드인
-                index.find(".opacity_wrap").animate({
-                    opacity:0
-                },1000,function(){index.find(".opacity_wrap").css("z-index","-1");});
-                return;
-            }
-            introFadeIn();
-
-            // 포트폴리오 데이터 연동
-            function init(sheetId, sheetName, divName) {
-                let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-                let query = encodeURIComponent('Select A,B,C,D,E,F,G');
-                let url = `${base}&sheet=${sheetName}&tq=${query}`;
-                let data = [];
-    
-                fetch(url)
-                    .then(res => res.text())
-                    .then(rep => {
-                        // JSON만 추출
-                        let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
-                        let jsonItem = jsonData.table.rows;
-    
-                        dataInit(divName, jsonItem);
-                        dataBtn(divName);
-                    })
-                    .then(() => { portfolioCheck(); });
-            }
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
-    
-            function dataInit(name, item) {
-                for(let i = item.length-1; i >= item.length-3; i--) { // 마지막에서 3번째까지 loop
-                    if(item[i].c[4].v == "null") { item[i].c[4].v = ""; }
-                    $('.index_portfolio_'+name).append(
-                        '<div class="index_portfolio_web_1">'
-                            +'<div class="index_portfolio_web_left">'
-                                +'<img src='+item[i].c[5].v+'>'
-                            +'</div>'
-                            +'<div class="index_portfolio_web_right">'
-                                +'<h2 style="color:'+item[i].c[2].v+'">'+item[i].c[1].v+'</h2>'
-                                +'<h3>'+item[i].c[3].v+'</h3>'
-                                +'<span></span>'
-                                +'<h4>'+item[i].c[4].v+'</h4>'
-                            +'</div>'
-                        +'</div>'
-                    );
-                }
-            }
-
-            function dataBtn(name) {
-                if(name == "web") {
-                    $(".index_portfolio_"+name).append(
-                        '<a class="btn_two" href="./sub/portfolio.html?pageType=1">'
-                            +'<span>포트폴리오 더보기</span>'
-                        +'</a>'
-                    );
-                }
-                else if(name == "product") {
-                    $(".index_portfolio_"+name).append(
-                        '<a class="btn_two" href="./sub/portfolio.html?pageType=2">'
-                            +'<span>포트폴리오 더보기</span>'
-                        +'</a>'
-                    );
-                }
-            }
-
-            function portfolioCheck(){ // 포트폴리오 라디오버튼 체크 이벤트
-                indexPortfolioHeight = index.find(".index_portfolio_web").outerHeight();
-
-                index.find(".index_portfolio_web").removeClass("zoom_in").addClass("zoom_out");
-                index.find(".index_portfolio_product").removeClass("zoom_in").addClass("zoom_out");
-                index.find(".index_portfolio_ai").removeClass("zoom_in").addClass("zoom_out");
-
-                if(index.find("input[id=portfolio_skill_1]").is(":checked")){
-                    // // 포트폴리오 종류에 따라 높이 변경
-                    index.find(".index_portfolio_1").css("height",indexPortfolioHeight);
-
-                    // 포트폴리오 투명도 애니메이션 이벤트
-                    index.find(".index_portfolio_web").removeClass("zoom_out").addClass("zoom_in");
-                }
-                else if($("input[id=portfolio_skill_2]").is(":checked")){
-                    index.find(".index_portfolio_1").css("height",indexPortfolioHeight);
-                    index.find(".index_portfolio_product").removeClass("zoom_out").addClass("zoom_in");
-                }
-                else if($("input[id=portfolio_skill_3]").is(":checked")){
-                    index.find(".index_portfolio_1").css("height",indexPortfolioHeight);
-                    index.find(".index_portfolio_ai").removeClass("zoom_out").addClass("zoom_in");
-                }
-                return;
-            }
-
-            $("input[name=portfolio_skill]").on("click",function(){ // 포트폴리오 라디오버튼 클릭 이벤트
-                portfolioCheck();
-                return;
-            });
-        }
-        // 커리어 페이지
-        else if(url.includes("aboutme.html")) {
-            $(window).resize(function(){ // 윈도우 리사이징
-                scrollAnimCheck();
-                return;
-            });
-
-            $(window).scroll(function() { // 윈도우 스크롤
-                scrollSetting();
-                return;
-            });
-
-            function scrollAnimCheck() { // "스크롤하기" 숨기기
-                if(window.innerWidth > 1080) {
-                    $(".scroll_animation").show();
-                }
-                else {
-                    $(".scroll_animation").hide();
-                }
-                return;
-            }
-            scrollAnimCheck();
-
-            function scrollSetting() { // 스크롤하기 숨김 설정
-                scrollTop = $(window).scrollTop();
-                scrollBottom = scrollTop + window.innerHeight;
-                profileTop = $(".profile").offset().top;
-
-                if(window.innerWidth > 1080) { // PC에서
-                    if(scrollTop <= 0) { // 맨위
-                        aboutme.find(".scroll_animation").removeClass("hide");
-                        aboutme.find(".profile").removeClass("show");
-                    }
-                    else { // 맨위가 아닐 때
-                        aboutme.find(".scroll_animation").addClass("hide");
-                        aboutme.find(".profile").addClass("show");
-                    }
-        
-                    if(profileTop > scrollTop) { // 프로필이 화면보다 위에 있을 때
-                        aboutme.find(".profile_img_wrap")
-                        .removeClass("fixed")
-                        .removeClass("bottom");
-                    }
-                    else if(profileTop <= scrollTop) { // 프로필이 화면보다 아래에 있을 때
-                        aboutme.find(".profile_img_wrap")
-                        .removeClass("bottom")
-                        .addClass("fixed");
-                    }
-                    else { // 그 외에
-                        aboutme.find(".profile_img_wrap")
-                        .removeClass("fixed")
-                        .addClass("bottom");
-                    }
-                }
-                else { // PC 이외에
-                    aboutme.find(".profile_img_wrap")
-                    .removeClass("fixed")
-                    .removeClass("bottom");
-                }
-
-                return;
-            }
-            scrollSetting();
-        }
-        // 스킬 페이지
-        else if(url.includes("skill.html")) {
-            // 포트폴리오 데이터 연동
-            function init(sheetId, sheetName, divName) {
-                let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-                let query = encodeURIComponent('Select A,B,C,D,E,F,G');
-                let url = `${base}&sheet=${sheetName}&tq=${query}`;
-                let data = [];
-    
-                fetch(url)
-                    .then(res => res.text())
-                    .then(rep => {
-                        // JSON만 추출
-                        let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
-                        let jsonItem = jsonData.table.rows;
-    
-                        dataInit(divName, jsonItem);
-                    })
-                    .then(() => { // Slick Slider 실행
-                        $("."+divName)
-                        .show()
-                        .slick({
-                            slidesToShow:3,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            arrows: false,
-                            autoplay: true,
-                            autoplayspeed: 200,
-                            responsive: [
-                                {
-                                    breakpoint: 1080,
-                                    settings: {
-                                        slidesToShow: 2,
-                                        autoplay: false
-                                    }
-                                },
-                                {
-                                    breakpoint: 720,
-                                    settings: {
-                                        slidesToShow: 1,
-                                        autoplay: false
-                                    }
-                                }
-                            ]
-                        });
-                    });
-            }
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
-    
-            function dataInit(name, item) { // 데이터 로딩
-                for(let i = item.length-1; i >= 0; i--) { // loop
-                    $("."+name).append(
-                        '<a href="'+item[i].c[6].v+'" target="_blank">'
-                            +'<div class="skill_slide_item">'
-                                +'<img src="'+item[i].c[5].v+'"/>'
-                            +'</div>'
-                            +'<h2>'+item[i].c[1].v+'</h2>'
-                            +'<h3>'+item[i].c[3].v+'</h3>'
-                            +'<span></span>'
-                        +'</a>'
-                    );
-                }
-            }
-
-            $(window).resize(function(){ // 윈도우 리사이징
-                scrollAnimCheck();
-                itemMargin();
-                return;
-            });
-
-            $(window).scroll(function() { // 윈도우 스크롤
-                scrollSetting();
-                return;
-            });
-
-            function scrollAnimCheck() { // "스크롤하기" 숨기기
-                if(window.innerWidth > 1080) {
-                    $(".scroll_animation").show();
-                }
-                else {
-                    $(".scroll_animation").hide();
-                }
-                return;
-            }
-            scrollAnimCheck();
-
-            function scrollSetting() { // 스크롤하기 숨김 설정
-                scrollTop = $(window).scrollTop();
-
-                if(scrollTop <= 0) { // 맨위
-                    skill.find(".scroll_animation").removeClass("hide");
-                }
-                else { // 맨위가 아닐 때
-                    skill.find(".scroll_animation").addClass("hide");
-                }
-                return;
-            }
-            scrollSetting();
-
-            function itemMargin() { // 아이템 마진값 설정
-                vw = skill.find(".skill_list").width() / 100;
-
-                if(window.innerWidth > 1080) {
-                    skill.find(".skill_web_box").css("margin-bottom",vw * 1.25);
-                }
-                else {
-                    skill.find(".skill_web_box").css("margin-bottom",vw * 2.5);
-                }
-                return;
-            }
-            itemMargin();
-        }
-        // 포트폴리오 페이지
-        else if(url.includes("portfolio.html")) {
-            // 포트폴리오 데이터 연동
-            function init(sheetId, sheetName, divName) {
-                let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-                let query = encodeURIComponent('Select A,B,C,D,E,F,G');
-                let url = `${base}&sheet=${sheetName}&tq=${query}`;
-                let data = [];
-    
-                fetch(url)
-                    .then(res => res.text())
-                    .then(rep => {
-                        // JSON만 추출
-                        let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
-                        let jsonItem = jsonData.table.rows;
-    
-                        dataInit(divName, jsonItem);
-                        dataAlign(divName, jsonItem);
-                        dataLink(divName);
-                    });
-            }
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
-    
-            function dataInit(name, item) { // 데이터 로딩
-                for(let i = item.length-1; i >= 0; i--) { // loop
-                    $("."+name).append(
-                        '<a href="'+item[i].c[6].v+'" target="_blank">'
-                            +'<div class="portfolio_item">'
-                                +'<div class="img_wrap">'
-                                    +'<img src="'+item[i].c[5].v+'"/>'
-                                +'</div>'
-                                +'<div class="portfolio_txt">'
-                                    +'<h2>'+item[i].c[1].v+'</h2>'
-                                    +'<h3>'+item[i].c[3].v+'</h3>'
-                                    +'<span></span>'
-                                +'</div>'
-                            +'</div>'
-                        +'</a>'
-                    );
-                }
-            }
-
-            function dataAlign(name, item) { // 홀수인 경우 왼쪽 정렬
-                if(item.length % 2 != 0){ $("."+name).append('<a></a>'); }
-            }
-
-            function dataLink(name) { // 링크가 없을 경우 현재창 유지
-                $("."+name).find("a").each(function() {
-                    if($(this).attr("href") == "#") {
-                        $(this).attr("target","_self");
-                    }
-                });
-            }
-
-            $(window).resize(function(){ // 윈도우 리사이징
-                itemMargin();
-                return;
-            });
-
-            function itemMargin() { // 아이템 마진값 설정
-                vw = portfolio.find(".portfolio_list").width() / 100;
-
-                if(window.innerWidth > 1080) {
-                    portfolio.find(".portfolio_item").parent("a").css("margin-bottom",vw * 0.5);
-                }
-                else {
-                    portfolio.find(".portfolio_item").parent("a").css("margin-bottom",vw * 2);
-                }
-                return;
-            }
-            itemMargin();
-
-            function getParameterByName(name) { // 파라미터 값 반환
-                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                results = regex.exec(location.search);
-                return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-            }
-            pageType = getParameterByName("pageType");
-
-            if(pageType == "1") { // "웹 디자인 / 개발" 클릭 시
-                portfolio.find(".web").show();
-                portfolio.find(".product").hide();
-                portfolio.find(".ai").hide();
-            }
-            else if(pageType == "2") { // "제품 디자인" 클릭 시
-                portfolio.find(".web").hide();
-                portfolio.find(".product").show();
-                portfolio.find(".ai").hide();
-            }
-            else if(pageType == "3") { // "일러스트 / 사진" 클릭 시
-                portfolio.find(".web").hide();
-                portfolio.find(".product").hide();
-                portfolio.find(".ai").show();
-            }
-            else { // 디폴트
-                portfolio.find(".web").show();
-                portfolio.find(".product").hide();
-                portfolio.find(".ai").hide();
-            }
-        }
-        else { // 메인 페이지
-            $(window).resize(function(){ // 윈도우 리사이징
-                portfolioCheck();
-                return;
-            });
-
-            function introFadeIn(){ // 로딩 완료 시 인트로 페이드인
-                index.find(".opacity_wrap").animate({
-                    opacity:0
-                },1000,function(){index.find(".opacity_wrap").css("z-index","-1");});
-                return;
-            }
-            introFadeIn();
-
             // 포트폴리오 데이터 연동
             function init(sheetId, sheetName, divName) {
                 let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
@@ -555,34 +160,388 @@ $(document).ready(function(){
                 }
             }
 
-            function portfolioCheck(){ // 포트폴리오 라디오버튼 체크 이벤트
-                indexPortfolioHeight = index.find(".index_portfolio_web").outerHeight();
+            // 윈도우 리사이징
+            $(window).resize(function() { portfolioCheck(); });
 
-                index.find(".index_portfolio_web").removeClass("zoom_in").addClass("zoom_out");
-                index.find(".index_portfolio_product").removeClass("zoom_in").addClass("zoom_out");
-                index.find(".index_portfolio_ai").removeClass("zoom_in").addClass("zoom_out");
+            // 스크롤바 가리기
+            idxBodyWidth();
 
-                if(index.find("input[id=portfolio_skill_1]").is(":checked")){
-                    // 포트폴리오 종류에 따라 높이 변경
-                    index.find(".index_portfolio_1").css("height",indexPortfolioHeight);
+            // 로딩 완료 시 인트로 페이드인
+            introFadeIn();
 
-                    // 포트폴리오 투명도 애니메이션 이벤트
-                    index.find(".index_portfolio_web").removeClass("zoom_out").addClass("zoom_in");
+            // 포트폴리오 라디오버튼 클릭 이벤트
+            $("input[name=portfolio_skill]").on("click",function() { portfolioCheck(); });
+        }
+
+        // 포트폴리오 페이지
+        else if(url.includes("portfolio.html")) {
+            // 포트폴리오 데이터 연동
+            function init(sheetId, sheetName, divName) {
+                let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+                let query = encodeURIComponent('Select A,B,C,D,E,F,G');
+                let url = `${base}&sheet=${sheetName}&tq=${query}`;
+                let data = [];
+    
+                fetch(url)
+                    .then(res => res.text())
+                    .then(rep => {
+                        // JSON만 추출
+                        let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+                        let jsonItem = jsonData.table.rows;
+    
+                        dataInit(divName, jsonItem);
+                        dataAlign(divName, jsonItem);
+                        dataLink(divName);
+                    });
+            }
+            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
+            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
+    
+            function dataInit(name, item) { // 데이터 로딩
+                for(let i = item.length-1; i >= 0; i--) { // loop
+                    $("."+name).append(
+                        '<a href="'+item[i].c[6].v+'" target="_blank">'
+                            +'<div class="portfolio_item">'
+                                +'<div class="img_wrap">'
+                                    +'<img src="'+item[i].c[5].v+'"/>'
+                                +'</div>'
+                                +'<div class="portfolio_txt">'
+                                    +'<h2>'+item[i].c[1].v+'</h2>'
+                                    +'<h3>'+item[i].c[3].v+'</h3>'
+                                    +'<span></span>'
+                                +'</div>'
+                            +'</div>'
+                        +'</a>'
+                    );
                 }
-                else if($("input[id=portfolio_skill_2]").is(":checked")){
-                    index.find(".index_portfolio_1").css("height",indexPortfolioHeight);
-                    index.find(".index_portfolio_product").removeClass("zoom_out").addClass("zoom_in");
-                }
-                else if($("input[id=portfolio_skill_3]").is(":checked")){
-                    index.find(".index_portfolio_1").css("height",indexPortfolioHeight);
-                    index.find(".index_portfolio_ai").removeClass("zoom_out").addClass("zoom_in");
-                }
-                return;
             }
 
-            $("input[name=portfolio_skill]").on("click",function(){ // 포트폴리오 라디오버튼 클릭 이벤트
-                portfolioCheck();
-                return;
-            });
+            function dataAlign(name, item) { // 홀수인 경우 왼쪽 정렬
+                if(item.length % 2 != 0){ $("."+name).append('<a></a>'); }
+            }
+
+            function dataLink(name) { // 링크가 없을 경우 현재창 유지
+                $("."+name).find("a").each(function() {
+                    if($(this).attr("href") == "#") {
+                        $(this).attr("target","_self");
+                    }
+                });
+            }
+
+            $(window).resize(function(){ itemMargin(); });
+
+            // 아이템 마진값 설정
+            itemMargin();
+
+            // 파라미터 값 반환
+            pageType = getParameterByName("pageType");
+
+            if(pageType == "1") { // "웹 디자인 / 개발" 클릭 시
+                portfolio.find(".web").show();
+                portfolio.find(".product").hide();
+                portfolio.find(".ai").hide();
+            }
+            else if(pageType == "2") { // "제품 디자인" 클릭 시
+                portfolio.find(".web").hide();
+                portfolio.find(".product").show();
+                portfolio.find(".ai").hide();
+            }
+            else if(pageType == "3") { // "일러스트 / 사진" 클릭 시
+                portfolio.find(".web").hide();
+                portfolio.find(".product").hide();
+                portfolio.find(".ai").show();
+            }
+            else { // 디폴트
+                portfolio.find(".web").show();
+                portfolio.find(".product").hide();
+                portfolio.find(".ai").hide();
+            }
         }
+
+        // 스킬 페이지
+        else if(url.includes("skill.html")) {
+            // 포트폴리오 데이터 연동
+            function init(sheetId, sheetName, divName) {
+                let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+                let query = encodeURIComponent('Select A,B,C,D,E,F,G');
+                let url = `${base}&sheet=${sheetName}&tq=${query}`;
+                let data = [];
+    
+                fetch(url)
+                    .then(res => res.text())
+                    .then(rep => {
+                        // JSON만 추출
+                        let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+                        let jsonItem = jsonData.table.rows;
+    
+                        dataInit(divName, jsonItem);
+                    })
+                    .then(() => { // Slick Slider 실행
+                        $("."+divName)
+                        .show()
+                        .slick({
+                            slidesToShow:3,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            arrows: false,
+                            autoplay: true,
+                            autoplayspeed: 200,
+                            responsive: [
+                                {
+                                    breakpoint: 1080,
+                                    settings: {
+                                        slidesToShow: 2,
+                                        autoplay: false
+                                    }
+                                },
+                                {
+                                    breakpoint: 720,
+                                    settings: {
+                                        slidesToShow: 1,
+                                        autoplay: false
+                                    }
+                                }
+                            ]
+                        });
+                    });
+            }
+            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
+            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
+    
+            function dataInit(name, item) { // 데이터 로딩
+                for(let i = item.length-1; i >= 0; i--) { // loop
+                    $("."+name).append(
+                        '<a href="'+item[i].c[6].v+'" target="_blank">'
+                            +'<div class="skill_slide_item">'
+                                +'<img src="'+item[i].c[5].v+'"/>'
+                            +'</div>'
+                            +'<h2>'+item[i].c[1].v+'</h2>'
+                            +'<h3>'+item[i].c[3].v+'</h3>'
+                            +'<span></span>'
+                        +'</a>'
+                    );
+                }
+            }
+
+            $(window).resize(function() { skill_scrollAnimCheck(); skill_itemMargin(); });
+            $(window).scroll(function() { skill_scrollSetting(); });
+
+            // '스크롤하기' 숨기기
+            skill_scrollAnimCheck();
+
+            // 스크롤하기 숨김 위치 설정
+            skill_scrollSetting();
+
+            // 아이템 마진값 설정
+            skill_itemMargin();
+        }
+
+        // 소개 페이지
+        else if(url.includes("aboutme.html")) {
+            $(window).resize(function() {  aboutMe_scrollAnimCheck(); });
+            $(window).scroll(function() { aboutMe_scrollSetting(); });
+
+            // '스크롤하기' 숨기기
+            aboutMe_scrollAnimCheck();
+
+            // '스크롤하기' 숨기는 위치 설정
+            aboutMe_scrollSetting();
+        }
+        
+        // 메인 페이지
+        else {
+            // 포트폴리오 데이터 연동
+            function init(sheetId, sheetName, divName) {
+                let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+                let query = encodeURIComponent('Select A,B,C,D,E,F,G');
+                let url = `${base}&sheet=${sheetName}&tq=${query}`;
+                let data = [];
+    
+                fetch(url)
+                    .then(res => res.text())
+                    .then(rep => {
+                        // JSON만 추출
+                        let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+                        let jsonItem = jsonData.table.rows;
+    
+                        dataInit(divName, jsonItem);
+                        dataBtn(divName);
+                    })
+                    .then(() => { portfolioCheck(); });
+            }
+            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
+            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
+    
+            function dataInit(name, item) {
+                for(let i = item.length-1; i >= item.length-3; i--) { // 마지막에서 3번째까지 loop
+                    if(item[i].c[4].v == "null") { item[i].c[4].v = ""; }
+                    $('.index_portfolio_'+name).append(
+                        '<div class="index_portfolio_web_1">'
+                            +'<div class="index_portfolio_web_left">'
+                                +'<img src='+item[i].c[5].v+'>'
+                            +'</div>'
+                            +'<div class="index_portfolio_web_right">'
+                                +'<h2 style="color:'+item[i].c[2].v+'">'+item[i].c[1].v+'</h2>'
+                                +'<h3>'+item[i].c[3].v+'</h3>'
+                                +'<span></span>'
+                                +'<h4>'+item[i].c[4].v+'</h4>'
+                            +'</div>'
+                        +'</div>'
+                    );
+                }
+            }
+
+            function dataBtn(name) {
+                if(name == "web") {
+                    $(".index_portfolio_"+name).append(
+                        '<a class="btn_two" href="./sub/portfolio.html?pageType=1">'
+                            +'<span>포트폴리오 더보기</span>'
+                        +'</a>'
+                    );
+                }
+                else if(name == "product") {
+                    $(".index_portfolio_"+name).append(
+                        '<a class="btn_two" href="./sub/portfolio.html?pageType=2">'
+                            +'<span>포트폴리오 더보기</span>'
+                        +'</a>'
+                    );
+                }
+                else if(name == "ai") {
+                    $(".index_portfolio_"+name).append(
+                        '<a class="btn_two" href="./sub/portfolio.html?pageType=3">'
+                            +'<span>포트폴리오 더보기</span>'
+                        +'</a>'
+                    );
+                }
+            }
+
+            // 윈도우 리사이징
+            $(window).resize(function() { portfolioCheck(); });
+
+            // 스크롤바 가리기
+            idxBodyWidth();
+
+            // 로딩 완료 시 인트로 페이드인
+            introFadeIn();
+
+            // 포트폴리오 라디오버튼 클릭 이벤트
+            $("input[name=portfolio_skill]").on("click",function() { portfolioCheck(); });
+        }
+
+        // 함수
+
+            // 메인 페이지
+                function deviceCheck() { // PC/모바일 구분
+                    if(navigator.userAgentData.mobile == false) { return "PC"; }
+                    else { return "Mobile"; }
+                }
+
+                function idxBodyWidth() { // 스크롤바 가리기
+                    if (deviceCheck() == "PC") { document.getElementById("indexBody").style.width = "calc(100% + 18px)"; }
+                    else { document.getElementById("indexBody").style.width = "100%" }
+                }
+
+                function introFadeIn(){ // 로딩 완료 시 인트로 페이드인
+                    index.find(".opacity_wrap").animate({ opacity: 0 },1000,function(){index.find(".opacity_wrap").css("z-index","-1");});
+                }
+
+                function portfolioCheck(){ // 포트폴리오 라디오버튼 체크 이벤트
+                    indexPortfolioHeight = index.find(".index_portfolio_web").outerHeight();
+
+                    index.find(".index_portfolio_web").removeClass("zoom_in").addClass("zoom_out");
+                    index.find(".index_portfolio_product").removeClass("zoom_in").addClass("zoom_out");
+                    index.find(".index_portfolio_ai").removeClass("zoom_in").addClass("zoom_out");
+
+                    if(index.find("input[id=portfolio_skill_1]").is(":checked")){
+                        index.find(".index_portfolio_1").css("height",indexPortfolioHeight); // 포트폴리오 종류에 따라 높이 변경
+                        index.find(".index_portfolio_web").removeClass("zoom_out").addClass("zoom_in"); // 포트폴리오 투명도 애니메이션 이벤트
+                    }
+                    else if($("input[id=portfolio_skill_2]").is(":checked")){
+                        index.find(".index_portfolio_1").css("height",indexPortfolioHeight);
+                        index.find(".index_portfolio_product").removeClass("zoom_out").addClass("zoom_in");
+                    }
+                    else if($("input[id=portfolio_skill_3]").is(":checked")){
+                        index.find(".index_portfolio_1").css("height",indexPortfolioHeight);
+                        index.find(".index_portfolio_ai").removeClass("zoom_out").addClass("zoom_in");
+                    }
+                }
+
+            // 포트폴리오 페이지
+                function itemMargin() { // 아이템 마진값 설정
+                    vw = portfolio.find(".portfolio_list").width() / 100;
+
+                    if(window.innerWidth > 1080) { portfolio.find(".portfolio_item").parent("a").css("margin-bottom",vw * 0.5); }
+                    else { portfolio.find(".portfolio_item").parent("a").css("margin-bottom",vw * 2); }
+                }
+
+                function getParameterByName(name) { // 파라미터 값 반환
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+            // 스킬 페이지
+                function skill_scrollAnimCheck() { // '스크롤하기' 숨기기
+                    if(window.innerWidth > 1080) { $(".scroll_animation").show(); }
+                    else { $(".scroll_animation").hide(); }
+                }
+
+                function skill_scrollSetting() { // 스크롤하기 숨김 위치 설정
+                    scrollTop = $(window).scrollTop();
+                    
+                    if(scrollTop <= 0) { skill.find(".scroll_animation").removeClass("hide"); } // 맨위
+                    else { skill.find(".scroll_animation").addClass("hide"); } // 맨위가 아닐 때
+                }
+
+                function skill_itemMargin() { // 아이템 마진값 설정
+                    vw = skill.find(".skill_list").width() / 100;
+    
+                    if(window.innerWidth > 1080) { skill.find(".skill_web_box").css("margin-bottom",vw * 1.25); }
+                    else { skill.find(".skill_web_box").css("margin-bottom",vw * 2.5); }
+                }
+
+            // 소개 페이지
+                function aboutMe_scrollAnimCheck() { // '스크롤하기' 숨기기
+                    if(window.innerWidth > 1080) { $(".scroll_animation").show(); }
+                    else { $(".scroll_animation").hide(); }
+                }
+
+                function aboutMe_scrollSetting() { // '스크롤하기' 숨기는 위치 설정
+                    scrollTop = $(window).scrollTop();
+                    scrollBottom = scrollTop + window.innerHeight;
+                    profileTop = $(".profile").offset().top;
+
+                    if(window.innerWidth > 1080) { // PC에서
+                        if(scrollTop <= 0) { // 맨위
+                            aboutme.find(".scroll_animation").removeClass("hide");
+                            aboutme.find(".profile").removeClass("show");
+                        }
+                        else { // 맨위가 아닐 때
+                            aboutme.find(".scroll_animation").addClass("hide");
+                            aboutme.find(".profile").addClass("show");
+                        }
+            
+                        if(profileTop > scrollTop) { // 프로필이 화면보다 위에 있을 때
+                            aboutme.find(".profile_img_wrap")
+                            .removeClass("fixed")
+                            .removeClass("bottom");
+                        }
+                        else if(profileTop <= scrollTop) { // 프로필이 화면보다 아래에 있을 때
+                            aboutme.find(".profile_img_wrap")
+                            .removeClass("bottom")
+                            .addClass("fixed");
+                        }
+                        else { // 그 외에
+                            aboutme.find(".profile_img_wrap")
+                            .removeClass("fixed")
+                            .addClass("bottom");
+                        }
+                    }
+                    else { // PC 이외에
+                        aboutme.find(".profile_img_wrap")
+                        .removeClass("fixed")
+                        .removeClass("bottom");
+                    }
+                }
 });

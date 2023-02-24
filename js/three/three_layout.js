@@ -1,25 +1,6 @@
 // GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// PC/모바일 구분
-var device;
-
-function deviceCheck() {
-  // 디바이스 종류
-  var pcDevice = "win16|win32|win64|mac|macintel";
-
-  // 디바이스 구분
-  if(navigator.platform) {
-    if(pcDevice.indexOf(navigator.platform.toLowerCase()) < 0) { // 모바일
-      device = "Mobile";
-    }
-    else { // PC
-      device = "PC";
-    }
-  }
-}
-deviceCheck();
-
 // 파라미터
 const parameters = {};
 parameters.count = 5000;
@@ -93,8 +74,6 @@ const generateGalaxy = () => {
   // Points
   const points = new THREE.Points(geometry, material);
   scene.add(points);
-
-  return;
 };
 generateGalaxy();
 
@@ -115,17 +94,11 @@ window.addEventListener("resize", () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   // 업데이트 - ScrollTrigger
-  if(device == "PC") {
-    ScrollTrigger.config({
-      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load, resize"
-    });
+  if(deviceCheck() == "PC") {
+    ScrollTrigger.config({ autoRefreshEvents: "visibilitychange, DOMContentLoaded, load, resize" });
     ScrollTrigger.refresh();
   }
-  else {
-    ScrollTrigger.config({
-      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
-    });
-  }
+  else { ScrollTrigger.config({ autoRefreshEvents: "visibilitychange, DOMContentLoaded, load" }); }
 });
 
 // 카메라
@@ -160,9 +133,6 @@ var render = () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     window.requestAnimationFrame(render); // 한 틱에 60초
   }
-  else{
-    return;
-  }
 };
 render();
 
@@ -182,17 +152,13 @@ var locoScroll = new LocomotiveScroll({
 locoScroll.on("scroll", ScrollTrigger.update);
 
 ScrollTrigger.scrollerProxy("[data-scroll-container]", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, 
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
+  scrollTop(value) { return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y; }, 
+  getBoundingClientRect() { return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight}; },
   pinType: document.querySelector("[data-scroll-container]").style.transform ? "transform" : "fixed"
 });
 
 function locoInit() {
-  if(device == "PC") {
+  if(deviceCheck() == "PC") {
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update()); // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
     ScrollTrigger.refresh(); // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
     ScrollTrigger.defaults({scroller: "[data-scroll-container]"});
@@ -201,36 +167,16 @@ function locoInit() {
     locoScroll.destroy();
     ScrollTrigger.defaults({scroller: ""});
   }
-  return;
 }
 locoInit();
 
 // 로딩 완료 시
-window.addEventListener("load", () => {
-  // 업데이트 - ScrollTrigger AutoRefresh 방지
-  blockRefresh();
-});
+window.addEventListener("load", () => { blockRefresh(); });
 
-function blockRefresh() {
-  var indexBody = document.getElementById("indexBody");
-  if(device == "PC") {
-    indexBody.style.width = "calc(100% + 18px)";
-    ScrollTrigger.config({
-      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load, resize"
-    });
-    ScrollTrigger.refresh();
-  }
-  else {
-    indexBody.style.width = "100%"
-    ScrollTrigger.config({
-      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
-    });
-  }
-  return;
-}
+// 업데이트 - ScrollTrigger AutoRefresh 방지
 blockRefresh();
 
-// VISION 타임라인
+// 인트로 타임라인
 var master1 = gsap.timeline({
   scrollTrigger:{
     trigger:'.index_scroll', // 트리거 객체
@@ -259,7 +205,7 @@ master1
 .add(t2(),"<")
 .add(t3(),"<");
 
-// INTRO 타임라인
+// 소개 타임라인
 var master2 = gsap.timeline({
   scrollTrigger:{
     trigger:'.index_intro',
@@ -285,12 +231,8 @@ var master2 = gsap.timeline({
         $(".scroll_animation").show();
       }
     },
-    onLeave: function(){
-      check = false;
-    },
-    onLeaveBack: function(){
-      check = false;
-    }
+    onLeave: function(){ check = false; },
+    onLeaveBack: function(){ check = false; }
   }
 });
 master2
@@ -298,7 +240,7 @@ master2
 .add(t5(),"<")
 .add(t6(),"<");
 
-// PORTFOLIO 타임라인
+// 포트폴리오 타임라인
 var master3 = gsap.timeline({
   scrollTrigger:{
     trigger:'.index_portfolio',
@@ -306,18 +248,16 @@ var master3 = gsap.timeline({
     start:'top bottom',
     onEnter: function(){
       check = false;
-      if(device == "PC") {
+      if(deviceCheck() == "PC") {
         $("input[id=index_nav_3]").prop("checked",true);
-        ScrollTrigger.refresh();
         indexNavCheck();
         $(".scroll_animation").hide();
       }
     },
     onEnterBack: function(){
       check = false;
-      if(device == "PC") {
+      if(deviceCheck() == "PC") {
         $("input[id=index_nav_3]").prop("checked",true);
-        ScrollTrigger.refresh();
         indexNavCheck();
         $(".scroll_animation").hide();
       }
@@ -326,8 +266,45 @@ var master3 = gsap.timeline({
 });
 master3;
 
-// 제목
-function t1(){ // duration:12
+// 네비게이션 클릭 시 큐브 애니메이션 활성화
+indexNavCheck();
+
+$("input[name=index_nav]").on("click",function(){
+  indexNavMove();
+  indexNavCheck();
+  ScrollTrigger.refresh();
+});
+
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+
+// 함수
+function deviceCheck() { // PC/모바일 구분
+  if(navigator.userAgentData.mobile == false) { return "PC"; }
+  else { return "Mobile"; }
+}
+
+function blockRefresh() { // 업데이트 - ScrollTrigger AutoRefresh 방지
+  if(deviceCheck() == "PC") { ScrollTrigger.config({ autoRefreshEvents: "visibilitychange, DOMContentLoaded, load, resize" }); ScrollTrigger.refresh(); }
+  else { ScrollTrigger.config({ autoRefreshEvents: "visibilitychange, DOMContentLoaded, load" }); }
+}
+
+function indexNavCheck(){ // 네비게이션 클릭 시 큐브 애니메이션 활성화
+  $("input[name=index_nav]").next("label").find(".scene").removeClass("scene-hover");
+  $("input[name=index_nav]:checked").next("label").find(".scene").addClass("scene-hover");
+}
+
+function indexNavMove(){ // 네비게이션 클릭 시 스크롤 이동
+  var indexPortfolio = document.getElementById("indexPortfolio");
+
+  if($("input[id=index_nav_1]").is(":checked")){ locoScroll.scrollTo(0); }
+  else if($("input[id=index_nav_2]").is(":checked")){ locoScroll.scrollTo(window.innerHeight * 3.5); }
+  else if($("input[id=index_nav_3]").is(":checked")){ locoScroll.scrollTo(indexPortfolio,{"offset":-window.innerHeight*0.1}); }
+}
+
+// 타임라인
+function t1(){ // 제목
   var windowWidth = window.innerWidth;
   var t1 = gsap.timeline();
 
@@ -358,8 +335,7 @@ function t1(){ // duration:12
   return t1;
 }
 
-// 소제목
-function t2(){
+function t2(){ // 소제목
   var t2 = gsap.timeline();
   t2
   .fromTo(".index_scroll_vision p",{opacity:0,scale:1,y:20},{opacity:1,scale:1,y:0,duration:4})
@@ -368,8 +344,7 @@ function t2(){
   return t2;
 }
 
-// 배경 투명도
-function t3(){
+function t3(){ // 배경 투명도
 	var t3 = gsap.timeline();
     t3
     .fromTo(".banner_wrap",{opacity:1},{opacity:0.5,duration:4})
@@ -377,8 +352,7 @@ function t3(){
     return t3;
 }
 
-// 3D OBJECT 카메라 포지션
-function t4(){ // duration:40
+function t4(){ // 3D OBJECT 카메라 포지션
   var t4 = gsap.timeline();
   t4
   .fromTo(camera.position,{x:0,y:0,z:-8},{x:0,y:0.2,z:8,duration:8})
@@ -391,8 +365,7 @@ function t4(){ // duration:40
   return t4;
 }
 
-// 전체 배경 투명도
-function t5(){
+function t5(){ // 전체 배경 투명도
   var t5 = gsap.timeline();
   t5
   .fromTo("#canvas",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:1})
@@ -401,8 +374,7 @@ function t5(){
   return t5;
 }
 
-// 텍스트 줌인/줌아웃
-function t6(){
+function t6(){ // 텍스트 줌인/줌아웃
   var t6 = gsap.timeline();
   t6
   .fromTo(".index_intro_txt_1",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:8})
@@ -417,33 +389,3 @@ function t6(){
   .fromTo({},{},{duration:2});
   return t6;
 }
-
-// 네비게이션 클릭 시 큐브 애니메이션 활성화
-function indexNavCheck(){
-  $("input[name=index_nav]").next("label").find(".scene").removeClass("scene-hover");
-  $("input[name=index_nav]:checked").next("label").find(".scene").addClass("scene-hover");
-  return;
-}
-indexNavCheck();
-
-// 네비게이션 클릭 시 스크롤 이동
-function indexNavMove(){
-  var indexPortfolio = document.getElementById("indexPortfolio");
-
-  if($("input[id=index_nav_1]").is(":checked")){
-    locoScroll.scrollTo(0);
-  }
-  else if($("input[id=index_nav_2]").is(":checked")){
-    locoScroll.scrollTo(window.innerHeight * 3.5);
-  }
-  else if($("input[id=index_nav_3]").is(":checked")){
-    locoScroll.scrollTo(indexPortfolio,{"offset":-window.innerHeight*0.1});
-  }
-  return;
-}
-
-$("input[name=index_nav]").on("click",function(){
-  indexNavMove();
-  ScrollTrigger.refresh();
-  indexNavCheck();
-});
