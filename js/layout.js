@@ -474,8 +474,9 @@ $(document).ready(function(){
 
             // 메인 페이지
                 function deviceCheck() { // PC/모바일 구분
-                    if(navigator.userAgentData.mobile == false) { return "PC"; }
-                    else { return "Mobile"; }
+                    let filter = "win16|win32|win64|mac|macintel";
+                    if (0 > filter.indexOf(navigator.platform.toLowerCase())) { return "Mobile"; }
+                    else { return "PC"; }
                 }
 
                 function idxBodyWidth() { // 스크롤바 가리기

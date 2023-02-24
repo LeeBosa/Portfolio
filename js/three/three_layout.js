@@ -281,8 +281,9 @@ $("input[name=index_nav]").on("click",function(){
 
 // 함수
 function deviceCheck() { // PC/모바일 구분
-  if(navigator.userAgentData.mobile == false) { return "PC"; }
-  else { return "Mobile"; }
+  let filter = "win16|win32|win64|mac|macintel";
+  if (0 > filter.indexOf(navigator.platform.toLowerCase())) { return "Mobile"; }
+  else { return "PC"; }
 }
 
 function blockRefresh() { // 업데이트 - ScrollTrigger AutoRefresh 방지
