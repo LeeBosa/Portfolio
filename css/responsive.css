@@ -455,6 +455,9 @@
     }
 
     /* 소개 */
+    .aboutme_wrap .bg {
+        height: 100vh;
+    }
     .aboutme_wrap .img_wrap {
         height: 100%;
     }
