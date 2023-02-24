@@ -177,18 +177,18 @@ header h1 svg{
     ---------------------------------------------------------------------------
 */
 @media (hover: hover) and (pointer: fine){
-    .index_portfolio_title h4 label:hover{
+    .index_project_title h4 label:hover{
         fill: #fff;
         opacity: 1;
         transform: scale(1.02) translateY(-2px);
     }
-    .index_portfolio_title h4 label:hover::before{
+    .index_project_title h4 label:hover::before{
         background: #fff;
         opacity: 1;
         transform: scale(1) translateX(50%);
     }
 
-    /* 포트폴리오 - 버튼1 호버 이벤트 */
+    /* 프로젝트 - 버튼1 호버 이벤트 */
     .btn_one:hover{
         background-color: transparent;
     }
@@ -201,7 +201,7 @@ header h1 svg{
         transform: scale(1, 1); 
     }
 
-    /* 포트폴리오 - 버튼2 호버 이벤트 */
+    /* 프로젝트 - 버튼2 호버 이벤트 */
     .btn_two:hover{
         background-color: rgba(255, 255, 255, 1);
     }
@@ -460,7 +460,7 @@ header h1 svg{
     right: 20px;
 }
 .index_m_banner_nav label:nth-of-type(2) span::before{
-    width: 28px;
+    width: 52px;
     right: 20px;
 }
 .index_nav_circle span{
@@ -476,7 +476,7 @@ header h1 svg{
     transition: 0.4s all;
     cursor: pointer;
 }
-.index_nav_circle span::before{
+.index_nav_circle span::before {
     content: '';
     position: absolute;
     bottom: -4px;
@@ -489,8 +489,8 @@ header h1 svg{
     transform: scale(0) translateX(0%);
     transition: 0.4s all;
 }
-.index_nav_circle_3 span::before{
-    width: 68px;
+.index_nav_circle_3 span::before {
+    width: 52px;
 }
 input[name=index_nav]{
     display: none;
@@ -636,13 +636,13 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     width: 650px;
 }
 
-/* 인덱스 - 포트폴리오 */
-.index_portfolio{
+/* 인덱스 - 프로젝트 */
+.index_project {
     width: 100%;
     position: relative;
     z-index: 3;
 }
-.index_portfolio_title{
+.index_project_title {
     width: 100%;
     text-align: center;
     color: #fff;
@@ -651,22 +651,22 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     justify-content: flex-start;
     align-items: center;
 }
-.index_portfolio_title h2{
+.index_project_title h2 {
     font-size: 76px;
     line-height: 1.5;
 }
-.index_portfolio_title h2 span{
+.index_project_title h2 span {
     background: -webkit-linear-gradient(45deg, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
     background: -webkit-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.index_portfolio_title h3{
+.index_project_title h3 {
     width: 620px;
     font-size: 16px;
     font-weight: 400;
 }
-.index_portfolio_title h4{
+.index_project_title h4 {
     font-size: 16px;
     font-weight: 400;
     position: relative;
@@ -677,10 +677,10 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     align-items: center;
     margin-top: 24px;
 }
-.index_portfolio_title h4 input{
+.index_project_title h4 input {
     display: none;
 }
-.index_portfolio_title h4 label{
+.index_project_title h4 label {
     width: 120px;
     cursor: pointer;
     display: block;
@@ -691,7 +691,7 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     opacity: 1;
     transition: 0.4s all;
 }
-.index_portfolio_title h4 label::before{
+.index_project_title h4 label::before {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -704,34 +704,34 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     transform: scale(0) translateX(50%);
     transition: 0.4s all;
 }
-.index_portfolio_title h4 label:nth-of-type(1)::before{
+.index_project_title h4 label:nth-of-type(1)::before {
     width: 100%;
     left: -50%;
 }
-.index_portfolio_title h4 label:nth-of-type(2)::before{
+.index_project_title h4 label:nth-of-type(2)::before{
     width: 75%;
     left: -25%;
 }
-input[name=portfolio_skill]:checked + label{
+input[name=project_skill]:checked + label{
     fill: #fff;
     opacity: 1;
     transform: scale(1.02) translateY(-2px);
 }
-input[name=portfolio_skill]:checked + label::before{
+input[name=project_skill]:checked + label::before{
     background: #fff;
     opacity: 1;
     transform: scale(1) translateX(50%);
 }
-.index_portfolio_title h4 label:nth-of-type(2){
+.index_project_title h4 label:nth-of-type(2){
     margin-left: 8px;
     margin-right: 8px;
 }
-.index_portfolio_1{
+.index_project_1{
     width: 100%;
     margin-top: 100px;
     position: relative;
 }
-.index_portfolio_1>div{
+.index_project_1>div{
     position: absolute;
     z-index: 1;
     left: 50%;
@@ -739,8 +739,8 @@ input[name=portfolio_skill]:checked + label::before{
     transform: translateX(-50%);
 }
 
-/* 인덱스 - 포트폴리오 - 웹디자인 */
-.index_portfolio_web{
+/* 인덱스 - 프로젝트 - 웹디자인 */
+.index_project_web{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -749,7 +749,7 @@ input[name=portfolio_skill]:checked + label::before{
     padding-bottom: 10vh;
     box-sizing: border-box;
 }
-.index_portfolio_web_1{
+.index_project_web_1{
     width: 1200px;
     height: 360px;
     padding: 0 60px;
@@ -761,30 +761,30 @@ input[name=portfolio_skill]:checked + label::before{
     align-items: center;
     margin-bottom: 80px;
 }
-.index_portfolio_web_left{
+.index_project_web_left{
     width: 500px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
-.index_portfolio_web_left img{
+.index_project_web_left img{
     width: 100%;
 }
-.index_portfolio_web_right{
+.index_project_web_right{
     width: 580px;
 }
-.index_portfolio_web_right h2{
+.index_project_web_right h2{
     font-size: 32px;
     font-weight: 700;
     color: #9FAAE5;
 }
-.index_portfolio_web_right h3{
+.index_project_web_right h3{
     font-size: 16px;
     font-weight: 400;
     color: #8C8DA1;
 }
-.index_portfolio_web_right>span{
+.index_project_web_right>span{
     display: block;
     width: 32px;
     height: 1px;
@@ -792,7 +792,7 @@ input[name=portfolio_skill]:checked + label::before{
     margin-top: 8px;
     margin-bottom: 32px;
 }
-.index_portfolio_web_right h4{
+.index_project_web_right h4{
     font-size: 16px;
     font-weight: 400;
     color: #5F5E6C;
@@ -803,8 +803,8 @@ input[name=portfolio_skill]:checked + label::before{
     -webkit-box-orient: vertical;
 }
 
-/* 인덱스 - 포트폴리오 - 제품디자인 */
-.index_portfolio_product {
+/* 인덱스 - 프로젝트 - 제품디자인 */
+.index_project_product {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -813,20 +813,20 @@ input[name=portfolio_skill]:checked + label::before{
     padding-bottom: 10vh;
     box-sizing: border-box;
 }
-.index_portfolio_product .index_portfolio_web_right {
+.index_project_product .index_project_web_right {
     position: relative;
     z-index: 3;
 }
-.index_portfolio_product .index_portfolio_web_left {
+.index_project_product .index_project_web_left {
     position: relative;
 }
-.index_portfolio_product .index_portfolio_web_left .img_wrap {
+.index_project_product .index_project_web_left .img_wrap {
     width: 100%;
     height: 300px;
     position: absolute;
     z-index: 2;
 }
-.index_portfolio_product .index_portfolio_web_left img {
+.index_project_product .index_project_web_left img {
     width: 90%;
     height: 360px;
     object-fit: contain;
@@ -834,27 +834,7 @@ input[name=portfolio_skill]:checked + label::before{
     transform: translateY(-40px);
 }
 
-/* 인덱스 - 포트폴리오 - 일러스트 */
-.index_portfolio_ai {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-bottom: 10vh;
-    box-sizing: border-box;
-}
-.index_portfolio_ai .index_portfolio_web_left {
-    height: 100%;
-    padding: 40px 0;
-    padding-right: 40px;
-}
-.index_portfolio_ai .index_portfolio_web_left img {
-    height: 100%;
-    object-fit: cover;
-}
-
-/* 포트폴리오 - 버튼1 호버 이벤트 */
+/* 프로젝트 - 버튼1 호버 이벤트 */
 .btn_one{
     width: 160px;
     height: 40px;
@@ -888,7 +868,7 @@ input[name=portfolio_skill]:checked + label::before{
     transition: 0.2s all;
 }
 
-/* 포트폴리오 - 버튼2 호버 이벤트 */
+/* 프로젝트 - 버튼2 호버 이벤트 */
 .btn_two{
     width: 160px;
     height: 40px;
@@ -1516,8 +1496,8 @@ input[name=portfolio_skill]:checked + label::before{
     color: rgba(0,0,0,0.6);
 }
 
-/* 포트폴리오 */
-.portfolio_wrap .nav {
+/* 프로젝트 */
+.project_wrap .nav {
     width: 100%;
     padding: 12px 0;
     padding-top: 64px;
@@ -1527,19 +1507,19 @@ input[name=portfolio_skill]:checked + label::before{
     align-items: center;
     border-bottom: 1px solid #666
 }
-.portfolio_wrap .nav a {
+.project_wrap .nav a {
     margin-right: 32px;
 }
-.portfolio_wrap .nav a:last-of-type {
+.project_wrap .nav a:last-of-type {
     margin-right: 0px;
 }
-.portfolio_wrap .nav_txt {
+.project_wrap .nav_txt {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.portfolio_wrap .nav_txt .svg_wrap {
+.project_wrap .nav_txt .svg_wrap {
     width: 28px;
     height: 28px;
     border: 1px solid #666333;
@@ -1549,17 +1529,17 @@ input[name=portfolio_skill]:checked + label::before{
     align-items: center;
     margin-bottom: 8px;
 }
-.portfolio_wrap .nav_txt .svg_wrap svg {
+.project_wrap .nav_txt .svg_wrap svg {
     width: 16px;
     height: 16px;
     fill: #666;
 }
-.portfolio_wrap .nav_txt h2 {
+.project_wrap .nav_txt h2 {
     font-size: 12px;
     font-weight: 400;
     color: #666;
 }
-.portfolio_wrap .portfolio_list {
+.project_wrap .project_list {
     width: 100%;
     padding: 40px;
     display: flex;
@@ -1567,12 +1547,12 @@ input[name=portfolio_skill]:checked + label::before{
     justify-content: space-between;
     align-items: flex-start;
 }
-.portfolio_wrap .portfolio_list a {
+.project_wrap .project_list a {
     display: block;
     width: 33%;
     margin-bottom: 12px;
 }
-.portfolio_wrap .portfolio_item {
+.project_wrap .project_item {
     width: 100%;
     padding: 40px;
     display: flex;
@@ -1583,44 +1563,44 @@ input[name=portfolio_skill]:checked + label::before{
     background-color: #f9f9f9;
 }
 @media (hover: hover) and (pointer: fine) {
-    .portfolio_wrap .portfolio_item:hover img {
+    .project_wrap .project_item:hover img {
         transform: scale(1.025);
     }
-    .portfolio_wrap .portfolio_item:hover .portfolio_txt span {
+    .project_wrap .project_item:hover .project_txt span {
         width: 100%;
     }
 }
-.portfolio_wrap .portfolio_item img {
+.project_wrap .project_item img {
     width: 85%;
     transition: 0.4s;
 }
-.portfolio_wrap .portfolio_txt {
+.project_wrap .project_txt {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.portfolio_wrap .portfolio_txt h2 {
+.project_wrap .project_txt h2 {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 4px;
 }
-.portfolio_wrap .portfolio_txt h3 {
+.project_wrap .project_txt h3 {
     font-size: 16px;
     font-weight: 300;
     color: #999;
     padding-bottom: 0px;
     margin-bottom: 12px;
 }
-.portfolio_wrap .portfolio_txt span {
+.project_wrap .project_txt span {
     display: block;
     width: 10%;
     height: 1px;
     background-color: #bbb;
     transition: 0.4s;
 }
-.portfolio_wrap .img_wrap {
+.project_wrap .img_wrap {
     width: 100%;
     height: 340px;
     margin-bottom: 20px;
@@ -1629,23 +1609,23 @@ input[name=portfolio_skill]:checked + label::before{
     justify-content: center;
     align-items: center;
 }
-.portfolio_wrap .img_wrap img {
+.project_wrap .img_wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
 }
-.portfolio_wrap .web .img_wrap img {
+.project_wrap .web .img_wrap img {
     object-fit: contain;
 }
-.portfolio_wrap .product .img_wrap img {
+.project_wrap .product .img_wrap img {
     width: 80%;
     height: 80%;
     object-fit: contain;
 }
 
-/* 포트폴리오 - Copyright */
-.portfolio_wrap .copyright {
+/* 프로젝트 - Copyright */
+.project_wrap .copyright {
     width: 100%;
     padding: 32px 0;
     display: flex;
@@ -1657,7 +1637,7 @@ input[name=portfolio_skill]:checked + label::before{
     letter-spacing: 0;
     color: rgba(0,0,0,0.6);
 }
-.portfolio_wrap .copyright a {
+.project_wrap .copyright a {
     display: inline-block;
     border-bottom: 1px solid rgba(0,0,0,0.6);
     color: rgba(0,0,0,0.6);

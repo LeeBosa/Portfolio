@@ -240,10 +240,10 @@ master2
 .add(t5(),"<")
 .add(t6(),"<");
 
-// 포트폴리오 타임라인
+// 프로젝트 타임라인
 var master3 = gsap.timeline({
   scrollTrigger:{
-    trigger:'.index_portfolio',
+    trigger:'.index_project',
     scrub:0,
     start:'top bottom',
     onEnter: function(){
@@ -297,11 +297,11 @@ function indexNavCheck(){ // 네비게이션 클릭 시 큐브 애니메이션 �
 }
 
 function indexNavMove(){ // 네비게이션 클릭 시 스크롤 이동
-  var indexPortfolio = document.getElementById("indexPortfolio");
+  var indexProject = document.getElementById("indexProject");
 
   if($("input[id=index_nav_1]").is(":checked")){ locoScroll.scrollTo(0); }
   else if($("input[id=index_nav_2]").is(":checked")){ locoScroll.scrollTo(window.innerHeight * 3.5); }
-  else if($("input[id=index_nav_3]").is(":checked")){ locoScroll.scrollTo(indexPortfolio,{"offset":-window.innerHeight*0.1}); }
+  else if($("input[id=index_nav_3]").is(":checked")){ locoScroll.scrollTo(indexProject,{"offset":-window.innerHeight*0.1}); }
 }
 
 // 타임라인
