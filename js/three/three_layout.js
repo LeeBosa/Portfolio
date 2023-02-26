@@ -251,6 +251,7 @@ var master3 = gsap.timeline({
       if(deviceCheck() == "PC") {
         $("input[id=index_nav_3]").prop("checked",true);
         indexNavCheck();
+        ScrollTrigger.refresh();
         $(".scroll_animation").hide();
       }
     },
@@ -259,6 +260,7 @@ var master3 = gsap.timeline({
       if(deviceCheck() == "PC") {
         $("input[id=index_nav_3]").prop("checked",true);
         indexNavCheck();
+        ScrollTrigger.refresh();
         $(".scroll_animation").hide();
       }
     }
