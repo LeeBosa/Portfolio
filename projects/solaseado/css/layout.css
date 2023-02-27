@@ -1325,9 +1325,10 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
 }
 
 /* 서브페이지 주택단지 */
-#wrap{
+#wrap {
     padding-top: 80px;
     width: 100%;
+    overflow: hidden;
     box-sizing: border-box;
 }
 .ra-1{
@@ -2333,6 +2334,7 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
 /* 서브페이지 스마트팜 */
 #sf{
     padding-top: 80px;
+    overflow: hidden;
 }
 #sf-1>h4{
     margin-bottom: 0;
