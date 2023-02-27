@@ -1147,7 +1147,7 @@
     color: #333;
     cursor: default;
 }
-.searchbox>form{
+.searchbox>form {
     width: 100%;
     margin-top: 50px;
     display: flex;
@@ -1411,6 +1411,9 @@ input[id="trip-type2"]:checked+label h4{
     }
     .trip-info button{
         width: 100%;
+    }
+    .searchbox > form {
+        padding: 0 60px;
     }
     .searchbox2 h4{
         display: none;
