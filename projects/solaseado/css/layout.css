@@ -391,7 +391,7 @@ html,body{
 .slide2-2{
     width: 100%;
     background: #222;
-    background-image: url(../img/tourBG2.png);
+    background-image: url(https://i.ibb.co/cTZpPpD/tourBG2.png);
     background-size: 100%;
     background-position: -5% 62%;
     padding-top: 80px;
@@ -581,6 +581,9 @@ html,body{
     }
 
     /* 컨텐츠 */
+    .index_body{
+        overflow: auto;
+    }
     .familysite{
         display: hidden;
     }
@@ -910,7 +913,7 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
 }
 .v1-3{
     width: 100%;
-    background: #141414 url(http://drive.google.com/uc?export=view&id=1Hq6HoDnMwkK7DqAoIIManFkfuuXPxu5s);
+    background: #141414 url(https://i.ibb.co/S5ZRSnc/map-garden.jpg);
     background-size: 2400px;
     background-position: center -150px;
     background-repeat: no-repeat;
@@ -1169,7 +1172,7 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
         margin-bottom: 5%;
     }
     .v1-3{
-        background: #141414 url(http://drive.google.com/uc?export=view&id=1pXGVhWVxvMSfwmoq1FAYfTIGWtItzVvk);
+        background: #141414 url(https://i.ibb.co/7vCQ3pr/map-garden-m.jpg);
         height: auto;
         background-size: 100%;
         background-position: center 252px;
@@ -2026,7 +2029,7 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
     font-size: 52px;
     font-weight: 600;
     line-height: 1.2;
-    background: url(http://drive.google.com/uc?export=view&id=1EI7TigXrZOQN2eF1kvr3L0U4rPobB5DJ) no-repeat 50%;
+    background: url(https://i.ibb.co/yp2Z5yX/dev-bg.jpg) no-repeat 50%;
     color: white;
 }
 .dev-1{
@@ -2135,7 +2138,7 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
 }
 .re100-1{
     width: 100%;
-    background-image: url(http://drive.google.com/uc?export=view&id=1nG-__Ofh7kHcPvqfbuSFQV_cnqS-xzLu);
+    background-image: url(https://i.ibb.co/nz2ZVFQ/map-re100.png);
     padding-top: 100px;
     box-sizing: border-box;
     height: 100vh;
@@ -2335,7 +2338,7 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
     margin-bottom: 50px;
 }
 #sf-3{
-    background-image: url(http://drive.google.com/uc?export=view&id=16Ha4D0NNQDPI3j_5EF7RBclQvmjjrntt);
+    background-image: url(https://i.ibb.co/h9Vm3D8/map-smartfarm2.png);
     height: 100vh;
     background-color: #141414;
     background-size: 2300px;
@@ -2564,7 +2567,7 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
     margin-bottom: 60px;
 }
 .leisure0{
-    background-image: url(http://drive.google.com/uc?export=view&id=1n_iKF8J7nSmIEHDj6jF6W0ENJJ1fF_6w);
+    background-image: url(https://i.ibb.co/w7J082G/map-golf.png);
 }
 .leisure .re100-1>div{
     max-width: 960px;
@@ -2625,13 +2628,13 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
     margin-bottom: 100px;
 }
 .leisure2{
-    background-image: url(http://drive.google.com/uc?export=view&id=1djyXGYTY3hoq0AmlP5SuShKs2QmyKLCC);
+    background-image: url(https://i.ibb.co/JkQKr91/map-resort.png);
 }
 .leisure3{
-    background-image: url(http://drive.google.com/uc?export=view&id=1l9w8dR-pDtO3G-Zk_OkpGMyGXXEu9WPf);
+    background-image: url(https://i.ibb.co/5rV7dvv/map-hotel.png);
 }
 .leisure4{
-    background-image: url(http://drive.google.com/uc?export=view&id=1eIOZdSdn6gCSAcVDGO63C5DrmN-ep7V5);
+    background-image: url(https://i.ibb.co/9VBW6qH/map-retail.png);
 }
 .leisure5{
     width: 100%;
@@ -2653,7 +2656,7 @@ input[id=videovolume]:checked~label img:nth-of-type(2){
     width: 47.5%;
 }
 .leisure6{
-    background-image: url(http://drive.google.com/uc?export=view&id=1Bo2JMgAnAM_6CYkno6SzDNCBYnHxKnS9);
+    background-image: url(https://i.ibb.co/yPH8RM1/map-marina.png);
 }
 .leisure1>div>div:nth-of-type(3){
     display: none;
