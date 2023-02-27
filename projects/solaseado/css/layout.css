@@ -85,6 +85,7 @@ html,body{
     position: fixed;
     top: -400vh;
     left: 0;
+    transition: 0.8s;
 }
 #leftwrap img{
     height: 100vh;
@@ -105,6 +106,7 @@ html,body{
     position: fixed;
     top: 100vh;
     left: 50%;
+    transition: 0.8s;
 }
 #rightwrap img{
     height: 100%;
@@ -308,11 +310,12 @@ html,body{
     width: 100%;
     height: 100vh;
 }
-.slide2{
+.slide2 {
     width: 100%;
     background: white;
-    position: absolute;
+    position: fixed;
     top: 100vh;
+    transition: 0.8s;
 }
 .slide2-1{
     max-width: 1170px;
@@ -582,7 +585,7 @@ html,body{
 
     /* 컨텐츠 */
     .index_body{
-        overflow: auto;
+        overflow: auto !important;
     }
     .familysite{
         display: hidden;
