@@ -2,7 +2,7 @@ $(document).ready(function(){
     // 도메인
         const url = window.location.href;
         const domain = window.location.host;
-        const githubName = "xxdevbosa"
+        const githubName = "taedonn"
         const repositoryName = "portfolio"
 
     // 페이지 설정
