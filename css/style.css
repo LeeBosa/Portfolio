@@ -518,16 +518,16 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     transform: scale(1) translateX(0%);
 }
 
-.index_scroll_wrap{
+.index_scroll_wrap {
     width: 100%;
 }
 
-/* 인덱스 - 비전 */
-.index_scroll{
+/* 인덱스 - 인트로 */
+.index_intro {
     width: 100%;
     display: flex;
 }
-.index_scroll_vision{
+.index_intro_title {
     width: 100%;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
@@ -538,7 +538,7 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     align-items: center;
     position: relative;
 }
-.index_scroll_vision span{
+.index_intro_title span {
     display: block;
     font-family: "Spoqa Han Sans Neo";
     font-size: 80px;
@@ -552,15 +552,15 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.index_scroll_vision p{
+.index_intro_title p {
     letter-spacing: 0.5px;
     background: -webkit-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* 인덱스 - GSAP */
-#canvas{
+/* 인덱스 - 인사이트 */
+#canvas {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -568,20 +568,20 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     top: 0;
     z-index: 2;
 }
-.index_intro{
+.index_insight {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.index_intro_1{
+.index_insight_1 {
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
-.index_intro_txt_wrap{
+.index_insight_txt_wrap {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -590,7 +590,7 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     z-index: 10;
     color: #fff;
 }
-.index_intro_txt{
+.index_insight_txt {
     width: 100%;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
@@ -603,7 +603,7 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     align-items: center;
     overflow: hidden;
 }
-.index_intro_2{
+.index_insight_2 {
     width: 600px;
     height: 100%;
     opacity: 0;
@@ -612,27 +612,27 @@ input[name=index_nav] + label:hover .index_nav_circle span::before{
     justify-content: center;
     align-items: center;
 }
-.index_intro_txt h2{
+.index_insight_txt h2 {
     font-size: 76px;
     line-height: 1.25;
     margin-bottom: 12px;
 }
-.index_intro_txt h3{
+.index_insight_txt h3 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 8px;
 }
-.index_intro_txt h4 {
+.index_insight_txt h4 {
     font-size: 16px;
     font-weight: 400;
 }
-.index_intro_txt_wrap .index_intro_txt span{
+.index_insight_txt_wrap .index_insight_txt span {
     background: -webkit-linear-gradient(45deg, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
     background: -webkit-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.index_intro_txt_2{
+.index_insight_txt_2 {
     width: 650px;
 }
 

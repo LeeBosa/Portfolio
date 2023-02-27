@@ -179,7 +179,7 @@ blockRefresh();
 // 인트로 타임라인
 var master1 = gsap.timeline({
   scrollTrigger:{
-    trigger:'.index_scroll', // 트리거 객체
+    trigger:'.index_intro', // 트리거 객체
     pin:true, // 고정/비고정
     scrub:0, // 모션 바운스
     start:'top top', // 트리거가 시작하는 위치 / top top : 트리거 객체가 화면의 맨위일 때 트리거 시작 / top 50% : 트리거 객체가 화면의 50% 위치일 때 트리거 시작
@@ -208,7 +208,7 @@ master1
 // 소개 타임라인
 var master2 = gsap.timeline({
   scrollTrigger:{
-    trigger:'.index_intro',
+    trigger:'.index_insight',
     pin:true,
     scrub:0,
     start:'top top',
@@ -313,27 +313,27 @@ function t1(){ // 제목
 
   if(windowWidth > 1080){ // PC
     t1
-    .fromTo(".index_scroll_vision span",{scale:2},{scale:1,duration:4})
+    .fromTo(".index_intro_title span",{scale:2},{scale:1,duration:4})
     .fromTo({},{},{duration:4})
-    .fromTo(".index_scroll_vision span",{opacity:1,scale:1},{opacity:0,scale:2,duration:4});
+    .fromTo(".index_intro_title span",{opacity:1,scale:1},{opacity:0,scale:2,duration:4});
   }
   else if(windowWidth <= 1080 && windowWidth > 720){ // TABLET
     t1
-    .fromTo(".index_scroll_vision span",{scale:2},{scale:1,duration:4})
+    .fromTo(".index_intro_title span",{scale:2},{scale:1,duration:4})
     .fromTo({},{},{duration:4})
-    .fromTo(".index_scroll_vision span",{opacity:1,scale:1},{opacity:0,scale:2,duration:4});
+    .fromTo(".index_intro_title span",{opacity:1,scale:1},{opacity:0,scale:2,duration:4});
   }
   else if(windowWidth <= 720 && windowWidth > 480){ // LARGE MOBILE
     t1
-    .fromTo(".index_scroll_vision span",{scale:2},{scale:1.25,duration:4})
+    .fromTo(".index_intro_title span",{scale:2},{scale:1.25,duration:4})
     .fromTo({},{},{duration:4})
-    .fromTo(".index_scroll_vision span",{opacity:1,scale:1.25},{opacity:0,scale:2,duration:4});
+    .fromTo(".index_intro_title span",{opacity:1,scale:1.25},{opacity:0,scale:2,duration:4});
   }
   else { // SMALL MOBILE
     t1
-    .fromTo(".index_scroll_vision span",{scale:2},{scale:1.25,duration:4})
+    .fromTo(".index_intro_title span",{scale:2},{scale:1.25,duration:4})
     .fromTo({},{},{duration:4})
-    .fromTo(".index_scroll_vision span",{opacity:1,scale:1.25},{opacity:0,scale:2,duration:4});
+    .fromTo(".index_intro_title span",{opacity:1,scale:1.25},{opacity:0,scale:2,duration:4});
   }
   return t1;
 }
@@ -341,9 +341,9 @@ function t1(){ // 제목
 function t2(){ // 소제목
   var t2 = gsap.timeline();
   t2
-  .fromTo(".index_scroll_vision p",{opacity:0,scale:1,y:20},{opacity:1,scale:1,y:0,duration:4})
+  .fromTo(".index_intro_title p",{opacity:0,scale:1,y:20},{opacity:1,scale:1,y:0,duration:4})
   .fromTo({},{},{duration:4})
-  .fromTo(".index_scroll_vision p",{opacity:1,y:0},{opacity:0,y:20,duration:4});
+  .fromTo(".index_intro_title p",{opacity:1,y:0},{opacity:0,y:20,duration:4});
   return t2;
 }
 
@@ -380,15 +380,15 @@ function t5(){ // 전체 배경 투명도
 function t6(){ // 텍스트 줌인/줌아웃
   var t6 = gsap.timeline();
   t6
-  .fromTo(".index_intro_txt_1",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:8})
+  .fromTo(".index_insight_txt_1",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:8})
   .fromTo({},{},{duration:4})
-  .fromTo(".index_intro_txt_1",{opacity:1,scale:1},{opacity:0,scale:0.5,duration:3})
-  .fromTo(".index_intro_txt_2",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:3})
+  .fromTo(".index_insight_txt_1",{opacity:1,scale:1},{opacity:0,scale:0.5,duration:3})
+  .fromTo(".index_insight_txt_2",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:3})
   .fromTo({},{},{duration:4})
-  .fromTo(".index_intro_txt_2",{opacity:1,scale:1},{opacity:0,scale:0.5,duration:3})
-  .fromTo(".index_intro_txt_3",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:3})
+  .fromTo(".index_insight_txt_2",{opacity:1,scale:1},{opacity:0,scale:0.5,duration:3})
+  .fromTo(".index_insight_txt_3",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:3})
   .fromTo({},{},{duration:4})
-  .fromTo(".index_intro_txt_3",{opacity:1,scale:1},{opacity:0,scale:0.5,duration:6})
+  .fromTo(".index_insight_txt_3",{opacity:1,scale:1},{opacity:0,scale:0.5,duration:6})
   .fromTo({},{},{duration:2});
   return t6;
 }

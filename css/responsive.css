@@ -12,16 +12,16 @@
     }
 }
 @media screen and (max-width: 1400px){
-    /* 인덱스 - 인트로 */
-    .index_intro_txt h2{
+    /* 인덱스 - 인사이트 */
+    .index_insight_txt h2 {
         font-size: 68px;
         margin-bottom: 10px;
     }
-    .index_intro_txt h3{
+    .index_insight_txt h3 {
         font-size: 32px;
         margin-bottom: 6px;
     }
-    .index_intro_txt h4 {
+    .index_insight_txt h4 {
         font-size: 14px;
     }
 
@@ -42,16 +42,16 @@
     }
 }
 @media screen and (max-width: 1200px){
-    /* 인덱스 - 비전 */
-    .index_scroll_vision span {
+    /* 인덱스 - 인트로 */
+    .index_intro_title span {
         font-size: 68px;
     }
-    .index_scroll_vision_txt{
+    .index_intro_title_txt {
         font-size: 14px;
     }
 
-    /* 인덱스 - 인트로 */
-    .index_intro_txt h2{
+    /* 인덱스 - 인사이트 */
+    .index_insight_txt h2 {
         font-size: 60px;
     }
 
@@ -254,22 +254,22 @@
         display: none;
     }
 
-    /* 인덱스 - 비전 */
-    .index_scroll_vision{
+    /* 인덱스 - 인트로 */
+    .index_intor_title {
         overflow: visible;
     }
-    .index_scroll_vision span{
+    .index_intro_title span {
         font-size: 56px;
     }
-    .index_scroll_vision_txt{
+    .index_intro_title_txt {
         margin-top: 12px;
     }
 
-    /* 인덱스 - 인트로 */
-    .index_intro_1{
+    /* 인덱스 - 인사이트 */
+    .index_insight_1 {
         overflow: visible;
     }
-    .index_intro_txt h2{
+    .index_insight_txt h2 {
         font-size: 52px;
     }
 
@@ -575,31 +575,31 @@
         min-width: 350%;
     }
 
-    /* 인덱스 - 비전 */
-    .index_scroll_vision span{
+    /* 인덱스 - 인트로 */
+    .index_intro_title span{
         font-size: 40px;
     }
-    .index_scroll_vision_txt{
+    .index_intro_title_txt {
         font-size: 14px;
         margin-top: 8px;
     }
 
-    /* 인덱스 - 인트로 */
-    .index_intro_2 {
+    /* 인덱스 - 인사이트 */
+    .index_insight_2 {
         width: 100%;
     }
-    .index_intro_txt br {
+    .index_insight_txt br {
         display: none;
     }
-    .index_intro_txt h2{
+    .index_insight_txt h2 {
         font-size: 48px;
         margin-bottom: 8px;
     }
-    .index_intro_txt h3{
+    .index_insight_txt h3 {
         width: 300px;
         font-size: 24px;
     }
-    .index_intro_txt h4 {
+    .index_insight_txt h4 {
         width: 300px;
     }
 
@@ -756,8 +756,8 @@
 }
 
 @media screen and (max-width: 480px) {
-    /* 인덱스 - 비전 */
-    .index_scroll_vision span{
+    /* 인덱스 - 인트로 */
+    .index_intro_title span{
         font-size: 32px;
     }
 
