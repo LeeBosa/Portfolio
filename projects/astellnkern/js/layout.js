@@ -29,12 +29,11 @@ $(document).ready(function() {
         }
     }); */
 
-    // 프로젝트 데이터 연동
+    // DAP 데이터 연동
     function DAP_init(sheetId, sheetName, divName) {
         let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
         let query = encodeURIComponent('Select A,B,C,D');
         let url = `${base}&sheet=${sheetName}&tq=${query}`;
-        let data = [];
 
         fetch(url)
             .then(res => res.text())
@@ -42,9 +41,9 @@ $(document).ready(function() {
                 // JSON만 추출
                 let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
                 let jsonItem = jsonData.table.rows;
-                slideOneAlphaData(divName, jsonItem);
-                slideOneBravoData(divName, jsonItem);
-                slideOneCharlieData(divName, jsonItem);
+                slideOneAlpha(divName, jsonItem);
+                slideOneBravo(divName, jsonItem);
+                slideOneCharlie(divName, jsonItem);
             })
             .then(() => { // Slick Slider 실행
                 $('.' + divName + ' .content3-a-slide').slick({
@@ -52,8 +51,8 @@ $(document).ready(function() {
                     slidesToScroll: 1,
                     infinite:true,
                     nextArrow:$('.' + divName + ' .content3-btn1-right'),
-                    prevArrow:$('.content3-1 .content3-btn1-left'),
-                    asNavFor:".content3-1 .content3-b-slide, .content3-1 .content3-b-slide2"
+                    prevArrow:$('.' + divName + ' .content3-btn1-left'),
+                    asNavFor:'.' + divName + ' .content3-b-slide, .' + divName + ' .content3-b-slide2'
                 });
                 $('.' + divName + ' .content3-b-slide').slick({
                     slidesToShow:1,
@@ -61,7 +60,7 @@ $(document).ready(function() {
                     infinite:true,
                     fade:true,
                     arrows:false,
-                    asNavFor:".content3-1 .content3-a-slide, .content3-1 .content3-b-slide2"
+                    asNavFor:'.' + divName + '.content3-a-slide, .' + divName + ' .content3-b-slide2'
                 });
                 $('.' + divName + ' .content3-b-slide2').slick({
                     slidesToShow:5,
@@ -70,45 +69,11 @@ $(document).ready(function() {
                     arrows:false,
                     focusOnSelect:true,
                     focusOnChange:true,
-                    asNavFor:".content3-1 .content3-a-slide, .content3-1 .content3-b-slide"
+                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide'
                 });
             });
     }
     DAP_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','DAP', 'content3-1');
-
-    // 슬라이더 1-1
-    function slideOneAlphaData(name, item) {
-        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
-            $('.' + name + ' .content3-a-slide').append(
-                '<div><img src="'+item[i].c[3].v+'"/></div>'
-            );
-        }
-    }
-
-    // 슬라이더 1-2
-    function slideOneBravoData(name, item) {
-        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
-            $('.' + name + ' .content3-b-slide').append(
-                '<div>'
-                    +'<h2>'+item[i].c[1].v+'</h2>'
-                    +'<h3>'+item[i].c[2].v+'</h3>'
-                    +'<a href="#">'
-                        +'<div><img src="./img/i_arrow_black.png"/></div>'
-                    +'</a>'
-                +'</div>'
-            );
-            console.log(item[i].c[2].v);
-        }
-    }
-
-    // 슬라이더 1-3
-    function slideOneCharlieData(name, item) {
-        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
-            $('.' + name + ' .content3-a-slide').append(
-                '<div><img src="'+item[i].c[3].v+'"/><h2>'+item[i].c[1].v+'</h2></div>'
-            );
-        }
-    }
 
     //슬라이더 1 슬라이드 전 이벤트
     $(".content3-1 .content3-a-slide").on('beforeChange',function(event,slick,currentSlide,nextSlide){
@@ -117,13 +82,231 @@ $(document).ready(function() {
         
         //progress bar의 배경 가로 사이즈에 계산한 백분율 값을 넣는다.
         $(".content3-1 .content3-b-slide3>span")
-            .css("background-size", calc + '% 100%')
-            .attr('aria-valuenow', calc);
+        .css("background-size", calc + '% 100%')
+        .attr('aria-valuenow', calc);
         
         //progress bar의 아이콘의 가로 좌표값에 계산한 백분율 값을 넣는다.
-        $(".content3-1 .content3-b-slide3>div>svg")
-            .css("left", calc + "%");
+        $(".content3-1 .content3-b-slide3>div>svg").css("left", calc + "%");
     });
+
+    // 슬라이더 1-1
+    function slideOneAlpha(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-a-slide').append(
+                '<div><img src="'+item[i].c[3].v+'"/></div>'
+            );
+        }
+    }
+
+    // 슬라이더 1-2
+    function slideOneBravo(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-b-slide').append(
+                '<div>'
+                    +'<h2>'+item[i].c[1].v+'</h2>'
+                    +'<h3>'+item[i].c[2].v+'</h3>'
+                    +'<a href="#">Find store'
+                        +'<div><img src="./img/i_arrow_black.png"/></div>'
+                    +'</a>'
+                +'</div>'
+            );
+        }
+    }
+
+    // 슬라이더 1-3
+    function slideOneCharlie(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-b-slide2').append(
+                '<div><img src="'+item[i].c[3].v+'"/><h2>'+item[i].c[1].v+'</h2></div>'
+            );
+        }
+    }
+
+    // Headphones 데이터 연동
+    function HP_init(sheetId, sheetName, divName) {
+        let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+        let query = encodeURIComponent('Select A,B,C,D');
+        let url = `${base}&sheet=${sheetName}&tq=${query}`;
+
+        fetch(url)
+            .then(res => res.text())
+            .then(rep => {
+                // JSON만 추출
+                let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+                let jsonItem = jsonData.table.rows;
+                slideTwoAlpha(divName, jsonItem);
+                slideTwoBravo(divName, jsonItem);
+                slideTwoCharlie(divName, jsonItem);
+            })
+            .then(() => { // Slick Slider 실행
+                $('.' + divName + ' .content3-a-slide').slick({
+                    slidesToShow:1,
+                    slidesToScroll: 1,
+                    infinite:true,
+                    nextArrow:$('.' + divName + ' .content3-btn1-right'),
+                    prevArrow:$('.' + divName + ' .content3-btn1-left'),
+                    asNavFor:'.' + divName + ' .content3-b-slide, .' + divName + ' .content3-b-slide2'
+                });
+                $('.' + divName + ' .content3-b-slide').slick({
+                    slidesToShow:1,
+                    slidesToScroll: 1,
+                    infinite:true,
+                    fade:true,
+                    arrows:false,
+                    asNavFor:'.' + divName + '.content3-a-slide, .' + divName + ' .content3-b-slide2'
+                });
+                $('.' + divName + ' .content3-b-slide2').slick({
+                    slidesToShow:5,
+                    slidesToScroll:3,
+                    infinite:true,
+                    arrows:false,
+                    focusOnSelect:true,
+                    focusOnChange:true,
+                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide'
+                });
+            });
+    }
+    HP_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Headphones', 'content3-2');
+
+    // 슬라이드 2 슬라이드 전 이벤트
+    $(".content3-2 .content3-a-slide").on('beforeChange',function(event,slick,currentSlide,nextSlide){
+        //이동할 슬라이드의 번호 숫자를 전체 슬라이드 -1로 나누고 백을 곱해서 백분율 값을 구한다.
+        let calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+        
+        //progress bar의 배경 가로 사이즈에 계산한 백분율 값을 넣는다.
+        $(".content3-2 .content3-b-slide3>span")
+        .css("background-size", calc + '% 100%')
+        .attr('aria-valuenow', calc);
+        
+        //progress bar의 아이콘의 가로 좌표값에 계산한 백분율 값을 넣는다.
+        $(".content3-2 .content3-b-slide3>div>svg").css("left", calc + "%");
+    });
+
+    // 슬라이더 2-1
+    function slideTwoAlpha(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-a-slide').append(
+                '<div><img src="'+item[i].c[3].v+'"/></div>'
+            );
+        }
+    }
+
+    // 슬라이더 2-2
+    function slideTwoBravo(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-b-slide').append(
+                '<div>'
+                    +'<h2>'+item[i].c[1].v+'</h2>'
+                    +'<h3>'+item[i].c[2].v+'</h3>'
+                    +'<a href="#">Find store'
+                        +'<div><img src="./img/i_arrow_black.png"/></div>'
+                    +'</a>'
+                +'</div>'
+            );
+        }
+    }
+
+    // 슬라이더 2-3
+    function slideTwoCharlie(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-b-slide2').append(
+                '<div><img src="'+item[i].c[3].v+'"/><h2>'+item[i].c[1].v+'</h2></div>'
+            );
+        }
+    }
+
+    // Home Audio 데이터 연동
+    function HA_init(sheetId, sheetName, divName) {
+        let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+        let query = encodeURIComponent('Select A,B,C,D');
+        let url = `${base}&sheet=${sheetName}&tq=${query}`;
+
+        fetch(url)
+            .then(res => res.text())
+            .then(rep => {
+                // JSON만 추출
+                let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+                let jsonItem = jsonData.table.rows;
+                slideThreeAlpha(divName, jsonItem);
+                slideThreeBravo(divName, jsonItem);
+                slideThreeCharlie(divName, jsonItem);
+            })
+            .then(() => { // Slick Slider 실행
+                $('.' + divName + ' .content3-a-slide').slick({
+                    slidesToShow:1,
+                    slidesToScroll: 1,
+                    infinite:true,
+                    nextArrow:$('.' + divName + ' .content3-btn1-right'),
+                    prevArrow:$('.' + divName + ' .content3-btn1-left'),
+                    asNavFor:'.' + divName + ' .content3-b-slide, .' + divName + ' .content3-b-slide2'
+                });
+                $('.' + divName + ' .content3-b-slide').slick({
+                    slidesToShow:1,
+                    slidesToScroll: 1,
+                    infinite:true,
+                    fade:true,
+                    arrows:false,
+                    asNavFor:'.' + divName + '.content3-a-slide, .' + divName + ' .content3-b-slide2'
+                });
+                $('.' + divName + ' .content3-b-slide2').slick({
+                    slidesToShow:5,
+                    slidesToScroll:3,
+                    infinite:true,
+                    arrows:false,
+                    focusOnSelect:true,
+                    focusOnChange:true,
+                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide'
+                });
+            });
+    }
+    HA_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Home Audio', 'content3-3');
+
+    // 슬라이드 3 슬라이드 전 이벤트
+    $(".content3-3 .content3-a-slide").on('beforeChange',function(event,slick,currentSlide,nextSlide){
+        //이동할 슬라이드의 번호 숫자를 전체 슬라이드 -1로 나누고 백을 곱해서 백분율 값을 구한다.
+        let calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+        
+        //progress bar의 배경 가로 사이즈에 계산한 백분율 값을 넣는다.
+        $(".content3-3 .content3-b-slide3>span")
+        .css("background-size", calc + '% 100%')
+        .attr('aria-valuenow', calc);
+        
+        //progress bar의 아이콘의 가로 좌표값에 계산한 백분율 값을 넣는다.
+        $(".content3-3 .content3-b-slide3>div>svg").css("left", calc + "%");
+    });
+
+    // 슬라이더 3-1
+    function slideThreeAlpha(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-a-slide').append(
+                '<div><img src="'+item[i].c[3].v+'"/></div>'
+            );
+        }
+    }
+
+    // 슬라이더 3-2
+    function slideThreeBravo(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-b-slide').append(
+                '<div>'
+                    +'<h2>'+item[i].c[1].v+'</h2>'
+                    +'<h3>'+item[i].c[2].v+'</h3>'
+                    +'<a href="#">Find store'
+                        +'<div><img src="./img/i_arrow_black.png"/></div>'
+                    +'</a>'
+                +'</div>'
+            );
+        }
+    }
+
+    // 슬라이더 3-3
+    function slideThreeCharlie(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-b-slide2').append(
+                '<div><img src="'+item[i].c[3].v+'"/><h2>'+item[i].c[1].v+'</h2></div>'
+            );
+        }
+    }
 
     /* --------------------------------------------------------------------- */
     /* --------------------------------------------------------------------- */
