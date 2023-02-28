@@ -308,6 +308,99 @@ $(document).ready(function() {
         }
     }
 
+    // Accesories 데이터 연동
+    function ACC_init(sheetId, sheetName, divName) {
+        let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+        let query = encodeURIComponent('Select A,B,C,D');
+        let url = `${base}&sheet=${sheetName}&tq=${query}`;
+
+        fetch(url)
+            .then(res => res.text())
+            .then(rep => {
+                // JSON만 추출
+                let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+                let jsonItem = jsonData.table.rows;
+                slideFourAlpha(divName, jsonItem);
+                slideFourBravo(divName, jsonItem);
+                slideFourCharlie(divName, jsonItem);
+            })
+            .then(() => { // Slick Slider 실행
+                $('.' + divName + ' .content3-a-slide').slick({
+                    slidesToShow:1,
+                    slidesToScroll: 1,
+                    infinite:true,
+                    nextArrow:$('.' + divName + ' .content3-btn1-right'),
+                    prevArrow:$('.' + divName + ' .content3-btn1-left'),
+                    asNavFor:'.' + divName + ' .content3-b-slide, .' + divName + ' .content3-b-slide2'
+                });
+                $('.' + divName + ' .content3-b-slide').slick({
+                    slidesToShow:1,
+                    slidesToScroll: 1,
+                    infinite:true,
+                    fade:true,
+                    arrows:false,
+                    asNavFor:'.' + divName + '.content3-a-slide, .' + divName + ' .content3-b-slide2'
+                });
+                $('.' + divName + ' .content3-b-slide2').slick({
+                    slidesToShow:5,
+                    slidesToScroll:3,
+                    infinite:true,
+                    arrows:false,
+                    focusOnSelect:true,
+                    focusOnChange:true,
+                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide'
+                });
+            });
+    }
+    ACC_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Accesories', 'content3-4');
+
+    // 슬라이드 4 슬라이드 전 이벤트
+    $(".content3-4 .content3-a-slide").on('beforeChange',function(event,slick,currentSlide,nextSlide){
+        //이동할 슬라이드의 번호 숫자를 전체 슬라이드 -1로 나누고 백을 곱해서 백분율 값을 구한다.
+        let calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+        
+        //progress bar의 배경 가로 사이즈에 계산한 백분율 값을 넣는다.
+        $(".content3-4 .content3-b-slide3>span")
+        .css("background-size", calc + '% 100%')
+        .attr('aria-valuenow', calc);
+        
+        //progress bar의 아이콘의 가로 좌표값에 계산한 백분율 값을 넣는다.
+        $(".content3-4 .content3-b-slide3>div>svg").css("left", calc + "%");
+    });
+
+    // 슬라이더 4-1
+    function slideFourAlpha(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-a-slide').append(
+                '<div><img src="'+item[i].c[3].v+'"/></div>'
+            );
+        }
+    }
+
+    // 슬라이더 4-2
+    function slideFourBravo(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-b-slide').append(
+                '<div>'
+                    +'<h2>'+item[i].c[1].v+'</h2>'
+                    +'<h3>'+item[i].c[2].v+'</h3>'
+                    +'<a href="#">Find store'
+                        +'<div><img src="./img/i_arrow_black.png"/></div>'
+                    +'</a>'
+                +'</div>'
+            );
+        }
+    }
+
+    // 슬라이더 4-3
+    function slideFourCharlie(name, item) {
+        for(let i = 0; i < item.length; i++) { // 마지막에서 3번째까지 loop
+            $('.' + name + ' .content3-b-slide2').append(
+                '<div><img src="'+item[i].c[3].v+'"/><h2>'+item[i].c[1].v+'</h2></div>'
+            );
+        }
+    }
+
     /* --------------------------------------------------------------------- */
     /* --------------------------------------------------------------------- */
     /* --------------------------------------------------------------------- */
