@@ -32,21 +32,20 @@
     margin-top: 10px;
     cursor: pointer;
 }
-.topnav>h2{
+.topnav > h2 {
     color: #fff;
     position: relative;
     display: block;
     width: 100%;
     text-align: center;
-    top: 8px;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 1px;
     font-weight: 300;
 }
-.topnav>svg{
-    width: 16px;
+.topnav > svg {
+    width: 14px;
     position: relative;
-    top: 6px;
+    top: 2px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -197,20 +196,20 @@ input[name=star]:checked~label:after{
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
-.content1-txt>h2{
+.content1-txt > h2 {
     font-size: 120px;
     font-weight: 700;
     color: #fff;
     letter-spacing: 48px;
     text-align: center;
 }
-.content1-txt>h4{
-    margin-top: 50px;
+.content1-txt > h4 {
     font-size: 28px;
     font-weight: 400;
-    color: #fff;
     letter-spacing: 17px;
+    color: #fff;
     text-align: center;
+    margin-top: 50px;
 }
 .content1-1{
     width: 100%;
@@ -226,7 +225,7 @@ input[name=star]:checked~label:after{
     background: #d81334;
     margin: 0 auto;
 }
-.content1-2{
+.content1-2 {
     width: 1100px;
     height: auto;
     position: absolute;
@@ -316,11 +315,9 @@ input[name=star]:checked~label:after{
     letter-spacing: 1.8px;
     color: white;
 }
-.slide-txt h2{
+.slide-txt h2 {
     font-size: 120px;
     font-weight: 700;
-    margin-bottom: 20px;
-    margin-top: 10px;
     color: white;
 }
 .slide-txt h4{
@@ -555,7 +552,7 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     opacity: 1;
 }
 /* 컨텐츠3 슬라이딩 메뉴 */
-.content3-menu>label{
+.content3-menu > label {
     display: block;
     width: 300px;
     height: 100%;
@@ -604,10 +601,11 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 .content3-a{
     width: 50%;
+    position: relative;
     padding: 0px 100px;
     box-sizing: border-box;
 }
@@ -618,7 +616,7 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     width: 100%;
 }
 .content3-a img{
-    width: 540px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     z-index: 3;
@@ -628,18 +626,19 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     box-sizing: border-box;
 }
 /* 컨텐츠3 Arrow */
-.content3-btn1{
+.content3-btn1 {
+    width: 100%;
     position: absolute;
     z-index: 2;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 /* 왼쪽 화살표 */
-.content3-btn1-left{
+.content3-btn1-left {
     width: 50px;
     height: 50px;
     position: relative;
@@ -647,10 +646,10 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     margin-left: 8px;
     transition-duration: 0.5s;
 }
-.content3-btn1-left:hover{
+.content3-btn1-left:hover {
     margin-left: -28px;
 }
-.content3-btn1-left:hover span:nth-of-type(2){
+.content3-btn1-left:hover span:nth-of-type(2) {
     width: 40px;
 }
 .content3-btn1-left>span{
@@ -822,30 +821,30 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     transition-duration: 0.2s;
 }
 /* 컨텐츠4 */
-.content4{
+.content4 {
     width: 100%;
     max-width: 1920px;
     height: 1120px;
     overflow: hidden;
     background-color: #fff;
 }
-.content4 h2{
+.content4 h2 {
     display: block;
     font-size: 18px;
     letter-spacing: 1.8px;
     text-align: center;
 }
-.content4 h2 span{
+.content4 h2 span {
     color: #d81334;
 }
-.content4 h3{
+.content4 h3 {
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.4px;
     color: #fff;
     opacity: 0.6;
 }
-.content4 h4{
+.content4 h4 {
     font-size: 24px;
     letter-spacing: 1.2px;
     color: #fff;
@@ -853,18 +852,22 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     line-height: 29px;
     margin-top: 5px;
 }
-.content4-1 span{
+.content4-1 span {
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-end;
     align-items: flex-start;
     align-content: flex-start;
-    width: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
     padding: 35px 40px;
     box-sizing: border-box;
     background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5));
 }
-.content4-1{
+.content4-1 {
     margin-top: 75px;
     width: 100%;
     display: flex;
@@ -872,15 +875,22 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     justify-content: center;
     align-items: flex-start;
 }
-.content4-1 a{
+.content4-1 a {
     display: block;
+    position: relative;
     overflow: hidden;
 }
-.content4-1 a:hover div{
-    transform: scale(1.1);
-    opacity: 0.6;
+.content4-1 img {
+    transition: 0.4s;
 }
-.content4-1-left{
+@media (hover: hover) and (pointer: fine) {
+    .content4-1 a:hover img {
+        transform: scale(1.05);
+        opacity: 0.6;
+    }
+}
+
+.content4-1-left {
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -888,7 +898,7 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     align-content: flex-start;
     margin-right: 10px;
 }
-.content4-1-left div{
+.content4-1-left div {
     width: 100%;
     height: 100%;
     display: flex;
@@ -897,14 +907,14 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     align-items: flex-start;
     transition-duration: 0.2s;
 }
-.content4-1-right{
+.content4-1-right {
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
 }
-.content4-1-right div{
+.content4-1-right div {
     width: 100%;
     height: 100%;
     display: flex;
@@ -913,52 +923,49 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     align-items: flex-start;
     transition-duration: 0.2s;
 }
-.left4-1{
+.left4-1 {
     width: 493px;
     height: 493px;
     background-color: #000;
 }
-.left4-1 div{
-    background-image: url(http://drive.google.com/uc?export=view&id=1EJ-s3ee2O7wQS3G2FS6CJz8GtJqbUNf_); /* img4-1 */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+.left4-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.left4-2{
+.left4-2 {
     width: 291px;
     height: 291px;
     margin-top: 10px;
     background-color: #000;
 }
-.left4-2 div{
-    background-image: url(http://drive.google.com/uc?export=view&id=1qVsn_uE5N2QXTMpxKJFqDUjX2X2vFPcb); /* img4-2 */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+.left4-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.right4-1{
+.right4-1 {
     width: 695px;
     height: 344px;
     background-color: #000;
 }
-.right4-1 div{
-    background-image: url(http://drive.google.com/uc?export=view&id=1lyKLlwTzrMsAjwBuKkZxmrF6crwSgJ7L); /* img4-3 */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+.right4-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.right4-2{
+.right4-2 {
     width: 493px;
     height: 554px;
     margin-top: 10px;
     background-color: #000;
 }
-.right4-2 div{
-    background-image: url(http://drive.google.com/uc?export=view&id=1KgChr-1Lh-2ISgLH1-7CVmjeQQq3gu-O); /* img4-4 */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+.right4-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 /* 고정 배경 */
 .line-bg{
     position: fixed;
@@ -1070,6 +1077,7 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
 }
 .content5_slider img{
     height: 720px;
+    object-fit: cover;
 }
 .content5_2{
     width: 100%;
@@ -1090,8 +1098,7 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     align-items: flex-end;
 }
 .content5_2_wrap h2{
-    width: 900px;
-    height: 200px;
+    width: 100%;
     font-size: 100px;
     letter-spacing: 10px;
     line-height: 100px;
@@ -1270,4 +1277,33 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
 }
 .content5_3_slider_wrap .content3-b-slide3>div>svg{
     left: 50%;
+}
+
+@media screen and (max-width: 1400px) {
+    .content1-txt > h2 {
+        font-size: 92px;
+        letter-spacing: 37px;
+    }
+    .content1-txt > h4 {
+        font-size: 24px;
+        letter-spacing: 15px;
+        margin-top: 30px;
+    }
+    .content1-2 {
+        width: 100%;
+        padding: 0 32px;
+        box-sizing: border-box;
+    }
+    .content3-menu > label {
+        width: 25%;
+    }
+    .content3-a {
+        padding: 0 40px;
+    }
+    .content3-btn1-left {
+        margin-left: 0;
+    }
+    .content3-btn1-right {
+        margin-right: 0;
+    }
 }

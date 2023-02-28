@@ -69,11 +69,19 @@ $(document).ready(function() {
                     arrows:false,
                     focusOnSelect:true,
                     focusOnChange:true,
-                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide'
+                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide',
+                    responsive: [
+                        {
+                            breakpoint: 1400,
+                            settings: {
+                                slidesToShow: 4,
+                                autoplay: false
+                            }
+                        }
+                    ]
                 });
             });
     }
-    DAP_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','DAP', 'content3-1');
 
     //슬라이더 1 슬라이드 전 이벤트
     $(".content3-1 .content3-a-slide").on('beforeChange',function(event,slick,currentSlide,nextSlide){
@@ -162,11 +170,19 @@ $(document).ready(function() {
                     arrows:false,
                     focusOnSelect:true,
                     focusOnChange:true,
-                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide'
+                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide',
+                    responsive: [
+                        {
+                            breakpoint: 1400,
+                            settings: {
+                                slidesToShow: 4,
+                                autoplay: false
+                            }
+                        }
+                    ]
                 });
             });
     }
-    HP_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Headphones', 'content3-2');
 
     // 슬라이드 2 슬라이드 전 이벤트
     $(".content3-2 .content3-a-slide").on('beforeChange',function(event,slick,currentSlide,nextSlide){
@@ -255,11 +271,19 @@ $(document).ready(function() {
                     arrows:false,
                     focusOnSelect:true,
                     focusOnChange:true,
-                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide'
+                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide',
+                    responsive: [
+                        {
+                            breakpoint: 1400,
+                            settings: {
+                                slidesToShow: 4,
+                                autoplay: false
+                            }
+                        }
+                    ]
                 });
             });
     }
-    HA_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Home Audio', 'content3-3');
 
     // 슬라이드 3 슬라이드 전 이벤트
     $(".content3-3 .content3-a-slide").on('beforeChange',function(event,slick,currentSlide,nextSlide){
@@ -348,11 +372,19 @@ $(document).ready(function() {
                     arrows:false,
                     focusOnSelect:true,
                     focusOnChange:true,
-                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide'
+                    asNavFor:'.' + divName + ' .content3-a-slide, .' + divName + ' .content3-b-slide',
+                    responsive: [
+                        {
+                            breakpoint: 1400,
+                            settings: {
+                                slidesToShow: 4,
+                                autoplay: false
+                            }
+                        }
+                    ]
                 });
             });
     }
-    ACC_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Accesories', 'content3-4');
 
     // 슬라이드 4 슬라이드 전 이벤트
     $(".content3-4 .content3-a-slide").on('beforeChange',function(event,slick,currentSlide,nextSlide){
@@ -401,6 +433,53 @@ $(document).ready(function() {
         }
     }
 
+    // 데이터 로딩 체크
+    var DAP_check,
+        HP_check,
+        HA_check,
+        ACC_check;
+
+    function dataListOnCheck() {
+        if( $("input[id=content3-slide1]").is(":checked") ) {
+            DAP_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','DAP', 'content3-1');
+            DAP_check = true;
+        }
+        else if( $("input[id=content3-slide2]").is(":checked") ) {
+            HP_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Headphones', 'content3-2');
+            HP_check = true;
+        }
+        else if( $("input[id=content3-slide3]").is(":checked") ) {
+            HA_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Home Audio', 'content3-3');
+            HA_check = true;
+        }
+        else {
+            ACC_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Accesories', 'content3-4');
+            ACC_check = true;
+        }
+    }
+    dataListOnCheck();
+
+    // 데이터 클릭 이벤트
+    $("input[id=content3-slide1]").on("click",function() {
+        if(DAP_check) { return; }
+        else { DAP_check = true; DAP_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','DAP', 'content3-1'); }
+    });
+
+    $("input[id=content3-slide2]").on("click",function() {
+        if(HP_check) { return; }
+        else { HP_check = true; HP_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Headphones', 'content3-2'); }
+    });
+
+    $("input[id=content3-slide3]").on("click",function() {
+        if(HA_check) { return; }
+        else { HA_check = true; HA_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Home Audio', 'content3-3'); }
+    });
+
+    $("input[id=content3-slide4]").on("click",function() {
+        if(ACC_check) { return; }
+        else { ACC_check = true; ACC_init('1R2FRUKsRxGSkSE1-AdFxCoWCq8s3v5FHnp687TVy6VQ','Accesories', 'content3-4'); }
+    });
+
     /* --------------------------------------------------------------------- */
     /* --------------------------------------------------------------------- */
     /* --------------------------------------------------------------------- */
@@ -432,7 +511,7 @@ $(document).ready(function() {
     );
 
     //헤더 호버시 이벤트
-    $(".gnb-menu>li").hover(
+    $(".gnb-menu > li").hover(
         function(){
             $("header").css({
                 "background":"white",

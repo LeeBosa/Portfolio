@@ -131,12 +131,12 @@
 
 /* 추천 여행지 */
 .slide1{
-    background-image: url(http://drive.google.com/uc?export=view&id=1r6u0172BvUyFr0mX8vhyfdQHQ8AZM3ez);
+    background-image: url(https://i.ibb.co/pdph4y4/jeju-island.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .slide1>div{
-    background-image: url(http://drive.google.com/uc?export=view&id=1r6u0172BvUyFr0mX8vhyfdQHQ8AZM3ez);
+    background-image: url(https://i.ibb.co/pdph4y4/jeju-island.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -195,12 +195,12 @@
     transition-duration: 0.2s;
 }
 .slide2{
-    background-image: url(http://drive.google.com/uc?export=view&id=1wWTwtPJu0tZFuNpFdIYfi0Exkuq75afn);
+    background-image: url(https://i.ibb.co/HDS7rz6/tokyo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .slide3{
-    background-image: url(http://drive.google.com/uc?export=view&id=17L9dHhySXstfc7kqzxY5kwlqzqM6gGLR);
+    background-image: url(https://i.ibb.co/9GjP5sj/incheon.jpg);
 }
 
 /* 리프레시포인트 */
