@@ -355,13 +355,22 @@ input[name=star]:checked~label:after{
     line-height: 26px;
     color: white;
 }
-.slide-img{
+.slide-img {
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 1;
+}
+.slide-img div {
+    width: 100%;
+    height: 100%;
+}
+.slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .slide-btn{
     width: 100%;
@@ -1597,6 +1606,9 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
         letter-spacing: 10px;
         margin-top: 10px;
     }
+    .content1-1, .content1-2 {
+        display: none;
+    }
 
     /* 컨텐츠 2 */
     .content2 {
@@ -1835,5 +1847,17 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     }
     .content5_3_slider_wrap .content3-b-slide3 {
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .slide-txt h3 {
+        font-size: 20px;
+    }
+    .slide-txt h2 {
+        font-size: 48px;
+    }
+    .slide-txt h4 br {
+        display: none;
     }
 }
