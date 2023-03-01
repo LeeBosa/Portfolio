@@ -951,10 +951,19 @@
         //FAMILY SITE 클릭 이벤트
         var footer_family_site_li_height = $(".footer_family_site li").outerHeight();
         var footer_family_site_li_length = $(".footer_family_site li").length;
+        
+        $(window).resize(function() {
+            footer_family_site_li_height = $(".footer_family_site li").outerHeight();
+        });
 
         $("input[id=family_site]").on('click',function(){
             if($(this).is(":checked")){
-                $(".footer_family_site ul").css({ "height":footer_family_site_li_height * footer_family_site_li_length });
+                if(window.innerWidth > 1080) {
+                    $(".footer_family_site ul").css({"height":(footer_family_site_li_height * footer_family_site_li_length),"top":"50px","bottom":"auto"});
+                }
+                else {
+                    $(".footer_family_site ul").css({"height":(footer_family_site_li_height * footer_family_site_li_length),"top":"auto","bottom":"50px"});
+                }
             }
             else{
                 $(".footer_family_site ul").css({ "height":"0" });
@@ -972,7 +981,7 @@
             windowTop = $(window).scrollTop();
             window_height = $(window).height();
             window_bottom = windowTop + window_height;
-            footer_height = $("footer").height();
+            footer_height = $("footer").outerHeight();
             footer_top = $("footer").offset().top;
 
             if(window_bottom >= footer_top){ // 화면이 footer보다 밑으로 갈 때

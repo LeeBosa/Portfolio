@@ -493,7 +493,6 @@ input[name=content3-slide]{
 
 /* label 1 활성화 시 발생하는 이벤트 */
 input[name=content3-slide]:nth-of-type(1):checked ~ label:nth-of-type(1){
-    background-image: url(../img/bg01.png);
     background-color: #f4ece8;
     color: #000;
     font-weight: 500;
@@ -517,7 +516,6 @@ input[name=content3-slide]:nth-of-type(1):checked ~ div:nth-of-type(4){
 
 /* label 2 활성화 시 발생하는 이벤트 */
 input[name=content3-slide]:nth-of-type(2):checked ~ label:nth-of-type(2){
-    background-image: url(../img/bg01.png);
     background-color: #f4ece8;
     color: #000;
     font-weight: 500;
@@ -540,7 +538,6 @@ input[name=content3-slide]:nth-of-type(2):checked ~ div:nth-of-type(4){
 }
 /* label 3 활성화 시 발생하는 이벤트 */
 input[name=content3-slide]:nth-of-type(3):checked ~ label:nth-of-type(3){
-    background-image: url(../img/bg01.png);
     background-color: #f4ece8;
     color: #000;
     font-weight: 500;
@@ -564,7 +561,6 @@ input[name=content3-slide]:nth-of-type(3):checked ~ div:nth-of-type(4){
 
 /* label 4 활성화 시 발생하는 이벤트 */
 input[name=content3-slide]:nth-of-type(4):checked ~ label:nth-of-type(4){
-    background-image: url(../img/bg01.png);
     background-color: #f4ece8;
     color: #000;
     font-weight: 500;
@@ -608,13 +604,11 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
 }
 .content3-1, .content3-2, .content3-3, .content3-4 {
     width: 100%;
-    background-image: url(../img/bg01.png);
     background-color: #f4ece8;
     position: absolute;
     top: 90px;
     left: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -875,6 +869,7 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     width: 100%;
     max-width: 1920px;
     height: 1120px;
+    padding-top: 220px;
     overflow: hidden;
     background-color: #fff;
 }
@@ -1334,6 +1329,30 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
     left: 50%;
 }
 
+@media screen and (max-width: 1800px) {
+    .content4 {
+        padding-top: 180px;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .content4 {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .content4 {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .content4 {
+        padding-top: 0;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     /* 메인배너 */
     .content1-txt > h2 {
@@ -1414,7 +1433,7 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
 
     /* 컨텐츠 3 */
     .content3 {
-        padding-bottom: 60px;
+        padding-bottom: 0;
     }
     .content3-1, .content3-2, .content3-3, .content3-4 {
         padding-top: 0;
@@ -1438,7 +1457,9 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
         height: 442px;
     }
     .content4 {
-        height: 940px;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 80px;
     }
     .content4 h3 {
         font-size: 14px;
@@ -1699,7 +1720,6 @@ input[name=content3-slide]:nth-of-type(4):checked ~ div:nth-of-type(4){
 
     /* 컨텐츠 4 */
     .content4 {
-        height: auto;
         padding-bottom: 60px;
     }
     .content4 h3 {
