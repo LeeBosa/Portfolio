@@ -52,7 +52,7 @@ $(document).ready(function() {
                     infinite:true,
                     nextArrow:$('.' + divName + ' .content3-btn1-right'),
                     prevArrow:$('.' + divName + ' .content3-btn1-left'),
-                    asNavFor:'.' + divName + ' .content3-b-slide, .' + divName + ' .content3-b-slide2'
+                    asNavFor:'.' + divName + ' .content3-b-slide, .' + divName + ' .content3-b-slide2',
                 });
                 $('.' + divName + ' .content3-b-slide').slick({
                     slidesToShow:1,
@@ -73,6 +73,27 @@ $(document).ready(function() {
                     responsive: [
                         {
                             breakpoint: 1400,
+                            settings: {
+                                slidesToShow: 4,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 1080,
+                            settings: {
+                                slidesToShow: 10,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 720,
+                            settings: {
+                                slidesToShow: 6,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 480,
                             settings: {
                                 slidesToShow: 4,
                                 autoplay: false
@@ -178,6 +199,27 @@ $(document).ready(function() {
                                 slidesToShow: 4,
                                 autoplay: false
                             }
+                        },
+                        {
+                            breakpoint: 1080,
+                            settings: {
+                                slidesToShow: 10,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 720,
+                            settings: {
+                                slidesToShow: 6,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 4,
+                                autoplay: false
+                            }
                         }
                     ]
                 });
@@ -279,6 +321,27 @@ $(document).ready(function() {
                                 slidesToShow: 4,
                                 autoplay: false
                             }
+                        },
+                        {
+                            breakpoint: 1080,
+                            settings: {
+                                slidesToShow: 10,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 720,
+                            settings: {
+                                slidesToShow: 6,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 4,
+                                autoplay: false
+                            }
                         }
                     ]
                 });
@@ -376,6 +439,27 @@ $(document).ready(function() {
                     responsive: [
                         {
                             breakpoint: 1400,
+                            settings: {
+                                slidesToShow: 4,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 1080,
+                            settings: {
+                                slidesToShow: 10,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 720,
+                            settings: {
+                                slidesToShow: 6,
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 480,
                             settings: {
                                 slidesToShow: 4,
                                 autoplay: false
@@ -490,24 +574,24 @@ $(document).ready(function() {
 
     //헤더 gnb 호버 이벤트
     $(".menu>div>ul:nth-of-type(1)>a").hover(
-        function() { $(".menu>div>span:nth-of-type(1)").css("background","black"); },
-        function() { $(".menu>div>span:nth-of-type(1)").css("background","white"); }
+        function() { if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(1)").css("background","black"); }},
+        function() { if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(1)").css("background","white"); }}
     );
     $(".menu>div>ul:nth-of-type(2)>a").hover(
-        function() { $(".menu>div>span:nth-of-type(2)").css("background","black"); },
-        function() { $(".menu>div>span:nth-of-type(2)").css("background","white"); }
+        function() { if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(2)").css("background","black"); }},
+        function() { if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(2)").css("background","white"); }}
     );
     $(".menu>div>ul:nth-of-type(3)>a").hover(
-        function() { $(".menu>div>span:nth-of-type(3)").css("background","black"); },
-        function() { $(".menu>div>span:nth-of-type(3)").css("background","white"); }
+        function() { if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(3)").css("background","black"); }},
+        function() { if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(3)").css("background","white"); }}
     );
     $(".menu>div>ul:nth-of-type(4)>a").hover(
-        function() { $(".menu>div>span:nth-of-type(4)").css("background","black"); },
-        function() { $(".menu>div>span:nth-of-type(4)").css("background","white"); }
+        function() { if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(4)").css("background","black"); }},
+        function() { if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(4)").css("background","white"); }}
     );
     $(".menu>div>ul:nth-of-type(5)>a").hover(
-        function(){ $(".menu>div>span:nth-of-type(5)").css("background","black"); },
-        function(){ $(".menu>div>span:nth-of-type(5)").css("background","white"); }
+        function(){ if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(5)").css("background","black"); }},
+        function(){ if(window.innerWidth > 1400) { $(".menu>div>span:nth-of-type(5)").css("background","white"); }}
     );
 
     //헤더 호버시 이벤트
@@ -538,7 +622,7 @@ $(document).ready(function() {
         function(){
             $("header").css({
                 "background":"black",
-                "border-bottom":"1px solid black"
+                "border-bottom":"1px solid rgba(255,255,255,0.1)"
             }),
             $(".gnb-menu>li>a").css({
                 "border-bottom":"2px solid black",
@@ -568,7 +652,7 @@ $(document).ready(function() {
         if(windowTop == contentTop){ //스크롤이 맨위에 있을 때
             $("header").css({
                 "background":"black",
-                "border-bottom":"1px solid black"
+                "border-bottom":"1px solid rgba(255,255,255,0.1)"
             }),
             $(".gnb-menu>li>a").css({
                 "border-bottom":"2px solid black",
@@ -615,7 +699,7 @@ $(document).ready(function() {
                 function(){
                     $("header").css({
                         "background":"black",
-                        "border-bottom":"1px solid black"
+                        "border-bottom":"1px solid rgba(255,255,255,0.1)"
                     }),
                     $(".gnb-menu>li>a").css({
                         "border-bottom":"2px solid black",

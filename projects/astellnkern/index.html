@@ -22,7 +22,6 @@
     <script src="./js/layout.js"></script>
 
     <!-- css 연결 -->
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/base.css">
     <link rel="stylesheet" type="text/css" href="./css/layout.css">
 </head>
@@ -359,8 +358,8 @@
                 function onYouTubeIframeAPIReady(){
                     player = new YT.Player('yt_player',{
                         width:'100%',
-                        videoId:'9MT8MM55ko4',
-                        playerVars:{ 'autoplay':1,'playlist':'9MT8MM55ko4','loop':1,'quality':'high','controls':0 },
+                        videoId:'T-OEFHmJdpU',
+                        playerVars:{ 'autoplay':1,'playlist':'T-OEFHmJdpU','loop':1,'quality':'high','controls':0 },
                         events:{
                             'onReady':onPlayerReady,
                             'onError':onPlayerError
@@ -781,7 +780,7 @@
                     </ul>
                     <h2>
                         311, Gangnam-daero, Seocho-Gu, Seoul, Republic of Korea | Business registration No. 214-86-29288<br/>
-                        Representative Director Ki-Young Lee | Personal information protection manager Chang-Heum Baek<br/><br/>
+                        Representative Director Ki-Young Lee<br/><br/>
                         COPYRIGHT Dreamus Company, ALL RIGHT RESERVED.
                     </h2>
                 </div>
@@ -814,7 +813,12 @@
     </footer>
     <!-- Slick 슬라이더 연결 -->
     <script>
-        AOS.init();
+        AOS.init({
+            disable: function() {
+                var maxWidth = 1080;
+                return window.innerWidth < maxWidth;
+            }
+        });
 
         $(".slide-txt").slick({
             slidesToShow:1,
@@ -918,7 +922,16 @@
             slidesToShow:content5_3_news_length-1,
             swipeToSlide:true,
             infinite:false,
-            arrows:false
+            arrows:false,
+            responsive: [
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 2.5,
+                        autoplay: false
+                    }
+                }
+            ]
         });
 
         //컨텐츠5-3 슬라이드 슬라이드 전 이벤트
