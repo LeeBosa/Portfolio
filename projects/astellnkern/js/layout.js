@@ -649,7 +649,7 @@ $(document).ready(function() {
         let windowTop = $(window).scrollTop();
         let contentTop = $(".content1").scrollTop();
 
-        if(windowTop == contentTop){ //스크롤이 맨위에 있을 때
+        if(windowTop == contentTop) { //스크롤이 맨위에 있을 때
             $("header").css({
                 "background":"black",
                 "border-bottom":"1px solid rgba(255,255,255,0.1)"
@@ -670,58 +670,8 @@ $(document).ready(function() {
             $("#logo .cls-1").css({
                 "fill":"white"
             })
-
-            //스크롤이 맨위에 있을 때 헤더 gnb 메뉴 호버 이벤트
-            $(".gnb-menu>li").hover(
-                function(){
-                    $("header").css({
-                        "background":"white",
-                        "border-bottom":"1px solid #ddd"
-                    }),
-                    $(".gnb-menu>li>a").css({
-                        "border-bottom":"2px solid white",
-                        "color":"black"
-                    }),
-                    $(".gnb-menu>li:hover .gnb-main").css({
-                        "color":"#d81334",
-                        "border-bottom":"2px solid #d81334"
-                    }),
-                    $("input[id='menu']+label span:nth-of-type(2),input[id='menu']+label span:nth-of-type(3)").css({
-                        "background":"black"
-                    }),
-                    $("#searchbar .cls-1").css({
-                        "fill":"black"
-                    }),
-                    $("#logo .cls-1").css({
-                        "fill":"black"
-                    })
-                },
-                function(){
-                    $("header").css({
-                        "background":"black",
-                        "border-bottom":"1px solid rgba(255,255,255,0.1)"
-                    }),
-                    $(".gnb-menu>li>a").css({
-                        "border-bottom":"2px solid black",
-                        "color":"white"
-                    }),
-                    $(".gnb-menu>li:hover .gnb-main").css({
-                        "color":"white",
-                        "border-bottom":"2px solid black"
-                    }),
-                    $("input[id='menu']+label span:nth-of-type(2),input[id='menu']+label span:nth-of-type(3)").css({
-                        "background":"white"
-                    }),
-                    $("#searchbar .cls-1").css({
-                        "fill":"white"
-                    }),
-                    $("#logo .cls-1").css({
-                        "fill":"white"
-                    })
-                }
-            );
         }
-        else if(windowTop > contentTop){ //스크롤을 내렸을 때
+        else {
             $("header").css({
                 "background":"white",
                 "border-bottom":"1px solid #ddd"
@@ -743,56 +693,6 @@ $(document).ready(function() {
             $("#logo .cls-1").css({
                 "fill":"black"
             })
-
-            //스크롤이 내려왔을 때 헤더 gnb 메뉴 호버 이벤트
-            $(".gnb-menu>li").hover(
-                function(){
-                    $("header").css({
-                        "background":"white",
-                        "border-bottom":"1px solid #ddd"
-                    }),
-                    $(".gnb-menu>li>a").css({
-                        "border-bottom":"2px solid white",
-                        "color":"black"
-                    }),
-                    $(".gnb-menu>li:hover .gnb-main").css({
-                        "color":"#d81334",
-                        "border-bottom":"2px solid #d81334"
-                    }),
-                    $("input[id='menu']+label span:nth-of-type(2),input[id='menu']+label span:nth-of-type(3)").css({
-                        "background":"black"
-                    }),
-                    $("#searchbar .cls-1").css({
-                        "fill":"black"
-                    }),
-                    $("#logo .cls-1").css({
-                        "fill":"black"
-                    })
-                },
-                function(){
-                    $("header").css({
-                        "background":"white",
-                        "border-bottom":"1px solid #ddd"
-                    }),
-                    $(".gnb-menu>li>a").css({
-                        "border-bottom":"2px solid white",
-                        "color":"black"
-                    }),
-                    $(".gnb-menu>li:hover .gnb-main").css({
-                        "color":"#d81334",
-                        "border-bottom":"2px solid #d81334"
-                    }),
-                    $("input[id='menu']+label span:nth-of-type(2),input[id='menu']+label span:nth-of-type(3)").css({
-                        "background":"black"
-                    }),
-                    $("#searchbar .cls-1").css({
-                        "fill":"black"
-                    }),
-                    $("#logo .cls-1").css({
-                        "fill":"black"
-                    })
-                }
-            );
         }
     });
 });
