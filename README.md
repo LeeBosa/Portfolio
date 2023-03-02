@@ -1,6 +1,6 @@
 # Portfolio
 
-[https://taedonn.github.io/portfolio](https://taedonn.github.io/portfolio)
+[https://taedonn.github.io/portfolio](https://taedonn.github.io/portfolio){:target="_blank"}
 
 Tae Lee | GitHub @ taedonn | FE & ID
 
