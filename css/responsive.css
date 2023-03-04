@@ -30,9 +30,15 @@
         font-size: 68px;
         line-height: 1.25;
     }
+    .index_project_web a {
+        margin-bottom: 60px;
+    }
     .index_project_web_1 {
         width: 800px;
         height: 300px;
+    }
+    .index_project_product a {
+        margin-bottom: 60px;
     }
     .index_project_product .index_project_web_left .img_wrap {
         height: 300px;
@@ -283,11 +289,11 @@
     .index_project_title h3{
         width: 400px;
     }
-    .index_project_web .index_project_web_1:last-of-type{
-        margin-bottom: 60px;
-    }
-    .index_project_web_1{
+    .index_project_web a {
         width: calc(100% - 48px);
+    }
+    .index_project_web_1 {
+        width: 100%;
     }
     .index_project_web_1{
         height: 320px;
@@ -313,8 +319,12 @@
     }
     .index_project_web_right h4{
         font-size: 14px;
+        padding-right: 20px;
     }
     /* 인덱스 - 프로젝트 - 제품디자인 */
+    .index_project_product a {
+        width: calc(100% - 48px);
+    }
     .index_project_product .index_project_web_left {
         width: 440px;
         margin-bottom: 0;
@@ -346,11 +356,11 @@
     }
 
     /* 버튼2 - 호버 */
-    .btn_two{
+    .index_project_web .btn_two, .index_project_product .btn_two {
         width: 180px;
         height: 40px;
     }
-    .btn_two span{
+    .index_project_web .btn_two span, .index_project_product .btn_two span {
         font-size: 16px;
     }
 
@@ -620,11 +630,13 @@
     .index_project_1{
         margin-top: 80px;
     }
+    .index_project_web a {
+        margin-bottom: 40px;
+    }
     .index_project_web_1{
         min-height: 500px;
         flex-direction: column;
         justify-content: flex-start;
-        margin-bottom: 60px;
     }
     .index_project_web_left img{
         width: 340px;
@@ -634,7 +646,11 @@
         width: 100%;
         transform: translateY(-40px);
     }
+
     /* 인덱스 - 프로젝트 - 제품디자인 */
+    .index_project_product a {
+        margin-bottom: 40px;
+    }
     .index_project_product .index_project_web_1 {
         padding: 24px;
         justify-content: center;

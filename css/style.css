@@ -202,14 +202,14 @@ header h1 svg{
     }
 
     /* 프로젝트 - 버튼2 호버 이벤트 */
-    .btn_two:hover{
+    .index_project_web .btn_two:hover, .index_project_product .btn_two:hover {
         background-color: rgba(255, 255, 255, 1);
     }
-    .btn_two:hover span{
+    .index_project_web .btn_two:hover span, .index_project_product .btn_two:hover span {
         color: #202020;
         letter-spacing: 1px;
     }
-    .btn_two:hover::before{
+    .index_project_web .btn_two:hover::before, .index_project_product .btn_two:hover::before {
         opacity: 0; 
         transform: scale(0, 1);
     }
@@ -749,6 +749,9 @@ input[name=project_skill]:checked + label::before{
     padding-bottom: 10vh;
     box-sizing: border-box;
 }
+.index_project_web a {
+    margin-bottom: 80px;
+}
 .index_project_web_1{
     width: 1200px;
     height: 360px;
@@ -759,7 +762,6 @@ input[name=project_skill]:checked + label::before{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
 }
 .index_project_web_left{
     width: 500px;
@@ -812,6 +814,9 @@ input[name=project_skill]:checked + label::before{
     align-items: center;
     padding-bottom: 10vh;
     box-sizing: border-box;
+}
+.index_project_product a {
+    margin-bottom: 80px;
 }
 .index_project_product .index_project_web_right {
     position: relative;
@@ -869,7 +874,7 @@ input[name=project_skill]:checked + label::before{
 }
 
 /* 프로젝트 - 버튼2 호버 이벤트 */
-.btn_two{
+.index_project_web .btn_two, .index_project_product .btn_two {
     width: 160px;
     height: 40px;
     background-color: transparent;
@@ -878,15 +883,16 @@ input[name=project_skill]:checked + label::before{
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 0;
     transition: 0.2s all;
 }
-.btn_two span{
+.index_project_web .btn_two span, .index_project_product .btn_two span {
     /* font-size: 18px; */
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     transition: 0.2s all;
 }
-.btn_two::before{
+.index_project_web .btn_two::before, .index_project_product .btn_two::before {
     content: '';
     position: absolute;
     z-index: 1;
