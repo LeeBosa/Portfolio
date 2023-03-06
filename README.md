@@ -1,6 +1,10 @@
 # Portfolio
 
-[https://taedonn.github.io/portfolio](https://taedonn.github.io/portfolio)
+Live Demo : [https://taedonn.github.io/portfolio](https://taedonn.github.io/portfolio)
+
+[![GSAP Version](https://img.shields.io/badge/featured%20on-GSAP%20%403.9.1-%2388ce02)](#) [![Three.js Version](https://img.shields.io/badge/featured%20on-Three%20%400.122.0-%233388ff)](#)
+
+&nbsp;
 
 Tae Lee | GitHub @ taedonn | FE & ID
 
