@@ -21,6 +21,23 @@ $(document).ready(function(){
             document.documentElement.style.setProperty("--vh", `${vh}px`);
         });
 
+    // 폰트 로딩
+        const fonts = [
+            // Google Fonts API
+            '<link rel="preconnect" href="https://fonts.googleapis.com">',
+            '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+
+            // Roboto
+            '<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="preload" type="text/css">',
+
+            // Noto Sans KR
+            '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="preload" type="text/css">',
+
+            // Spoqa Han Sans Neo
+            '<link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="preload" type="text/css">'
+        ]
+        for (let i = 0; i < fonts.length; i++) { document.getElementsByTagName("head")[0].innerHTML += fonts[i]; }
+
     // 헤더 설정
         // 헤더 생성
         $("body").prepend(
@@ -131,7 +148,7 @@ $(document).ready(function(){
                         '<a href="'+item[i].c[6].v+'" target="'+linkTarget+'">'
                             +'<div class="index_project_web_1">'
                                 +'<div class="index_project_web_left">'
-                                    +'<img src='+item[i].c[5].v+'>'
+                                    +'<img src='+item[i].c[5].v+' loading="lazy" alt="index '+name+' image '+i+'">'
                                 +'</div>'
                                 +'<div class="index_project_web_right">'
                                     +'<h2 style="color:'+item[i].c[2].v+'">'+item[i].c[1].v+'</h2>'
@@ -205,7 +222,7 @@ $(document).ready(function(){
                         '<a href="'+item[i].c[6].v+'" target="_blank">'
                             +'<div class="project_item">'
                                 +'<div class="img_wrap">'
-                                    +'<img src="'+item[i].c[5].v+'"/>'
+                                    +'<img src="'+item[i].c[5].v+'" loading="lazy" alt="project '+name+' image '+i+'"/>'
                                 +'</div>'
                                 +'<div class="project_txt">'
                                     +'<h2>'+item[i].c[1].v+'</h2>'
@@ -307,7 +324,7 @@ $(document).ready(function(){
                     $("."+name).append(
                         '<a href="'+item[i].c[6].v+'" target="_blank">'
                             +'<div class="skill_slide_item">'
-                                +'<img src="'+item[i].c[5].v+'"/>'
+                                +'<img src="'+item[i].c[5].v+'" loading="lazy" alt="skill page '+name+' image '+i+'"/>'
                             +'</div>'
                             +'<h2>'+item[i].c[1].v+'</h2>'
                             +'<h3>'+item[i].c[3].v+'</h3>'
@@ -420,7 +437,7 @@ $(document).ready(function(){
                         '<a href="'+item[i].c[6].v+'" target="'+linkTarget+'">'
                             +'<div class="index_project_web_1">'
                                 +'<div class="index_project_web_left">'
-                                    +'<img src='+item[i].c[5].v+'>'
+                                    +'<img src='+item[i].c[5].v+' loading="lazy" alt="index '+name+' image '+i+'">'
                                 +'</div>'
                                 +'<div class="index_project_web_right">'
                                     +'<h2 style="color:'+item[i].c[2].v+'">'+item[i].c[1].v+'</h2>'
