@@ -209,7 +209,6 @@ $(document).ready(function(){
                         let jsonItem = jsonData.table.rows;
     
                         dataInit(divName, jsonItem);
-                        dataAlign(divName, jsonItem);
                         dataLink(divName);
                     });
             }
@@ -233,10 +232,9 @@ $(document).ready(function(){
                         +'</a>'
                     );
                 }
-            }
 
-            function dataAlign(name, item) { // 홀수인 경우 왼쪽 정렬
-                if(item.length % 2 != 0){ $("."+name).append('<a></a>'); }
+                // 홀수인 경우 왼쪽 정렬
+                if(item.length % 2 === 0){ $("."+name).append('<a></a>'); }
             }
 
             function dataLink(name) { // 링크가 없을 경우 현재창 유지
