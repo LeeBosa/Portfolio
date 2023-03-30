@@ -723,7 +723,7 @@ input[name="index_nav"] + label:hover .index_nav_circle span::before {
     display: none;
 }
 .index_project_title h4 label {
-    width: 120px;
+    width: 128px;
     cursor: pointer;
     display: block;
     position: relative;
