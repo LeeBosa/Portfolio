@@ -36,6 +36,6 @@ Tae Lee | GitHub @ taedonn | FE & ID
 
 ## 연락처 바로가기 :
 
-바로가기 : https:/portfolio.taedonn.com/sub/contacts.html
+바로가기 : https://portfolio.taedonn.com/sub/contacts.html
 
 이메일 : grandsky95@hotmail.com
