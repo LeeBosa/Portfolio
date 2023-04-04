@@ -42,7 +42,7 @@ $(document).ready(function(){
                         +'<li><a class="gnb_menu" href="/index.html">프로젝트</a></li>'
                         +'<li><a class="gnb_menu" href="/sub/skill.html">스킬</a></li>'
                         +'<li><a class="gnb_menu" href="https://resume.taedonn.com" target="_blank">이력서</a></li>'
-                        +'<li><a class="gnb_menu" href="https://taedonn.tistory.com" target="_blank">블로그</a></li>'
+                        +'<li><a class="gnb_menu" href="https://github.com/taedonn" target="_blank">깃허브</a></li>'
                         +'<li><a class="gnb_menu" href="/sub/contacts.html">연락처</a></li>'
                     +'</ul>'
                 +'</div>'
