@@ -26,9 +26,9 @@ Tae Lee | GitHub @ taedonn | FE & ID
 
 ## 프로젝트 바로가기 :
 
-프론트엔드 개발 : https://portfolio.taedonn.com/sub/project.html?pageType=1
+프론트엔드 개발 : https://portfolio.taedonn.com/index.html?pageType=1
 
-제품 디자인 : https://portfolio.taedonn.com/sub/project.html?pageType=2
+제품 디자인 : https://portfolio.taedonn.com/index.html?pageType=2
 
 이력서 : https://resume.taedonn.com
 

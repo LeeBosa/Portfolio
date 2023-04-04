@@ -5,259 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO</title>
-    <link rel="icon" href="./img/logo_favicon.svg"/>
-    <!-- 제이쿼리 -->
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-
-    <!-- Locomotive Scroll -->
-    <link rel="stylesheet" href="./css/locomotive-scroll.min.css"/>
-    <script type="text/javascript" src="./js/locomotive-scroll.min.js"></script>
-
-    <!-- Animation Cube -->
-    <link rel="stylesheet" type="text/css" href="./css/animation_cube/animation_cube.css"/>
-
-    <!-- 기본 스타일 -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
-    <script type="text/javascript" src="./js/layout.min.js"></script>
+    <!-- 기본 구조 -->
+    <link rel="icon" href="../img/logo_favicon.svg"/>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
 </head>
-<body id="indexBody">
-    <div id="wrap" class="index_wrap">
-        <div id="scrollbar_wrap"></div>
-        <div class="opacity_wrap"></div>
-        <section class="index_m_banner">
-            <!-- 유튜브 iframe API 설정 -->
-            <script>
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                var player;
-                function onYouTubeIframeAPIReady(){
-                    player = new YT.Player('yt_player',{
-                        width:'100%',
-                        videoId:'sbioGKKKa6w',
-                        playerVars:{ 'autoplay':1,'playlist':'sbioGKKKa6w','loop':1,'quality':'high','controls':0 },
-                        events:{
-                            'onReady':onPlayerReady,
-                            'onError':onPlayerError
-                        }
-                    });
-                }
-
-                function onPlayerReady(e){
-                    e.target.mute();
-                    e.target.playVideo();
-                }
-                
-                function onPlayerError(e){
-                    location.reload();
-                }
-            </script>
-            <div id="yt_player"></div>
-            <div class="banner_wrap"></div>
-            <div class="index_m_banner_nav fade_left">
-                <input type="radio" name="index_nav" id="index_nav_1" checked/>
-                <label for="index_nav_1">
-                    <div class="index_nav_circle index_nav_circle_1">
-                        <div class="cube_container">
-                            <div class="scene">
-                                <div class="webpack-cube">
-                                    <div class="outer-cube">
-                                        <div class="face face-top"></div>
-                                        <div class="face face-bottom"></div>
-                                        <div class="face face-left"></div>
-                                        <div class="face face-right"></div>
-                                        <div class="face face-front"></div>
-                                        <div class="face face-back"></div>
-                                    </div>
-                                    <div class="inner-cube">
-                                        <div class="face face-top"></div>
-                                        <div class="face face-bottom"></div>
-                                        <div class="face face-left"></div>
-                                        <div class="face face-right"></div>
-                                        <div class="face face-front"></div>
-                                        <div class="face face-back"></div>
-                                    </div>
-                                </div>
-                                <div class="shadows-outer-container">
-                                    <div class="shadow-outer"></div>
-                                </div>
-                                <div class="shadows-inner-container">
-                                    <div class="shadow-inner"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <span>인트로</span>
+<body>
+    <div id="wrap" class="project_wrap">
+        <div class="nav">
+            <a class="nav_web" href="/index.html?pageType=1">
+                <div class="nav_txt">
+                    <div class="svg_wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                        </svg>
                     </div>
-                </label>
-                <input type="radio" name="index_nav" id="index_nav_2"/>
-                <label for="index_nav_2">
-                    <div class="index_nav_circle index_nav_circle_2">
-                        <div class="cube_container">
-                            <div class="scene">
-                                <div class="webpack-cube">
-                                    <div class="outer-cube">
-                                        <div class="face face-top"></div>
-                                        <div class="face face-bottom"></div>
-                                        <div class="face face-left"></div>
-                                        <div class="face face-right"></div>
-                                        <div class="face face-front"></div>
-                                        <div class="face face-back"></div>
-                                    </div>
-                                    <div class="inner-cube">
-                                        <div class="face face-top"></div>
-                                        <div class="face face-bottom"></div>
-                                        <div class="face face-left"></div>
-                                        <div class="face face-right"></div>
-                                        <div class="face face-front"></div>
-                                        <div class="face face-back"></div>
-                                    </div>
-                                </div>
-                                <div class="shadows-outer-container">
-                                    <div class="shadow-outer"></div>
-                                </div>
-                                <div class="shadows-inner-container">
-                                    <div class="shadow-inner"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <span>인사이트</span>
+                    <h2>프론트엔드 개발</h2>
+                </div>
+            </a>
+            <a class="nav_product" href="/index.html?pageType=2">
+                <div class="nav_txt">
+                    <div class="svg_wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
+                            <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                        </svg>
                     </div>
-                </label>
-                <input type="radio" name="index_nav" id="index_nav_3"/>
-                <label for="index_nav_3">
-                    <div class="index_nav_circle index_nav_circle_3">
-                        <div class="cube_container">
-                            <div class="scene">
-                                <div class="webpack-cube">
-                                    <div class="outer-cube">
-                                        <div class="face face-top"></div>
-                                        <div class="face face-bottom"></div>
-                                        <div class="face face-left"></div>
-                                        <div class="face face-right"></div>
-                                        <div class="face face-front"></div>
-                                        <div class="face face-back"></div>
-                                    </div>
-                                    <div class="inner-cube">
-                                        <div class="face face-top"></div>
-                                        <div class="face face-bottom"></div>
-                                        <div class="face face-left"></div>
-                                        <div class="face face-right"></div>
-                                        <div class="face face-front"></div>
-                                        <div class="face face-back"></div>
-                                    </div>
-                                </div>
-                                <div class="shadows-outer-container">
-                                    <div class="shadow-outer"></div>
-                                </div>
-                                <div class="shadows-inner-container">
-                                    <div class="shadow-inner"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <span>프로젝트</span></div>
-                </label>
-            </div>
-            <div class="scroll_animation fade_up">
-                <a href="#"><span></span>스크롤하기</a>
-            </div>
-        </section>
-        <section class="index_scroll_wrap" data-scroll-container>
-            <section class="index_intro">
-                <div class="index_intro_title index_intro_1">
-                    <span>PORTFOLIO</span>
-                    <p class="index_intro_title_txt">
-                        이태호(Tae Lee) | Github @taedonn | FE & ID
-                    </p>
+                    <h2>제품 디자인</h2>
                 </div>
-            </section>
-            <section class="index_insight">
-                <div class="index_insight_1">
-                    <div class="index_insight_txt_wrap">
-                        <div class="index_insight_txt">
-                            <div class="index_insight_2 index_insight_txt_1">
-                                <h2>
-                                    <span>SIMPLE</span>
-                                </h2>
-                                <h3>
-                                    단순함은 궁극적인 정교함.
-                                </h3>
-                                <h4>
-                                    장문의 글을 요약하는 것, 핵심을 하나의 문장으로 설명하는 것과 같이, <br/>
-                                    복잡한 내용을 단순하고 정교하게 만드는 것이 최고의 미덕이라고 생각합니다.
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="index_insight_txt">
-                            <div class="index_insight_2 index_insight_txt_2">
-                                <h2>
-                                    <span>DIFFERENT</span>
-                                </h2>
-                                <h3>
-                                    닮음이 아닌 다름.
-                                </h3>
-                                <h4>
-                                    독특한 개성을 가진 사람만이 갖고 있는 독창적인 <br/>
-                                    감성이 최고의 강점이라고 생각합니다.
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="index_insight_txt">
-                            <div class="index_insight_2 index_insight_txt_3">
-                                <h2>
-                                    <span>PROPOSAL</span>
-                                </h2>
-                                <h3>
-                                    단순하지만 다르게!
-                                </h3>
-                                <h4>
-                                    각자의 역할에 대한 핵심을 파악하고, 단순함을 <br/>
-                                    유지하며, 정교한 서비스를 만드는게 제 목표입니다.
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <canvas id="canvas"></canvas>
-                </div>
-            </section>
-            <section class="index_project" id="indexProject">
-                <div class="index_project_title">
-                    <h2>
-                        Pro<span>jects</span>
-                    </h2>
-                    <h3>
-                        프론트엔드 개발, 제품 디자인 등의 작업을 하고 있습니다.
-                    </h3>
-                    <h4>
-                        <input type="radio" id="project_skill_1" name="project_skill" checked>
-                        <label for="project_skill_1">프론트엔드 개발</label>
-                        <input type="radio" id="project_skill_2" name="project_skill">
-                        <label for="project_skill_2">제품 디자인</label>
-                    </h4>
-                </div>
-                <div class="index_project_1">
-                    <!-- 스크린샷 - PC : 1920X1080 / 모바일 : 500 X 900 -->
-                    <div class="index_project_web"></div>
-                    <div class="index_project_product"></div>
-                </div>
-                <div class="copyright"></div>
-                <script>
-                    document.getElementsByClassName('copyright')[0].innerText += 'Copyright ' + new Date().getFullYear() + '. taedonn, all rights reserved.';
-                    document.getElementsByClassName('copyright')[0].innerHTML += '<a href="https://github.com/taedonn/portfolio" target="_blank">Check this repository on GitHub</a>';
-                </script>
-            </section>
-        </section>
+            </a>
+        </div>
+        <div class="project_list web"></div>
+        <div class="project_list product"></div>
+        <div class="copyright"></div>
+        <script>
+            document.getElementsByClassName('copyright')[0].innerText += 'Copyright ' + new Date().getFullYear() + '. taedonn, all rights reserved.';
+            document.getElementsByClassName('copyright')[0].innerHTML += '<a href="https://github.com/taedonn/portfolio" target="_blank">Check this repository on GitHub</a>';
+        </script>
     </div>
-
-    <!-- GSAP -->
-    <script type="text/javascript" src="./js/gsap/gsap.min.js"></script>
-    <script type="text/javascript" src="./js/gsap/ScrollTrigger.min.js"></script>
-    
-    <!-- three.js -->
-    <script type="module" src="./js/three/three.min.js"></script>
-    <script type="module" src="./js/three/OrbitControls.min.js"></script>
-    <script type="module" src="./js/three/GeometryUtils.js"></script>
-    <script type="module" src="./js/three/three_layout.min.js"></script>
 </body>
 </html>
