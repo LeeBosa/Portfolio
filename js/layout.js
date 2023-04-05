@@ -5,7 +5,6 @@ $(document).ready(function(){
     // 페이지 설정
         // 페이지 분류
         const project = $(".project_wrap"); // 포트폴리오 페이지
-        const skill = $(".skill_wrap"); // 스킬 페이지
 
     // vh값 업데이트 (모바일 주소창 대응)
         var vh = window.innerHeight * 0.01;
@@ -27,9 +26,6 @@ $(document).ready(function(){
 
             // Noto Sans KR
             '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="preload" type="text/css">',
-
-            // Spoqa Han Sans Neo
-            '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/SpoqaHanSansNeo/SpoqaHanSansNeo.css" type="text/css"/>'
         ]
         for (let i = 0; i < fonts.length; i++) { document.getElementsByTagName("head")[0].innerHTML += fonts[i]; }
 
@@ -183,86 +179,8 @@ $(document).ready(function(){
             }
         }
 
-        // 스킬 페이지
-        else if(url.includes("skill.html")) {
-            // Body 태그 배경색 변경
-            $("body").css("background-color","#000");
-
-            // 프로젝트 데이터 연동
-            function init(sheetId, sheetName, divName) {
-                let base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-                let query = encodeURIComponent('Select A,B,C,D,E,F,G');
-                let url = `${base}&sheet=${sheetName}&tq=${query}`;
-                let data = [];
-    
-                fetch(url)
-                    .then(res => res.text())
-                    .then(rep => {
-                        // JSON만 추출
-                        let jsonData = JSON.parse(rep.substring(47).slice(0, -2));
-                        let jsonItem = jsonData.table.rows;
-    
-                        dataInit(divName, jsonItem);
-                    })
-                    .then(() => { // Slick Slider 실행
-                        $("."+divName)
-                        .show()
-                        .slick({
-                            slidesToShow:3,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            arrows: false,
-                            autoplay: true,
-                            autoplayspeed: 200,
-                            responsive: [
-                                {
-                                    breakpoint: 1080,
-                                    settings: {
-                                        slidesToShow: 2,
-                                        autoplay: false
-                                    }
-                                },
-                                {
-                                    breakpoint: 720,
-                                    settings: {
-                                        slidesToShow: 1,
-                                        autoplay: false
-                                    }
-                                }
-                            ]
-                        });
-                    });
-            }
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
-    
-            function dataInit(name, item) { // 데이터 로딩
-                for(let i = item.length-1; i >= 0; i--) { // loop
-                    $("."+name).append(
-                        '<a href="'+item[i].c[6].v+'" target="_blank">'
-                            +'<div class="skill_slide_item">'
-                                +'<img src="'+item[i].c[5].v+'" loading="lazy" alt="skill page '+name+' image '+i+'"/>'
-                            +'</div>'
-                            +'<h2>'+item[i].c[1].v+'</h2>'
-                            +'<h3>'+item[i].c[3].v+'</h3>'
-                            +'<span></span>'
-                        +'</a>'
-                    );
-                }
-            }
-
-            $(window).resize(function() { skill_scrollAnimCheck(); skill_itemMargin(); });
-            $(window).scroll(function() { skill_scrollSetting(); });
-
-            // '스크롤하기' 숨기기
-            skill_scrollAnimCheck();
-
-            // 스크롤하기 숨김 위치 설정
-            skill_scrollSetting();
-
-            // 아이템 마진값 설정
-            skill_itemMargin();
-        }
+        // 연락처 페이지
+        else if (url.includes("contacts.html")) { return; }
 
         // 메인 페이지
         else {
@@ -344,7 +262,6 @@ $(document).ready(function(){
             // 프로젝트 페이지
                 function itemMargin() { // 아이템 마진값 설정
                     vw = project.find(".project_list").width() / 100;
-
                     if(window.innerWidth > 1080) { project.find(".project_item").parent("a").css("margin-bottom",vw * 0.5); }
                     else { project.find(".project_item").parent("a").css("margin-bottom",vw * 2); }
                 }
@@ -354,25 +271,5 @@ $(document).ready(function(){
                     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                     results = regex.exec(location.search);
                     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-                }
-
-            // 스킬 페이지
-                function skill_scrollAnimCheck() { // '스크롤하기' 숨기기
-                    if(window.innerWidth > 1080) { $(".scroll_animation").show(); }
-                    else { $(".scroll_animation").hide(); }
-                }
-
-                function skill_scrollSetting() { // 스크롤하기 숨김 위치 설정
-                    scrollTop = $(window).scrollTop();
-                    
-                    if(scrollTop <= 0) { skill.find(".scroll_animation").removeClass("hide"); } // 맨위
-                    else { skill.find(".scroll_animation").addClass("hide"); } // 맨위가 아닐 때
-                }
-
-                function skill_itemMargin() { // 아이템 마진값 설정
-                    vw = skill.find(".skill_list").width() / 100;
-    
-                    if(window.innerWidth > 1080) { skill.find(".skill_web_box").css("margin-bottom",vw * 1.25); }
-                    else { skill.find(".skill_web_box").css("margin-bottom",vw * 2.5); }
                 }
 });
