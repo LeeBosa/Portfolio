@@ -721,9 +721,6 @@ header h1 svg {
     letter-spacing: 0.5px;
     color: #fff;
 }
-.contacts_wrap .bg_profile_txt h4:first-of-type {
-    margin-bottom: 24px;
-}
 .contacts_wrap .bg_profile_txt h4:last-of-type {
     margin-top: 40px;
 }
