@@ -32,4 +32,4 @@ Tae Lee | GitHub @ taedonn | FE & ID
 
 바로가기 : https://portfolio.taedonn.com/sub/contacts.html
 
-이메일 : grandsky95@hotmail.com
+이메일 : taedonn@outlook.com
