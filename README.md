@@ -6,7 +6,9 @@ Live Demo : [https://portfolio.taedonn.com](https://portfolio.taedonn.com)
 
 &nbsp;
 
-Tae Lee | GitHub @ taedonn | FE & ID
+Tae Lee | GitHub @taedonn
+
+Front-End Developer
 
 > I'm a front-end developer residing in Seoul, South Korea. I've always had vast interest in web development and engineering, but as an alumnus of OCAD University with a major of industrial design, it was a big challenge for me to move away from my major and explore different field. I'm a type of person who doesn't regret the past, so now I'm just ready to move on and keep on developing!
 
