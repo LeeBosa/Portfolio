@@ -1,27 +1,36 @@
 <template>
-    <div class="root">
-        <HelloWorld msg="Welcome to Your Vue.js"/>
+    <div id="app">
+        <HeaderPage/>
     </div>
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld.vue'
+    import HeaderPage from './components/HeaderPage.vue'
 
     export default {
         name: 'App',
         components: {
-            HelloWorld
+            HeaderPage
         }
     }
 </script>
 
 <style>
+    /* 리셋 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
+        font-family: "Spoqa Han Sans Neo";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: -0.4px;
+        word-break: keep-all;
+        color: #333333;
+        scroll-behavior: smooth;
     }
 </style>
