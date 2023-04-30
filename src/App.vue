@@ -1,16 +1,17 @@
 <template>
     <div id="app">
         <HeaderPage/>
+        <router-view/>
     </div>
 </template>
 
 <script>
-    import HeaderPage from './components/HeaderPage.vue'
+    import HeaderPage from './components/HeaderPage.vue';
 
     export default {
         name: 'App',
         components: {
-            HeaderPage
+            HeaderPage,
         }
     }
 </script>
@@ -21,6 +22,10 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     #app {

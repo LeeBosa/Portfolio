@@ -61,7 +61,6 @@
         width: 180px;
         height: 100%;
         display: block;
-        text-decoration: none;
         font-size: 14px;
         font-weight: 400;
         letter-spacing: 1px;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <!-- 기본 구조 -->
+    <link rel="icon" href="../img/logo_favicon.svg"/>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+<body>
+    <div id="wrap" class="project_wrap">
+        <div class="nav">
+            <a class="nav_web" href="/index.html?pageType=1">
+                <div class="nav_txt">
+                    <div class="svg_wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                        </svg>
+                    </div>
+                    <h2>프론트엔드 개발</h2>
+                </div>
+            </a>
+            <a class="nav_product" href="/index.html?pageType=2">
+                <div class="nav_txt">
+                    <div class="svg_wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
+                            <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                        </svg>
+                    </div>
+                    <h2>제품 디자인</h2>
+                </div>
+            </a>
+        </div>
+        <div class="project_list web"></div>
+        <div class="project_list product"></div>
+        <div class="copyright"></div>
+        <script>
+            document.getElementsByClassName('copyright')[0].innerText += 'Copyright ' + new Date().getFullYear() + '. taedonn, all rights reserved.';
+            document.getElementsByClassName('copyright')[0].innerHTML += '<a href="https://github.com/taedonn/portfolio" target="_blank">Check this repository on GitHub</a>';
+        </script>
+    </div>
+</body>
+</html>

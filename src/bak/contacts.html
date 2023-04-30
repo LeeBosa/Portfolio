@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <!-- 기본 구조 -->
+    <link rel="icon" href="../img/logo_favicon.svg"/>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+<body>
+    <script type="text/javascript">
+        function resize(obj){
+            obj.style.height = "1px";
+            obj.style.height = (2+obj.scrollHeight)+"px";
+        }
+    </script>
+    <div id="wrap" class="contacts_wrap">
+        <div class="bg">
+            <div class="img">
+                <div class="img_color"></div>
+                <img src="https://i.ibb.co/3Fd8vS0/bg-contacts.jpg" alt="연락처 배경이미지"/>
+                <div class="img_copyright"></div>
+                <script>
+                    document.getElementsByClassName('img_copyright')[0].innerText += '© ' + new Date().getFullYear() + ' eberhard grossgasteiger, Pexels'
+                </script>
+            </div>
+            <div class="bg_wrap">
+                <div class="bg_profile">
+                    <div class="bg_profile_txt">
+                        <h3>이태호<span class="line"></span><span class="en">TAE HO LEE</span></h3>
+                        <h4>
+                            E-MAIL :
+                            <p>taedonn@outlook.com</p>
+                        </h4>
+                        <h4>
+                            <p>
+                                <a href="https://github.com/taedonn" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://taedonn.tistory.com" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459"><g><path d="M229.5,0C102.75,0,0,102.75,0,229.5S102.75,459,229.5,459,459,356.25,459,229.5,356.25,0,229.5,0ZM130.21,191.45a39.57,39.57,0,1,1,39.56-39.57A39.58,39.58,0,0,1,130.21,191.45ZM229.5,390a39.56,39.56,0,1,1,39.56-39.56A39.56,39.56,0,0,1,229.5,390Zm0-99.29a39.56,39.56,0,1,1,39.56-39.56A39.56,39.56,0,0,1,229.5,290.74Zm0-99.29a39.57,39.57,0,1,1,39.56-39.57A39.57,39.57,0,0,1,229.5,191.45Zm99.29,0a39.57,39.57,0,1,1,39.57-39.57A39.57,39.57,0,0,1,328.79,191.45Z"/></g></svg>
+                                </a>
+                            </p>
+                        </h4>
+                    </div>
+                </div>
+                <form class="bg_txt gform" method="post" action="https://script.google.com/macros/s/AKfycbypVBkBaOgyw7W0khmi1tEB_3ZYurQ8r5r6ERU0Ol6XAax7_VP-ykFxdX-i07nmHc7nmQ/exec">
+                    <h2>문의하기</h2>
+                    <fieldset>
+                        <ul>
+                            <li>
+                                <input id="contacts_name" type="text" name="name" placeholder="이름"/>
+                            </li>
+                            <li>
+                                <input id="contacts_phone" type="text" name="phone" placeholder="핸드폰"/>
+                            </li>
+                            <li>
+                                <input id="contacts_email" type="text" name="email" placeholder="이메일"/>
+                            </li>
+                            <li>
+                                <textarea maxlength="500" rows="1" onkeydown="resize(this)" onkeyup="resize(this)" name="message" placeholder="남기실 말"></textarea>
+                            </li>
+                        </ul>
+                        <button class="contacts_submit" type="submit">문의하기</button>
+                    </fieldset>
+                    <div class="thankyou_message">
+                        <div class="thankyou_message_txt">
+                            <span>
+                                문의해주셔서 감사합니다.<br/>
+                                빠른 시일 내에 연락드리겠습니다.
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="copyright"></div>
+            <script>
+                document.getElementsByClassName('copyright')[0].innerText += 'Copyright ' + new Date().getFullYear() + '. taedonn, all rights reserved.';
+                document.getElementsByClassName('copyright')[0].innerHTML += '<a href="https://github.com/taedonn/portfolio" target="_blank">Check this repository on GitHub</a>';
+            </script>
+        </div>
+    </div>
+    <!-- Form Submission Handler -->
+    <script data-cfasync="false" type="text/javascript" src="../js/form_submission_handler.js"></script>
+</body>
+</html>

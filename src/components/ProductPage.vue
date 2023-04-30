@@ -1,7 +1,7 @@
 <template>
     <div class="main">
         <MainPageNav/>
-        <div class="project_list web"></div>
+        <div class="project_list product"></div>
         <div class="copyright">
             {{'Copyright ' + new Date().getFullYear() + '. taedonn, all rights reserved.'}}
             <a href="https://github.com/taedonn/portfolio" target="_blank">Check this repository on GitHub</a>
@@ -18,7 +18,7 @@
             MainPageNav
         },
         created() {
-            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','web_design', 'web');
+            init('1sHnd5DHJK1yI5YiPhJwPzL5VKDxGdtdLe4O8MTrHoo4','product_design', 'product');
         }
     }
 
