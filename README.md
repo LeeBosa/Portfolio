@@ -2,7 +2,7 @@
 
 Live Demo : [https://portfolio.taedonn.com](https://portfolio.taedonn.com)
 
-[![GSAP Version](https://img.shields.io/badge/featured%20on-GSAP%20%403.9.1-%2388ce02)](#) [![Three.js Version](https://img.shields.io/badge/featured%20on-Three%20%400.122.0-%233388ff)](#)
+[![Vue Version](https://img.shields.io/badge/featured%20on-Vue%20%403.2.13-%2341B883)](#)
 
 &nbsp;
 
