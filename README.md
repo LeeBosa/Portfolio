@@ -22,9 +22,9 @@ Front-End Developer
 
 ## 프로젝트 바로가기 :
 
-프론트엔드 개발 : https://portfolio.taedonn.com/index.html?pageType=1
+프론트엔드 개발 : https://portfolio.taedonn.com/main/web
 
-제품 디자인 : https://portfolio.taedonn.com/index.html?pageType=2
+제품 디자인 : https://portfolio.taedonn.com/main/product
 
 이력서 : https://resume.taedonn.com
 
@@ -32,6 +32,6 @@ Front-End Developer
 
 ## 연락처 바로가기 :
 
-바로가기 : https://portfolio.taedonn.com/sub/contacts.html
+바로가기 : https://portfolio.taedonn.com/contacts
 
 이메일 : taedonn@outlook.com
