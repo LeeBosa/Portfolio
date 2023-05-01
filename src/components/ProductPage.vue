@@ -44,7 +44,7 @@
     function load(name, item) {
         for(let i = item.length-1; i >= 0; i--) { // loop
             document.getElementsByClassName(name)[0].innerHTML += 
-                `<a class="project_item_wrap" href="` + item[i].c[6].v + `" target="_blank">
+                `<div class="project_item_wrap" href="` + item[i].c[6].v + `" target="_blank">
                     <div class="project_item">
                         <div class="project_img">
                             <img src="` + item[i].c[5].v + `" alt="project ` + name + ` image ` + i + `"/>
@@ -55,7 +55,7 @@
                             <span></span>
                         </div>
                     </div>
-                </a>`
+                </div>`
         }
 
         // 데이터가 홀수일 때 빈 박스 추가
