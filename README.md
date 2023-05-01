@@ -26,7 +26,6 @@ Front-End Developer
 
 제품 디자인 : https://portfolio.taedonn.com/main/product
 
-이력서 : https://resume.taedonn.com
 
 &nbsp;
 
