@@ -35,7 +35,31 @@
         line-height: 1.5;
         letter-spacing: -0.4px;
         word-break: keep-all;
-        color: #333333;
+        color: #333;
         scroll-behavior: smooth;
+    }
+
+    body.hidden {
+        height: 100%;
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    /* 스크롤바 */
+    body::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: #555;
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+        background-color: #777;
+    }
+
+    body::-webkit-scrollbar-track {
+        background-color: #333;
     }
 </style>

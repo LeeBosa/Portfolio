@@ -13,7 +13,7 @@
     import MainPageNav from './MainPageNav.vue'
 
     export default {
-        name: 'MainPage',
+        name: 'ProductPage',
         components: {
             MainPageNav
         },
@@ -59,106 +59,12 @@
         }
 
         // 데이터가 홀수일 때 빈 박스 추가
-        if (item.length % 2 === 0) { document.getElementsByClassName(name)[0].innerHTML += '<a class="project_item_wrap"></a>'; }
+        if (item.length % 2 === 0) { document.getElementsByClassName(name)[0].innerHTML += '<a class="project_item_wrap project_item_wrap_empty"></a>'; }
     }
 </script>
 
-<style>
-    .project_list {
-        width: 100%;
-        padding: 20px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: stretch;
-    }
-    .project_list .project_item_wrap {
-        width: calc(33.3% - 5px);
-        display: block;
-        margin-top: 10px;
-        color: #3A3A3A;
-    }
-    .project_list .project_item_wrap:nth-of-type(1) { margin-top: 0; }
-    .project_list .project_item_wrap:nth-of-type(2) { margin-top: 0; }
-    .project_list .project_item_wrap:nth-of-type(3) { margin-top: 0; }
-    .project_item {
-        width: 100%;
-        height: 100%;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        overflow: hidden;
-        background-color: #F9F9F9;
-    }
-    .project_img {
-        width: 100%;
-        height: 340px;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .project_img img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
-        transition: 0.4s;
-    }
-    .project_txt {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .project_txt h2 {
-        font-size: 24px;
-        font-weight: 500;
-        margin-bottom: 4px;
-    }
-    .project_txt h3 {
-        font-size: 16px;
-        font-weight: 300;
-        color: #999;
-        padding-bottom: 0px;
-        margin-bottom: 12px;
-    }
-    .project_txt span {
-        display: block;
-        width: 10%;
-        height: 1px;
-        background-color: #bbb;
-        transition: 0.4s;
-    }
-    @media (hover: hover) and (pointer: fine) {
-        .project_item:hover img {
-            transform: scale(1.025);
-        }
-        .project_item:hover .project_txt span {
-            width: 100%;
-        }
-    }
-
-    /* Copyright */
-    .copyright {
-        width: 100%;
-        padding: 32px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 14px;
-        letter-spacing: 0;
-        color: rgba(0, 0, 0, 0.6);
-    }
-    .copyright a {
-        display: inline-block;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-        color: rgba(0, 0, 0, 0.6);
+<style scoped>
+    .product .project_img img {
+        width: 80%;
     }
 </style>
