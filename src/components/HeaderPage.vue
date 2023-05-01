@@ -2,8 +2,8 @@
     <header>
         <div class="header">
             <nav class="gnb">
-                <router-link to="/" class="gnb_menu">프로젝트</router-link>
-                <router-link to="/contacts" class="gnb_menu">문의하기</router-link>
+                <a class="gnb_menu" href="/">프로젝트</a>
+                <a class="gnb_menu" href="/contacts">문의하기</a>
                 <a class="gnb_menu" href="https://github.com/taedonn" target="_blank">깃허브</a>
                 <a class="gnb_menu" href="https://resume.taedonn.com" target="_blank">이력서</a>
                 <a class="gnb_menu" href="https://taedonn.tistory.com" target="_blank">블로그</a>
@@ -18,23 +18,23 @@
                     </label>
                     <div class="gnb_menu_m_wrap">
                         <div class="gnb_menu_m">
-                            <h2><router-link to="/" v-on:click="handleGnbMenuClick">프로젝트</router-link></h2>
+                            <h2><a href="/">프로젝트</a></h2>
                             <span></span>
                         </div>
                         <div class="gnb_menu_m">
-                            <h2><router-link to="/contacts" v-on:click="handleGnbMenuClick">문의하기</router-link></h2>
+                            <h2><a href="/contacts">문의하기</a></h2>
                             <span></span>
                         </div>
                         <div class="gnb_menu_m">
-                            <h2><a href="https://github.com/taedonn" v-on:click="handleGnbMenuClick" target="_blank">깃허브</a></h2>
+                            <h2><a href="https://github.com/taedonn" target="_blank">깃허브</a></h2>
                             <span></span>
                         </div>
                         <div class="gnb_menu_m">
-                            <h2><a href="https://resume.taedonn.com" v-on:click="handleGnbMenuClick" target="_blank">이력서</a></h2>
+                            <h2><a href="https://resume.taedonn.com" target="_blank">이력서</a></h2>
                             <span></span>
                         </div>
                         <div class="gnb_menu_m">
-                            <h2><a href="https://taedonn.tistory.com" v-on:click="handleGnbMenuClick" target="_blank">블로그</a></h2>
+                            <h2><a href="https://taedonn.tistory.com" target="_blank">블로그</a></h2>
                             <span></span>
                         </div>
                     </div>
@@ -67,14 +67,6 @@
                     document.getElementsByClassName("gnb_menu_m_wrap")[0].classList.remove("checked");
                 }
             },
-
-            // 모바일 헤더 GNB 메뉴 클릭 이벤트
-            handleGnbMenuClick: function() {
-                window.scrollTo(0,0);
-                document.getElementById("gnb_btn").checked = false;
-                document.body.classList.remove("hidden");
-                document.getElementsByClassName("gnb_menu_m_wrap")[0].classList.remove("checked");
-            }
         }
     }
 

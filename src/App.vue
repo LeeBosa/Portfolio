@@ -12,7 +12,15 @@
         name: 'App',
         components: {
             HeaderPage,
+        },
+        created() {
+            loadFonts()
         }
+    }
+
+    const fonts = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/SpoqaHanSansNeo/SpoqaHanSansNeo.css" type="text/css"/>'
+    function loadFonts () {
+        document.head.innerHTML += fonts;
     }
 </script>
 
@@ -26,6 +34,23 @@
 
     a {
         text-decoration: none;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
     }
 
     #app {

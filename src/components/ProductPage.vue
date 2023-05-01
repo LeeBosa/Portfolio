@@ -63,8 +63,8 @@
     }
 </script>
 
-<style scoped>
-    .product .project_img img {
+<style>
+    .project_list.product .project_img img {
         width: 80%;
     }
 </style>
