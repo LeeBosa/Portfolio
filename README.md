@@ -22,9 +22,9 @@ Front-End Developer
 
 ## 프로젝트 바로가기 :
 
-프론트엔드 개발 : https://portfolio.taedonn.com/main/web
+프론트엔드 개발 : https://portfolio.taedonn.com/web
 
-제품 디자인 : https://portfolio.taedonn.com/main/product
+제품 디자인 : https://portfolio.taedonn.com/product
 
 
 &nbsp;
