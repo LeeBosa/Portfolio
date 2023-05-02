@@ -67,6 +67,15 @@
                     document.getElementsByClassName("gnb_menu_m_wrap")[0].classList.remove("checked");
                 }
             },
+
+            // 페이지 나가기 전에 gnb 버튼 체크 해제
+            unLoadEvent: function () {
+                document.getElementById("gnb_btn").checked = false;
+            },
+        },
+        mounted() {
+            // 페이지 나가기 전에 gnb 버튼 체크 해제
+            window.addEventListener('beforeunload', this.unLoadEvent);
         }
     }
 
