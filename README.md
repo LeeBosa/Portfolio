@@ -14,7 +14,7 @@ Front-End Developer
 
 &nbsp;
 
-## Simple, but different!
+## Simple, but different! 
 
 역할에 대한 핵심을 파악하고, 단순함을 유지하며, 정교한 서비스를 만드는게 제 목표입니다.
 
