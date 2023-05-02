@@ -70,7 +70,9 @@
 
             // 페이지 나가기 전에 gnb 버튼 체크 해제
             unLoadEvent: function () {
+                document.body.classList.remove("hidden");
                 document.getElementById("gnb_btn").checked = false;
+                document.getElementsByClassName("gnb_menu_m_wrap")[0].classList.remove("checked");
             },
         },
         mounted() {
