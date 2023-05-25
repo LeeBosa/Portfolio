@@ -11,7 +11,7 @@ const Index = ({params}: any) => {
 export async function getStaticProps(ctx: any) {
     try {
         return {
-            props: {
+            props: { 
                 
             }
         }
