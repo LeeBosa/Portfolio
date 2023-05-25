@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+Live Demo : [https://portfolio.taedonn.com](https://portfolio.taedonn.com)
 
-First, run the development server:
+[![Vue Version](https://img.shields.io/badge/featured%20on-Vue%20%403.2.13-%2341B883)](#)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+&nbsp;
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tae Lee | GitHub @taedonn
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Front-End Developer
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+> I'm a front-end developer residing in Seoul, South Korea. I've always had vast interest in web development and engineering, but as an alumnus of OCAD University with a major of industrial design, it was a big challenge for me to move away from my major and explore different field. I'm a type of person who doesn't regret the past, so now I'm just ready to move on and keep on developing!
 
-## Learn More
+&nbsp;
 
-To learn more about Next.js, take a look at the following resources:
+## Simple, but different! 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+역할에 대한 핵심을 파악하고, 단순함을 유지하며, 정교한 서비스를 만드는게 제 목표입니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+&nbsp;
 
-## Deploy on Vercel
+## 프로젝트 바로가기 :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+프론트엔드 개발 : https://portfolio.taedonn.com/web
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+제품 디자인 : https://portfolio.taedonn.com/product
+
+
+&nbsp;
+
+## 연락처 바로가기 :
+
+바로가기 : https://portfolio.taedonn.com/contacts
+
+이메일 : taedonn@outlook.com
