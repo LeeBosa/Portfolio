@@ -1,4 +1,5 @@
 // 훅
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 
 // 컴포넌트
@@ -15,84 +16,84 @@ export default function Product () {
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">UD CHAIR V2</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">DIY Furniture Project - Chair</p>
                     </div>
-                    <img src="/product-ud-chair-2.png" alt="UD 의자 2" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-ud-chair-2.png" alt="UD 의자 2" width="400" height="400" className="h-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">UD CHAIR V1</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">DIY Furniture Project - Chair</p>
                     </div>
-                    <img src="/product-ud-chair-1.png" alt="UD 의자 1" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-ud-chair-1.png" alt="UD 의자 1" width="400" height="400" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">STACK UP - TABLE</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">DIY Furniture Project - Table</p>
                     </div>
-                    <img src="/product-stack-table.png" alt="스택업 - 책상" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-stack-table.png" alt="스택업 - 책상" width="400" height="400" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">STACK UP - STOOL</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">DIY Furniture Project - Stool</p>
                     </div>
-                    <img src="/product-stack-stool.png" alt="스택업 - 의자" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-stack-stool.png" alt="스택업 - 의자" width="400" height="400" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
-                        <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">SLIDE'M</p>
+                        <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">SLIDE&#39;M</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">DIY Furniture Project - Desk</p>
                     </div>
-                    <img src="/product-slide-m.png" alt="슬라이뎀" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-slide-m.png" alt="슬라이뎀" width="400" height="400" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">PATH</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">DIY Furniture Project - Shelf</p>
                     </div>
-                    <img src="/product-shelf.png" alt="패스" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-shelf.png" alt="패스" width="400" height="400" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">CUSTABLE</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">DIY Furniture Project - Table</p>
                     </div>
-                    <img src="/product-custable.png" alt="커스터블" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-custable.png" alt="커스터블" width="400" height="400" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">FORMATT</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">DIY Furniture Project - Mattress</p>
                     </div>
-                    <img src="/product-formatt.png" alt="포멧" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-formatt.png" alt="포멧" width="400" height="400" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">COSMO</p>
-                        <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">Johnson Controls' Smart Home Assistant</p>
+                        <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent text-center font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">Johnson Controls&#39; Smart Home Assistant</p>
                     </div>
-                    <img src="/product-cosmo.png" alt="코스모" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-cosmo.png" alt="코스모" width="400" height="400" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent text-center font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">CARDBOARD LIGHT</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">Cardboard Upcycling Project V3</p>
                     </div>
-                    <img src="/product-cardboard-light.png" alt="카드보드 샹들리에" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-cardboard-light.png" width="400" height="400" alt="카드보드 샹들리에" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent text-center font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">CARDBOARD TABLE</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">Cardboard Upcycling Project V2</p>
                     </div>
-                    <img src="/product-cardboard-table.png" alt="카드보드 책상" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-cardboard-table.png" width="400" height="400" alt="카드보드 책상" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
                         <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent text-center font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">CARDBOARD CHAIR</p>
                         <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">Cardboard Upcycling Project V1</p>
                     </div>
-                    <img src="/product-cardboard-chair.png" alt="카드보드 의자" className="h-[80%] max-w-[80%] object-contain"/>
+                    <Image src="/product-cardboard-chair.png" width="400" height="400" alt="카드보드 의자" className="h-[80%] max-w-[80%] object-contain"/>
                 </div>
                 <div className="w-[calc(25%-12px)]"></div>
                 <div className="w-[calc(25%-12px)]"></div>
