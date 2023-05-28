@@ -23,18 +23,16 @@ button {
     background-color: transparent;
 }
 
-/* 스크롤바 */
-body::-webkit-scrollbar {
-    width: 16px;
+.portfolio .portfolio-box:nth-of-type(1), 
+.portfolio .portfolio-box:nth-of-type(2), 
+.portfolio .portfolio-box:nth-of-type(3), 
+.portfolio .portfolio-box:nth-of-type(4) { margin-top: 0; }
+@media screen and (max-width: 1024px) {
+    .portfolio .portfolio-box:nth-of-type(3),
+    .portfolio .portfolio-box:nth-of-type(4) { margin-top: 16px; }
 }
-body::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: #4C4D50;
-}
-body::-webkit-scrollbar-thumb:hover {
-    border-radius: 8px;
-    background-color: #646568;
-}
-body::-webkit-scrollbar-track {
-    background-color: #35363A;
+@media screen and (max-width: 640px) {
+    .portfolio .portfolio-box:nth-of-type(2),
+    .portfolio .portfolio-box:nth-of-type(3),
+    .portfolio .portfolio-box:nth-of-type(4) { margin-top: 12px; }
 }
