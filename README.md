@@ -18,14 +18,14 @@
 
 &nbsp;
 
-## 깃허브 프로젝트
-
-깃허브 프로젝트 방문하기 : https://github.com/portfolio
-
-&nbsp;
-
 ## 개발 모토
 
 역할에 대한 핵심을 파악하고, 단순함을 유지하며, 정교한 서비스를 만드는게 제 목표입니다.
+
+&nbsp;
+
+## 소개
+
+I'm a front-end developer residing in Seoul, South Korea. I've always had vast interest in web development and engineering, but as an alumnus of OCAD University with a major of industrial design, it was a big challenge for me to move away from my major and explore different field. I'm a type of person who doesn't regret the past, so now I'm just ready to move on and keep on developing!
 
 &nbsp;
