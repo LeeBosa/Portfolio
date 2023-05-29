@@ -1,5 +1,3 @@
-// 훅
-
 export default function Header ({theme}:{theme:string}) {
     return (
         <>
