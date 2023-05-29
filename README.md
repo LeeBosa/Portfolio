@@ -1,36 +1,31 @@
-# Portfolio
-
-Live Demo : [https://portfolio.taedonn.com](https://portfolio.taedonn.com)
-
-[![Vue Version](https://img.shields.io/badge/featured%20on-Vue%20%403.2.13-%2341B883)](#)
-
-&nbsp;
-
-Tae Lee | GitHub @taedonn
-
-Front-End Developer
-
-> I'm a front-end developer residing in Seoul, South Korea. I've always had vast interest in web development and engineering, but as an alumnus of OCAD University with a major of industrial design, it was a big challenge for me to move away from my major and explore different field. I'm a type of person who doesn't regret the past, so now I'm just ready to move on and keep on developing!
+<p align="center">
+  <a href="https://fonts.taedonn.com">
+      <img src="./public/logo.png" height="120">
+      <h1 align="center">Fonts Archive</h1>
+  </a>
+  <p align="center">
+    <img src="https://img.shields.io/badge/Made%20with-Next.js%20%4013.4.1-%23202124"/>
+    <img src="https://img.shields.io/badge/Built%20on-Node%20%4016.13.2-%2337873A"/>
+    <img src="https://img.shields.io/badge/Protected%20under-GPL%20v3.0-blue"/>
+  </p>
+</p>
 
 &nbsp;
 
-## Simple, but different! 
+## 라이브 서버
 
-역할에 대한 핵심을 파악하고, 단순함을 유지하며, 정교한 서비스를 만드는게 제 목표입니다.
-
-&nbsp;
-
-## 프로젝트 바로가기 :
-
-프론트엔드 개발 : https://portfolio.taedonn.com/web
-
-제품 디자인 : https://portfolio.taedonn.com/product
-
+웹사이트 방문하기 : https://fonts.taedonn.com
 
 &nbsp;
 
-## 연락처 바로가기 :
+## 깃허브 프로젝트
 
-바로가기 : https://portfolio.taedonn.com/contacts
+깃허브 프로젝트 방문하기 : https://github.com/fonts-archive
 
-이메일 : taedonn@outlook.com
+&nbsp;
+
+## 개발 목적
+
+폰트 아카이브는 상업용 무료 한글 폰트를 아카이빙하기위해 제작한 웹사이트입니다. 이 프로젝트는 한글 폰트를 아카이빙한 웹사이트 중 Google Fonts처럼 웹 임베딩에 최적화된 서비스가 없다는 생각이 들어서, 웹 임베딩에 최적화된 서비스 개발을 목적으로 시작한 프로젝트입니다. 이 프로젝트에 저장된 모든 폰트들은 상업적/개인적 목적으로 사용이 허가된 폰트들이지만, 폰트 별 사용 범위는 폰트 제작사의 규정에 따라 다를 수 있기 때문에, 따로 라이센스 허가 범위를 표기한 테이블과 라이센스 본문을 폰트별로 기재해 놓았습니다.
+
+&nbsp;
