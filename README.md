@@ -26,8 +26,8 @@
 
 ## 소개
 
-저는 서울에 거주하는 프론트엔드 개발자입니다. 사용자 경험을 개선하고 직관적인 인터페이스를 구축하는 것을 목표로 웹 개발에 정진하고 있고, Vue, React, Next.js, RestAPI 등 여러가지 프론트엔드 언어를 활용하여 웹 사이트와 웹 애플리케이션을 구축한 경험이 있습니다. 또, 최신 프론트엔드 프레임워크와 도구들에 대한 지속적인 학습과 개발 트렌드에 대한 관심을 가지고 있고, 하루하루 공부한 부분을 기록하기 위한 블로그도 운영하고 있습니다.
+저는 서울에 거주하는 프론트엔드 개발자입니다. 사용자 경험을 개선하고 직관적인 인터페이스를 구축하는 것을 목표로 웹 개발에 정진하고 있고, 하루하루 공부한 부분을 기록하기 위한 블로그도 운영하고 있습니다.
 
-I am a front-end developer residing in Seoul, South Korea. My goal is to enhance user experience and build intuitive interfaces. I am dedicated to web development and have experience building websites and web applications using various front-end languages such as Vue, React, Next.js, and RestAPI. I also keep myself updated with the latest front-end frameworks and tools, and I have a keen interest in following the trends in the development industry. Additionally, I maintain a blog to document my daily learning and growth.
+I am a front-end developer based in Seoul, South Korea. My focus is on improving user experience and creating intuitive interfaces through web development. I am dedicated to continuous learning and strive to enhance my skills on a daily basis. In order to document my progress and the things I learn each day, I also maintain a blog.
 
 &nbsp;
