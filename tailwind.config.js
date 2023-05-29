@@ -17,6 +17,7 @@ module.exports = {
                 "transparent": "transparent",
                 "theme-white-1": "#FFFFFF",
                 "theme-white-2": "#F9F9F9",
+                "theme-white-3": "#E9EAEE",
                 "theme-dark-1": "#000000",
                 "theme-dark-2": "#202124",
                 "theme-jejuair": "#F15A22"

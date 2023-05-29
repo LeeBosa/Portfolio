@@ -10,6 +10,7 @@ const queryClient = new QueryClient();
 
 // 스타일
 import '../styles/globals.css';
+import '../styles/spinner.css';
 
 export default function App({ Component, pageProps }: AppProps) {
     return (

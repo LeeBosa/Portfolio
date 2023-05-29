@@ -1,10 +1,18 @@
 // 컴포넌트
 import Header from "@/components/Header";
+import Spinner from "@/components/Spinner";
 
 export default function Index () {
     return (
         <>
-            <Header/>
+            <Header theme={"dark"}/>
+            <div className="w-[100%] h-[100vh] relative pt-[120px] tlg:pt-[100px] tsm:pt-[80px] bg-theme-dark-1">
+                <span className="square-spinner"></span>
+                <span className="circle-spinner"></span>
+                <span className="code-spinner"></span>
+                <span className="bar-spinner"></span>
+                <Spinner/>
+            </div>
         </>
     );
 }

@@ -9,7 +9,7 @@ export default function Product () {
     return (
         <>
             <NextSeo title={"T A E D O N N · 제품 디자인"}/>
-            <Header/>
+            <Header theme={"light"}/>
             <div className="portfolio w-[100%] flex flex-row flex-wrap justify-between items-start pt-[120px] tlg:pt-[100px] tsm:pt-[80px] pb-[60px] tlg:pb-[48px] tsm:pb-[24px] px-[60px] tlg:px-[48px] tsm:px-[24px]">
                 <div className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group cursor-pointer">
                     <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
