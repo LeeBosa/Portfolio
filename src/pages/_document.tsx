@@ -9,9 +9,6 @@ class MyDocument extends Document {
             <Html lang="ko">
                 <Head>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/SUIT/SUIT.css" type="text/css"/>
-
-                    {/* Google AdSense Script */}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819549426971576" crossOrigin="anonymous"></script>
                 </Head>
                 <body style={{fontFamily: "SUIT"}}>
                     <Main/>
