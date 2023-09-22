@@ -14,6 +14,11 @@ export default function WebDev () {
             img: "/web-nextjs-aws-test.png"
         },
         {
+            name: "TISTORY HELLO CUSTOM SKIN",
+            url: "https://taedonn.tistory.com",
+            img: "/web-tistory-hello-custom-skin.png"
+        },
+        {
             name: "FONTS ARCHIVE",
             url: "https://fonts.taedonn.com",
             img: "/web-fonts-archive.png"
@@ -59,7 +64,7 @@ export default function WebDev () {
         <>
             <NextSeo title={"T A E D O N N · 웹 개발"}/>
             <Header theme={"light"}/>
-            <div className="portfolio w-[100%] flex flex-row flex-wrap justify-between items-start pt-[100px] tlg:pt-[80px] pb-[60px] tlg:pb-[48px] tsm:pb-[24px] px-[60px] tlg:px-[48px] tsm:px-[24px]">
+            <div className="portfolio w-[100%] flex flex-row flex-wrap justify-between items-start pt-[100px] tlg:pt-[80px] tsm:pt-[60px] pb-[60px] tlg:pb-[48px] tsm:pb-[24px] px-[60px] tlg:px-[48px] tsm:px-[24px]">
                 {
                     data.map((dataMap: any) => {
                         return (
