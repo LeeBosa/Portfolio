@@ -14,15 +14,15 @@
 
 ## Intro
 
-A simple next.js project to display and showcase my web development stacks.
+A simple next.js project to display and showcase my development stacks.
 
 Visit website: https://taedonn.com
 
 &nbsp;
 
-## Dev goal
+## Goal
 
-Welcome to my front-end developer portfolio website! Here, you'll find a showcase of my passion for creating engaging and user-friendly web experiences. Explore my projects and discover how I transform concepts into digital reality. Join me on this creative journey and let's build the future of the web together.
+Explore my projects and discover how I transform concepts into digital reality. Join me on this creative journey and let's build the future of the web together!
 
 &nbsp;
 
