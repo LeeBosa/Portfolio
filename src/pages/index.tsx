@@ -6,7 +6,7 @@ export default function Index () {
     return (
         <>
             <Header theme={"dark"}/>
-            <div className="w-[100%] h-[100vh] relative pt-[120px] tlg:pt-[100px] tsm:pt-[80px] bg-theme-dark-1">
+            <div className="w-[100%] h-[100vh] relative pt-[120px] tlg:pt-[100px] tsm:pt-[80px] bg-theme-11">
                 <span className="square-spinner"></span>
                 <span className="circle-spinner"></span>
                 <span className="code-spinner"></span>

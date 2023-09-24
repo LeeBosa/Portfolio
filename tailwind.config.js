@@ -15,12 +15,19 @@ module.exports = {
             },
             colors: {
                 "transparent": "transparent",
-                "theme-white-1": "#FFFFFF",
-                "theme-white-2": "#F9F9F9",
-                "theme-white-3": "#E9EAEE",
-                "theme-dark-1": "#000000",
-                "theme-dark-2": "#202124",
-                "theme-jejuair": "#F15A22"
+                "theme-1": "#FFFFFF",
+                "theme-2": "#F9F9F9",
+                "theme-3": "#E9EAEE",
+                "theme-4": "#DCE0E4",
+                "theme-5": "#CCD1D7",
+                "theme-6": "#B7BDC3",
+                "theme-7": "#9FA4AA",
+                "theme-8": "#878B90",
+                "theme-9": "#63666A",
+                "theme-9": "#3A3A3A",
+                "theme-10": "#202020",
+                "theme-11": "#000000",
+                "theme-blue": "#2F81F7"
             },
             width: {
                 "content": "max-content"

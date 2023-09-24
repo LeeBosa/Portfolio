@@ -6,59 +6,11 @@ import { NextSeo } from "next-seo";
 // 컴포넌트
 import Header from "@/components/Header";
 
-export default function WebDev () {
-    const data: any = [
-        {
-            name: "NEXTJS AWS TEST",
-            url: "https://nextjs-aws-test.vercel.app",
-            img: "/web-nextjs-aws-test.png"
-        },
-        {
-            name: "TISTORY HELLO CUSTOM SKIN",
-            url: "https://taedonn.tistory.com",
-            img: "/web-tistory-hello-custom-skin.png"
-        },
-        {
-            name: "FONTS ARCHIVE",
-            url: "https://fonts.taedonn.com",
-            img: "/web-fonts-archive.png"
-        },
-        {
-            name: "GDRIVE IMAGE CONVERTER",
-            url: "https://gdrive-img-converter.taedonn.com",
-            img: "/web-google-drive-image-converter.png"
-        },
-        {
-            name: "GITBOOK TEMPLATE",
-            url: "https://gitbook.taedonn.com",
-            img: "/web-gitbook-theme.png"
-        },
-        {
-            name: "WEB RESUME",
-            url: "https://resume.taedonn.com",
-            img: "/web-resume.png"
-        },
-        {
-            name: "ROBOMD CLONE",
-            url: "https://clone-robomd.taedonn.com",
-            img: "/web-robomd.png"
-        },
-        {
-            name: "ASTELL&KERN CLONE",
-            url: "https://clone-astellnkern.taedonn.com",
-            img: "/web-astellnkern.png"
-        },
-        {
-            name: "SOLASEADO CLONE",
-            url: "https://clone-solaseado.taedonn.com",
-            img: "/web-solaseado.png"
-        },
-        {
-            name: "JEJU AIR CLONE",
-            url: "https://clone-jejuair.taedonn.com",
-            img: "/web-jejuair.png"
-        },
-    ]
+// 데이터
+import { FetchData } from "./api/data";
+
+const WebDev = ({params}: any) => {
+    const data = params.data;
 
     return (
         <>
@@ -68,13 +20,44 @@ export default function WebDev () {
                 {
                     data.map((dataMap: any) => {
                         return (
-                            <Link key={dataMap.name} href={dataMap.url} target="_blank" className="portfolio-box w-[calc(25%-12px)] tlg:w-[calc(50%-8px)] tsm:w-[100%] h-[16vw] tlg:h-[28vw] tsm:h-[50vw] relative flex flex-row justify-center items-center bg-theme-white-2 mt-[16px] tsm:mt-[12px] group">
-                                <div className="w-[100%] h-[100%] absolute z-10 left-0 top-0 flex flex-col justify-center items-center bg-theme-white-2/0 group-hover:bg-theme-white-2/80 tlg:group-hover:bg-transparent duration-300">
-                                    <p className="text-[1.04vw] text-theme-dark-2/0 group-hover:text-theme-dark-2 tlg:group-hover:text-transparent font-extrabold tracking-widest translate-y-[1vw] group-hover:translate-y-0 duration-200">{dataMap.name}</p>
-                                    <p className="text-[0.83vw] text-theme-dark-2/0 group-hover:text-theme-dark-2/60 tlg:group-hover:text-transparent font-normal tracking-tight mt-[0.21vw] translate-y-[1vw] group-hover:translate-y-0 duration-200 delay-100">{dataMap.url}</p>
+                            <div key={dataMap.name} className="data-box w-[calc(25%-0.63vw)] txl:w-[calc(33.3%-0.63vw)] tlg:w-[calc(50%-0.42vw)] tsm:w-[100%] mt-[2.8vw] flex flex-col">
+                                <div className="w-[100%] pt-[1.46vw] pb-0 px-[4.17vw] bg-theme-2">
+                                    <img src={dataMap.img} alt={dataMap.name} className="w-[100%]"/>
                                 </div>
-                                <img src={dataMap.img} alt={dataMap.name} className="h-[95%] object-contain translate-x-[0.5vw] translate-y-[1vw] tlg:translate-y-[2vw] tsm:translate-y-[3.5vw]"/>
-                            </Link>
+                                <div className="text-[0.63vw] text-theme-7 mt-[0.63vw]">TITLE</div>
+                                <div className="text-[0.83vw] text-theme-10 font-bold mt-[0.2vw]">{dataMap.name}</div>
+                                <div className="text-[0.63vw] text-theme-7 mt-[1.46vw]">DESCRIPTION</div>
+                                <div className="description text-[0.83vw] text-theme-10 font-medium mt-[0.2vw]">{dataMap.description}</div>
+                                {
+                                    dataMap.github_link_yn === true
+                                    ? <a href={dataMap.github_link} target="_blank" className="text-[0.63vw] text-theme-blue mt-[0.28vw] hover:underline tlg:underline">MORE</a>
+                                    : <></>
+                                }
+                                <div className="text-[0.63vw] text-theme-7 mt-[1.46vw]">STACKS</div>
+                                <div className="flex flex-wrap mt-[0.2vw]">
+                                    {
+                                        dataMap.stacks && dataMap.stacks.map((stack: any) => {
+                                            return (
+                                                <>
+                                                    <div style={{backgroundColor: stack.bgColor, color: stack.txtColor}} className="text-[0.63vw] font-bold rounded-full px-[0.63vw] py-[0.2vw] mb-[0.28vw] mr-[0.28vw]">{stack.stack}</div>  
+                                                </>  
+                                            )
+                                        })
+                                    }
+                                </div>
+                                <div className="text-[0.63vw] text-theme-7 mt-[1.46vw]">LINK</div>
+                                <div className="flex items-center mt-[0.2vw]">
+                                    {
+                                        dataMap.github_link_yn === true
+                                        ? <>
+                                            <a href={dataMap.github_link} target="_blank" className="text-[0.63vw] text-theme-blue hover:underline tlg:underline">VIEW IN GITHUB</a>
+                                            <div className="mx-[0.2vw]">·</div>
+                                        </> : <></>
+                                    }
+                                    <a href={dataMap.url} target="_blank" className="text-[0.63vw] text-theme-blue hover:underline tlg:underline">VISIT WEBSITE</a>
+                                </div>
+                                <div className="w-[1.04vw] h-[2px] bg-theme-5 mt-[0.63vw]"></div>
+                            </div>
                         )
                     })
                 }
@@ -85,3 +68,23 @@ export default function WebDev () {
         </>
     );
 }
+
+export async function getServerSideProps(ctx: any) {
+    try {
+        // 데이터 불러오기
+        const data = await FetchData('web-dev');
+        
+        return {
+            props: {
+                params: {
+                    data: data
+                }
+            }
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+export default WebDev;
