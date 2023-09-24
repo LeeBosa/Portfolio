@@ -32,6 +32,12 @@ module.exports = {
             width: {
                 "content": "max-content"
             },
+            height: {
+                "content": "max-content"
+            },
+            dropShadow: {
+                "default": "1px 2px 4px #97989C",
+            }
         },
     },
     plugins: [],
