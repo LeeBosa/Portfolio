@@ -27,7 +27,12 @@ module.exports = {
                 "theme-9": "#3A3A3A",
                 "theme-10": "#202020",
                 "theme-11": "#000000",
-                "theme-blue": "#2F81F7"
+                "theme-blue": "#2F81F7",
+                "lang-html": "#E34C26",
+                "lang-javascript": "#F1E05A",
+                "lang-css": "#563D7C",
+                "lang-react": "#00D8FF",
+                "lang-shell": "#89E051",
             },
             width: {
                 "content": "max-content"
@@ -40,5 +45,8 @@ module.exports = {
             }
         },
     },
+    safelist: [
+        { pattern: /(from|via|to)-lang-(html|javascript|css|react|shell)/ }
+    ],
     plugins: [],
 }
