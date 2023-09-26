@@ -30,9 +30,11 @@ module.exports = {
                 "theme-blue": "#2F81F7",
                 "lang-html": "#E34C26",
                 "lang-javascript": "#F1E05A",
+                "lang-typescript": "#3178C6",
                 "lang-css": "#563D7C",
                 "lang-react": "#00D8FF",
                 "lang-shell": "#89E051",
+                "lang-pug": "#A86454",
             },
             width: {
                 "content": "max-content"
@@ -46,7 +48,8 @@ module.exports = {
         },
     },
     safelist: [
-        { pattern: /(from|via|to)-lang-(html|javascript|css|react|shell)/ }
+        { pattern: /(from|via|to)-lang-(html|javascript|typescript|css|react|shell|pug)/ },
+        { pattern: /(from|via|to)-(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100|)/ }
     ],
     plugins: [],
 }

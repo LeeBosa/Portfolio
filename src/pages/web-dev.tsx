@@ -15,15 +15,15 @@ const WebDev = ({params}: any) => {
     // LANGUAGES 그래프 만들기
     const genLangGraph = (lang: any) => {
         // 기본 그라디언트 설정 및 처음 퍼센트값 입력(from)
-        let thisClass = `bg-gradient-to-r from-lang-${lang[0].name.toLowerCase()} from-${Math.round(lang[0].percentage)}% `;
+        let thisClass = `bg-gradient-to-r from-lang-${lang[0].name.toLowerCase()} from-${lang[0].graph_pc}% `;
 
         // 처음/마지막 제외한 퍼센트값 입력(via)
         for (let i = 1; i < lang.length - 1; i++) {
-            thisClass += `via-lang-${lang[i].name.toLowerCase()} via-${Math.round(lang[i].percentage)}% `
+            thisClass += `via-lang-${lang[i].name.toLowerCase()} via-${lang[i].graph_pc}% `
         }
 
         // 마지막 퍼센트값 입력(to)
-        thisClass += `to-lang-${lang[lang.length-1].name.toLowerCase()} to-100%`
+        thisClass += `to-lang-${lang[lang.length-1].name.toLowerCase()} to-${lang[lang.length-1].graph_pc}%`
 
         return thisClass;
     }
@@ -51,16 +51,18 @@ const WebDev = ({params}: any) => {
                                             {/* dynamic rendering 시 Tailwind CSS 적용 안됨 방지 */}
                                             <div className="bg-lang-html"></div>
                                             <div className="bg-lang-javascript"></div>
+                                            <div className="bg-lang-typescript"></div>
                                             <div className="bg-lang-css"></div>
                                             <div className="bg-lang-react"></div>
                                             <div className="bg-lang-shell"></div>
+                                            <div className="bg-lang-pug"></div>
                                             {
                                                 dataMap.lang && dataMap.lang.map((lang: any) => {
                                                     return (
                                                         <div key={lang.id} className="flex items-center mt-[0.2vw] txl:mt-[0.31vw] tlg:mt-[0.4vw] tsm:mt-[0.63vw] mr-[0.63vw] txl:mr-[0.94vw] tlg:mr-[1.17vw] tsm:mr-[1.88vw]">
                                                             <div className={`w-[0.42vw] txl:w-[0.63vw] tlg:w-[0.78vw] tsm:w-[1.25vw] h-[0.42vw] txl:h-[0.63vw] tlg:h-[0.78vw] tsm:h-[1.25vw] rounded-full mb-px bg-lang-${lang.name.toLowerCase()}`}></div>
                                                             <div className="text-theme-9 font-bold text-[0.63vw] txl:text-[0.94vw] tlg:text-[1.17vw] tsm:text-[1.88vw] ml-[0.31vw] txl:ml-[0.47vw] tlg:ml-[0.59vw] tsm:ml-[0.94vw]">{lang.name}</div>
-                                                            <div className="text-theme-7 text-[0.63vw] txl:text-[0.94vw] tlg:text-[1.17vw] tsm:text-[1.88vw] ml-[0.31vw] txl:ml-[0.47vw] tlg:ml-[0.59vw] tsm:ml-[0.94vw]">{lang.percentage}%</div>
+                                                            <div className="text-theme-7 text-[0.63vw] txl:text-[0.94vw] tlg:text-[1.17vw] tsm:text-[1.88vw] ml-[0.31vw] txl:ml-[0.47vw] tlg:ml-[0.59vw] tsm:ml-[0.94vw]">{lang.pc}%</div>
                                                         </div>
                                                     )
                                                 })

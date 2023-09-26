@@ -1,134 +1,165 @@
 export async function FetchData(page: string) {
     if (page === 'web-dev') {
         const data: any = [
-            // {
-            //     id: crypto.randomUUID(),
-            //     name: "NEXTJS AWS TEST",
-            //     description: "Next.js project to test uploading files to S3 through aws-sdk for javascript",
-            //     github_link_yn: true,
-            //     github_link: "https://github.com/taedonn/nextjs-aws-test",
-            //     url: "https://nextjs-aws-test.vercel.app",
-            //     img: "/web-nextjs-aws-test.png",
-            //     stacks: [
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "Next.js",
-            //             bgColor: "#000",
-            //             txtColor: "#FFF"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "TypeScript",
-            //             bgColor: "#007ACC",
-            //             txtColor: "#FFF"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "Tailwind CSS",
-            //             bgColor: "#3EBFF8",
-            //             txtColor: "#000"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "AWS",
-            //             bgColor: "#F79B26",
-            //             txtColor: "#2A3644"
-            //         },
-            //     ]
-            // },
-            // {
-            //     id: crypto.randomUUID(),
-            //     name: "TISTORY HELLO CUSTOM SKIN",
-            //     description: "티스토리 hELLO 커스텀 스킨",
-            //     github_link_yn: true,
-            //     github_link: "https://github.com/taedonn/tistory-skin-hELLO",
-            //     url: "https://taedonn.tistory.com",
-            //     img: "/web-tistory-hello-custom-skin.png",
-            //     stacks: [
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "Pug",
-            //             bgColor: "#A86454",
-            //             txtColor: "#FFF"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "JavaScript",
-            //             bgColor: "#F1E05A",
-            //             txtColor: "#000"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "Tailwind CSS",
-            //             bgColor: "#3EBFF8",
-            //             txtColor: "#000"
-            //         },
-            //     ]
-            // },
-            // {
-            //     id: crypto.randomUUID(),
-            //     name: "FONTS ARCHIVE",
-            //     description: "상업용 무료 한글 폰트 아카이브",
-            //     github_link_yn: true,
-            //     github_link: "https://github.com/taedonn/fonts-archive",
-            //     url: "https://fonts.taedonn.com",
-            //     img: "/web-fonts-archive.png",
-            //     stacks: [
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "Next.js",
-            //             bgColor: "#000",
-            //             txtColor: "#FFF"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "Prisma",
-            //             bgColor: "#0A3A53",
-            //             txtColor: "#FFF"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "TypeScript",
-            //             bgColor: "#007ACC",
-            //             txtColor: "#FFF"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "Tailwind CSS",
-            //             bgColor: "#3EBFF8",
-            //             txtColor: "#000"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "AWS",
-            //             bgColor: "#F79B26",
-            //             txtColor: "#2A3644"
-            //         },
-            //     ]
-            // },
-            // {
-            //     id: crypto.randomUUID(),
-            //     name: "GDRIVE IMAGE CONVERTER",
-            //     description: "A website that converts Google Drive image into an external link",
-            //     github_link_yn: true,
-            //     github_link: "https://github.com/taedonn/gdrive-img-converter",
-            //     url: "https://gdrive-img-converter.taedonn.com",
-            //     img: "/web-google-drive-image-converter.png",
-            //     stacks: [
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "HTML",
-            //             bgColor: "#E34C26",
-            //             txtColor: "#FFF"
-            //         },
-            //         {
-            //             id: crypto.randomUUID(),
-            //             stack: "JavaScript",
-            //             bgColor: "#F1E05A",
-            //             txtColor: "#000"
-            //         },
-            //     ]
-            // },
+            {
+                id: 10,
+                name: "NEXTJS AWS TEST",
+                description: "Next.js project to test uploading files to S3 through aws-sdk for javascript",
+                github_link_yn: true,
+                github_link: "https://github.com/taedonn/nextjs-aws-test",
+                url: "https://nextjs-aws-test.vercel.app",
+                img: "/web-nextjs-aws-test.png",
+                lang: [
+                    {
+                        id: 1,
+                        name: "TypeScript",
+                        pc: 84.9,
+                        graph_pc: 70
+                    },
+                    {
+                        id: 2,
+                        name: "CSS",
+                        pc: 10.5,
+                        graph_pc: 85
+                    },
+                    {
+                        id: 3,
+                        name: "JavaScript",
+                        pc: 4.6,
+                        graph_pc: 100
+                    }
+                ],
+                stacks: [
+                    {
+                        id: 1,
+                        name: "Next.js",
+                        img: "/icon-nextjs.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "AWS",
+                        img: "/icon-aws.svg"
+                    }
+                ]
+            },
+            {
+                id: 9,
+                name: "TISTORY HELLO CUSTOM SKIN",
+                description: "티스토리 hELLO 커스텀 스킨",
+                github_link_yn: true,
+                github_link: "https://github.com/taedonn/tistory-skin-hELLO",
+                url: "https://taedonn.tistory.com",
+                img: "/web-tistory-hello-custom-skin.png",
+                lang: [
+                    {
+                        id: 1,
+                        name: "Pug",
+                        pc: 90.5,
+                        graph_pc: 70
+                    },
+                    {
+                        id: 2,
+                        name: "JavaScript",
+                        pc: 6.8,
+                        graph_pc: 85
+                    },
+                    {
+                        id: 3,
+                        name: "CSS",
+                        pc: 2.7,
+                        graph_pc: 100
+                    }
+                ],
+                stacks: [
+                    {
+                        id: 1,
+                        name: "Pug",
+                        img: "/icon-pug.svg"
+                    }
+                ]
+            },
+            {
+                id: 8,
+                name: "FONTS ARCHIVE",
+                description: "상업용 무료 한글 폰트 아카이브",
+                github_link_yn: true,
+                github_link: "https://github.com/taedonn/fonts-archive",
+                url: "https://fonts.taedonn.com",
+                img: "/web-fonts-archive.png",
+                lang: [
+                    {
+                        id: 1,
+                        name: "TypeScript",
+                        pc: 95.7,
+                        graph_pc: 80
+                    },
+                    {
+                        id: 2,
+                        name: "CSS",
+                        pc: 3.6,
+                        graph_pc: 90
+                    },
+                    {
+                        id: 3,
+                        name: "JavaScript",
+                        pc: 0.7,
+                        graph_pc: 100
+                    }
+                ],
+                stacks: [
+                    {
+                        id: 1,
+                        name: "Next.js",
+                        img: "/icon-nextjs.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "prisma",
+                        img: "/icon-prisma.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "AWS",
+                        img: "/icon-aws.svg"
+                    }
+                ]
+            },
+            {
+                id: 7,
+                name: "GDRIVE IMAGE CONVERTER",
+                description: "A website that converts Google Drive image into an external link",
+                github_link_yn: true,
+                github_link: "https://github.com/taedonn/gdrive-img-converter",
+                url: "https://gdrive-img-converter.taedonn.com",
+                img: "/web-google-drive-image-converter.png",
+                lang: [
+                    {
+                        id: 1,
+                        name: "HTML",
+                        pc: 44.3,
+                        graph_pc: 25
+                    },
+                    {
+                        id: 2,
+                        name: "CSS",
+                        pc: 42.9,
+                        graph_pc: 55
+                    },
+                    {
+                        id: 3,
+                        name: "JavaScript",
+                        pc: 12.8,
+                        graph_pc: 95
+                    }
+                ],
+                stacks: [
+                    {
+                        id: 1,
+                        name: "HTML",
+                        img: "/icon-html.svg"
+                    }
+                ]
+            },
             {
                 id: 6,
                 name: "GITBOOK TEMPLATE",
@@ -141,24 +172,21 @@ export async function FetchData(page: string) {
                     {
                         id: 1,
                         name: "JavaScript",
-                        percentage: 61.8
+                        pc: 61.8,
+                        graph_pc: 45
                     },
                     {
                         id: 2,
                         name: "Shell",
-                        percentage: 38.2
+                        pc: 38.2,
+                        graph_pc: 100
                     }
                 ],
                 stacks: [
                     {
                         id: 1,
                         name: "Jekyll",
-                        img: "/icon-react.svg"
-                    },
-                    {
-                        id: 2,
-                        name: "JavaScript",
-                        img: "/icon-javascript.svg"
+                        img: "/icon-jekyll.svg"
                     }
                 ]
             },
@@ -174,17 +202,20 @@ export async function FetchData(page: string) {
                     {
                         id: 1,
                         name: "CSS",
-                        percentage: 59.4
+                        pc: 59.4,
+                        graph_pc: 30
                     },
                     {
                         id: 2,
                         name: "JavaScript",
-                        percentage: 39.1
+                        pc: 39.1,
+                        graph_pc: 65
                     },
                     {
                         id: 3,
                         name: "HTML",
-                        percentage: 1.5
+                        pc: 1.5,
+                        graph_pc: 100
                     }
                 ],
                 stacks: [
@@ -192,11 +223,6 @@ export async function FetchData(page: string) {
                         id: 1,
                         name: "React",
                         img: "/icon-react.svg"
-                    },
-                    {
-                        id: 2,
-                        name: "JavaScript",
-                        img: "/icon-javascript.svg"
                     }
                 ]
             },
@@ -212,17 +238,20 @@ export async function FetchData(page: string) {
                     {
                         id: 1,
                         name: "HTML",
-                        percentage: 49
+                        pc: 49,
+                        graph_pc: 25
                     },
                     {
                         id: 2,
                         name: "CSS",
-                        percentage: 48.3
+                        pc: 48.3,
+                        graph_pc: 65
                     },
                     {
                         id: 3,
                         name: "JavaScript",
-                        percentage: 2.7
+                        pc: 2.7,
+                        graph_pc: 100
                     }
                 ],
                 stacks: [
@@ -230,11 +259,6 @@ export async function FetchData(page: string) {
                         id: 1,
                         name: "HTML",
                         img: "/icon-html.svg"
-                    },
-                    {
-                        id: 2,
-                        name: "JavaScript",
-                        img: "/icon-javascript.svg"
                     }
                 ]
             },
@@ -250,17 +274,20 @@ export async function FetchData(page: string) {
                     {
                         id: 1,
                         name: "CSS",
-                        percentage: 40.7
+                        pc: 40.7,
+                        graph_pc: 20
                     },
                     {
                         id: 2,
                         name: "HTML",
-                        percentage: 38
+                        pc: 38,
+                        graph_pc: 60
                     },
                     {
                         id: 3,
                         name: "JavaScript",
-                        percentage: 21.3
+                        pc: 21.3,
+                        graph_pc: 90
                     }
                 ],
                 stacks: [
@@ -268,11 +295,6 @@ export async function FetchData(page: string) {
                         id: 1,
                         name: "HTML",
                         img: "/icon-html.svg"
-                    },
-                    {
-                        id: 2,
-                        name: "JavaScript",
-                        img: "/icon-javascript.svg"
                     }
                 ]
             },
@@ -288,17 +310,20 @@ export async function FetchData(page: string) {
                     {
                         id: 1,
                         name: "HTML",
-                        percentage: 69.6
+                        pc: 69.6,
+                        graph_pc: 35
                     },
                     {
                         id: 2,
                         name: "CSS",
-                        percentage: 21
+                        pc: 21,
+                        graph_pc: 80
                     },
                     {
                         id: 3,
                         name: "JavaScript",
-                        percentage: 9.4
+                        pc: 9.4,
+                        graph_pc: 100
                     }
                 ],
                 stacks: [
@@ -306,11 +331,6 @@ export async function FetchData(page: string) {
                         id: 1,
                         name: "HTML",
                         img: "/icon-html.svg"
-                    },
-                    {
-                        id: 2,
-                        name: "JavaScript",
-                        img: "/icon-javascript.svg"
                     }
                 ]
             },
@@ -326,17 +346,20 @@ export async function FetchData(page: string) {
                     {
                         id: 1,
                         name: "HTML",
-                        percentage: 59.7
+                        pc: 59.7,
+                        graph_pc: 30
                     },
                     {
                         id: 2,
                         name: "JavaScript",
-                        percentage: 27.7
+                        pc: 27.7,
+                        graph_pc: 60
                     },
                     {
                         id: 3,
                         name: "CSS",
-                        percentage: 12.6
+                        pc: 12.6,
+                        graph_pc: 100
                     }
                 ],
                 stacks: [
@@ -344,11 +367,6 @@ export async function FetchData(page: string) {
                         id: 1,
                         name: "HTML",
                         img: "/icon-html.svg"
-                    },
-                    {
-                        id: 2,
-                        name: "JavaScript",
-                        img: "/icon-javascript.svg"
                     }
                 ]
             },
