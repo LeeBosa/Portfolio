@@ -41,10 +41,10 @@ const WebDev = ({params}: any) => {
                                     <img src={dataMap.img} alt={dataMap.name} className="w-[100%]"/>
                                 </div>
                                 <div className="w-[100%] p-[1.46vw] txl:p-[2.19vw] tlg:p-[2.74vw] tsm:p-[4.38vw] pb-[2.71vw] txl:pb-[4.06vw] tlg:pb-[5.08vw] tsm:pb-[8.13vw]">
-                                    <div className="w-content border-b border-theme-8 text-[0.63vw] txl:text-[0.95vw] tlg:text-[1.18vw] tsm:text-[1.89vw] text-theme-8">PROJECT</div>
+                                    <div className="w-content border-b border-theme-9 text-[0.63vw] txl:text-[0.95vw] tlg:text-[1.18vw] tsm:text-[1.89vw] text-theme-9">PROJECT</div>
                                     <div className="text-[0.94vw] txl:text-[1.41vw] tlg:text-[1.76vw] tsm:text-[2.81vw] text-theme-10 font-bold mt-[0.4vw] txl:mt-[0.6vw] tlg:mt-[0.75vw] tsm:mt-[1.2vw]">{dataMap.name}</div>
                                     <div className="description text-[0.83vw] txl:text-[1.25vw] tlg:text-[1.56vw] tsm:text-[2.49vw] text-theme-9">{dataMap.description}</div>
-                                    <div className="w-content border-b border-theme-8 text-[0.63vw] txl:text-[0.95vw] tlg:text-[1.18vw] tsm:text-[1.89vw] text-theme-8 mt-[1.46vw] txl:mt-[2.19vw] tlg:mt-[2.74vw] tsm:mt-[4.38vw] mb-[0.4vw] txl:mb-[0.6vw] tlg:mb-[0.75vw] tsm:mb-[1.2vw]">LANGUAGES</div>
+                                    <div className="w-content border-b border-theme-9 text-[0.63vw] txl:text-[0.95vw] tlg:text-[1.18vw] tsm:text-[1.89vw] text-theme-9 mt-[1.46vw] txl:mt-[2.19vw] tlg:mt-[2.74vw] tsm:mt-[4.38vw] mb-[0.4vw] txl:mb-[0.6vw] tlg:mb-[0.75vw] tsm:mb-[1.2vw]">LANGUAGES</div>
                                     <div className="flex flex-wrap mt-[0.5vw] txl:mt-[0.75vw] tlg:mt-[0.94vw] tsm:mt-[1.5vw]">
                                         <div className={`w-[100%] h-[0.42vw] txl:h-[0.63vw] tlg:h-[0.78vw] tsm:h-[1.25vw] ${genLangGraph(dataMap.lang)}`}></div>
                                         <div className="w-[100%] flex flex-wrap mt-[0.31vw] txl:mt-[0.47vw] tlg:mt-[0.59vw] tsm:mt-[0.94vw]">
@@ -62,14 +62,14 @@ const WebDev = ({params}: any) => {
                                                         <div key={lang.id} className="flex items-center mt-[0.2vw] txl:mt-[0.31vw] tlg:mt-[0.4vw] tsm:mt-[0.63vw] mr-[0.63vw] txl:mr-[0.94vw] tlg:mr-[1.17vw] tsm:mr-[1.88vw]">
                                                             <div className={`w-[0.42vw] txl:w-[0.63vw] tlg:w-[0.78vw] tsm:w-[1.25vw] h-[0.42vw] txl:h-[0.63vw] tlg:h-[0.78vw] tsm:h-[1.25vw] rounded-full mb-px bg-lang-${lang.name.toLowerCase()}`}></div>
                                                             <div className="text-theme-9 font-bold text-[0.63vw] txl:text-[0.94vw] tlg:text-[1.17vw] tsm:text-[1.88vw] ml-[0.31vw] txl:ml-[0.47vw] tlg:ml-[0.59vw] tsm:ml-[0.94vw]">{lang.name}</div>
-                                                            <div className="text-theme-7 text-[0.63vw] txl:text-[0.94vw] tlg:text-[1.17vw] tsm:text-[1.88vw] ml-[0.31vw] txl:ml-[0.47vw] tlg:ml-[0.59vw] tsm:ml-[0.94vw]">{lang.pc}%</div>
+                                                            <div className="text-theme-9 text-[0.63vw] txl:text-[0.94vw] tlg:text-[1.17vw] tsm:text-[1.88vw] ml-[0.31vw] txl:ml-[0.47vw] tlg:ml-[0.59vw] tsm:ml-[0.94vw]">{lang.pc}%</div>
                                                         </div>
                                                     )
                                                 })
                                             }
                                         </div>
                                     </div>
-                                    <div className="w-content border-b border-theme-8 text-[0.63vw] txl:text-[0.95vw] tlg:text-[1.18vw] tsm:text-[1.89vw] text-theme-8 mt-[1.46vw] txl:mt-[2.19vw] tlg:mt-[2.74vw] tsm:mt-[4.38vw] mb-[0.54vw] txl:mb-[0.6vw] tlg:mb-[0.75vw] tsm:mb-[1.2vw]">STACKS</div>
+                                    <div className="w-content border-b border-theme-9 text-[0.63vw] txl:text-[0.95vw] tlg:text-[1.18vw] tsm:text-[1.89vw] text-theme-9 mt-[1.46vw] txl:mt-[2.19vw] tlg:mt-[2.74vw] tsm:mt-[4.38vw] mb-[0.54vw] txl:mb-[0.6vw] tlg:mb-[0.75vw] tsm:mb-[1.2vw]">STACKS</div>
                                     <div className={`w-[100%] flex flex-wrap px-[1.46vw] txl:px-[2.19vw] tlg:px-[2.73vw] tsm:px-[4.38vw] pt-[0.83vw] txl:pt-[1.25vw] tlg:pt-[1.56vw] tsm:pt-[2.5vw] pb-0 rounded-[0.42vw] txl:rounded-[0.63vw] tlg:rounded-[0.78vw] tsm:rounded-[1.25vw] border border-theme-4`}>
                                         {
                                             dataMap.stacks && dataMap.stacks.map((stack: any) => {
