@@ -17,8 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <>
             <QueryClientProvider client={queryClient}>
                 <NextSeo
-                    title="T A E D O N N"
-                    description="태돈 포트폴리오 웹사이트"
+                    title="T A E D O N N · 태돈"
+                    description="포트폴리오 웹사이트"
                     additionalLinkTags={[ { rel:"icon", href: "/favicon.svg" } ]}
                 />
                 <main>

@@ -70,17 +70,18 @@ const WebDev = ({params}: any) => {
                                         </div>
                                     </div>
                                     <div className="w-content border-b border-theme-8 text-[0.63vw] txl:text-[0.95vw] tlg:text-[1.18vw] tsm:text-[1.89vw] text-theme-8 mt-[1.46vw] txl:mt-[2.19vw] tlg:mt-[2.74vw] tsm:mt-[4.38vw] mb-[0.54vw] txl:mb-[0.6vw] tlg:mb-[0.75vw] tsm:mb-[1.2vw]">STACKS</div>
-                                    <div className={`w-[100%] flex flex-wrap justify-between px-[1.46vw] txl:px-[2.19vw] tlg:px-[2.73vw] tsm:px-[4.38vw] pt-[0.83vw] txl:pt-[1.25vw] tlg:pt-[1.56vw] tsm:pt-[2.5vw] pb-0 rounded-[0.42vw] txl:rounded-[0.63vw] tlg:rounded-[0.78vw] tsm:rounded-[1.25vw] border border-theme-4`}>
+                                    <div className={`w-[100%] flex flex-wrap px-[1.46vw] txl:px-[2.19vw] tlg:px-[2.73vw] tsm:px-[4.38vw] pt-[0.83vw] txl:pt-[1.25vw] tlg:pt-[1.56vw] tsm:pt-[2.5vw] pb-0 rounded-[0.42vw] txl:rounded-[0.63vw] tlg:rounded-[0.78vw] tsm:rounded-[1.25vw] border border-theme-4`}>
                                         {
                                             dataMap.stacks && dataMap.stacks.map((stack: any) => {
                                                 return(
-                                                    <div key={stack.id} className="flex flex-col items-center mb-[0.83vw] txl:mb-[1.25vw] tlg:mb-[1.56vw] tsm:mb-[2.49vw]">
+                                                    <div key={stack.id} className="w-[20%] flex flex-col items-center mb-[0.83vw] txl:mb-[1.25vw] tlg:mb-[1.56vw] tsm:mb-[2.49vw] mr-[0.31vw]">
                                                         <img src={stack.img} alt={stack.name} className="w-[1.67vw] txl:w-[2.5vw] tlg:w-[3.13vw] tsm:w-[5vw] h-[1.67vw] txl:h-[2.5vw] tlg:h-[3.13vw] tsm:h-[5vw] rounded-full"/>
                                                         <div className="text-[0.63vw] txl:text-[0.94vw] tlg:text-[1.17vw] tsm:text-[1.88vw] text-theme-9 font-bold mt-[0.31vw] txl:mt-[0.47vw] tlg:mt-[0.59vw] tsm:mt-[0.94vw]">{stack.name}</div>
                                                     </div>
                                                 )
                                             })
                                         }
+                                        <div></div>
                                         <div></div>
                                         <div></div>
                                         <div></div>
