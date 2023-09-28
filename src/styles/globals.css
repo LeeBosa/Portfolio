@@ -198,6 +198,14 @@ button {
     overflow: hidden;
 }
 
+.product-description {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* 데이터 */
 .portfolio .data-box:nth-of-type(1) { margin-top: 0; }
 .portfolio .data-box:nth-of-type(2) { margin-top: 0; }

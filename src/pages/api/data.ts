@@ -374,4 +374,298 @@ export async function FetchData(page: string) {
     
         return data;
     }
+    else if (page === 'product') {
+        const data: any = [
+            {
+                id: 12,
+                name: "UD CHAIR V2",
+                subtitle: "DIY Furniture Project - Chair",
+                description: "Ud chair v2 is a version 2 of the ud chair which is a set of chairs that can change its functionality from chairs into shelves when stacked up.",
+                img: "/product-ud-chair-2.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 11,
+                name: "UD CHAIR V1",
+                subtitle: "DIY Furniture Project - Chair",
+                description: "Ud chair is a set of chairs that can change its functionality from chairs into shelves when stacked up.",
+                img: "/product-ud-chair-1.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 10,
+                name: "STACK UP - TABLE",
+                subtitle: "DIY Furniture Project - Table",
+                description: "Stack up table is a stackable table that can be the baseline product to stack other products such as lightings, stools, or even the table itself.",
+                img: "/product-stack-table.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 9,
+                name: "STACK UP - STOOL",
+                subtitle: "DIY Furniture Project - Stool",
+                description: "Stack up stool is a stackable stool that can be stacked on top of a baseline stack up product or used as itself as a stool.",
+                img: "/product-stack-stool.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 8,
+                name: "SLIDE'M",
+                subtitle: "DIY Furniture Project - Desk",
+                description: "Slide'm is a multifunctional desk which is divided into 5 different slidable sections where each one of them has its own unique functionality.",
+                img: "/product-slide-m.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 7,
+                name: "PATH",
+                subtitle: "DIY Furniture Project - Shelf",
+                description: "Path is a shelf product of DIY furniture project which is a baseline product of other shelving items that can be customized to match the usage of each users.",
+                img: "/product-shelf.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 6,
+                name: "CUSTABLE",
+                subtitle: "DIY Furniture Project - Table",
+                description: "Custable is a table product of DIY furniture project which is a baseline product of other shelving items that can be customized to match the usage of each users.",
+                img: "/product-custable.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 5,
+                name: "FORMATT",
+                subtitle: "DIY Furniture Project - Mattress",
+                description: "Formatt is a mattress product of DIY furniture project that can be transformed to match the usage of each users.",
+                img: "/product-formatt.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 4,
+                name: "COSMO",
+                subtitle: "Johnson Controls' Smart Home Assistant",
+                description: "Cosmo is a smart home assistant device made for Johnson Controls' smart home assistance design competition.",
+                img: "/product-cosmo.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 3,
+                name: "CARDBOARD LIGHT",
+                subtitle: "Cardboard Upcycling Project V3",
+                description: "Cardboard light is part of cardboard upcycling project, which is a lighting device inspired by the unique pattern of cardboards and to reduce the waste being made by throwing them away.",
+                img: "/product-cardboard-light.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 2,
+                name: "CARDBOARD TABLE",
+                subtitle: "Cardboard Upcycling Project V2",
+                description: "Cardboard table is part of cardboard upcycling project, which is a table inspired by the unique pattern of cardboards and to reduce the waste being made by throwing them away.",
+                img: "/product-cardboard-table.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+            {
+                id: 1,
+                name: "CARDBOARD CHAIR",
+                subtitle: "Cardboard Upcycling Project V1",
+                description: "Cardboard chair is part of cardboard upcycling project, which is a chair inspired by the unique pattern of cardboards and to reduce the waste being made by throwing them away.",
+                img: "/product-cardboard-chair.png",
+                programs: [
+                    {
+                        id: 1,
+                        name: "Rhino",
+                        img: "/icon-rhinoceros.svg"
+                    },
+                    {
+                        id: 2,
+                        name: "KeyShot",
+                        img: "/icon-keyshot.svg"
+                    },
+                    {
+                        id: 3,
+                        name: "Ai",
+                        img: "/icon-illustrator.svg"
+                    },
+                ]
+            },
+        ];
+
+        return data;
+    }
 }

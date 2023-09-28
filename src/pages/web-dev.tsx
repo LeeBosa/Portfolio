@@ -46,7 +46,7 @@ const WebDev = ({params}: any) => {
                                     <div className="description text-[0.83vw] txl:text-[1.25vw] tlg:text-[1.56vw] tsm:text-[2.49vw] text-theme-9">{dataMap.description}</div>
                                     <div className="w-content border-b border-theme-9 text-[0.63vw] txl:text-[0.95vw] tlg:text-[1.18vw] tsm:text-[1.89vw] text-theme-9 mt-[1.46vw] txl:mt-[2.19vw] tlg:mt-[2.74vw] tsm:mt-[4.38vw] mb-[0.4vw] txl:mb-[0.6vw] tlg:mb-[0.75vw] tsm:mb-[1.2vw]">LANGUAGES</div>
                                     <div className="flex flex-wrap mt-[0.5vw] txl:mt-[0.75vw] tlg:mt-[0.94vw] tsm:mt-[1.5vw]">
-                                        <div className={`w-[100%] h-[0.42vw] txl:h-[0.63vw] tlg:h-[0.78vw] tsm:h-[1.25vw] ${genLangGraph(dataMap.lang)}`}></div>
+                                        <div className={`animate-expand h-[0.42vw] txl:h-[0.63vw] tlg:h-[0.78vw] tsm:h-[1.25vw] ${genLangGraph(dataMap.lang)}`}></div>
                                         <div className="w-[100%] flex flex-wrap mt-[0.31vw] txl:mt-[0.47vw] tlg:mt-[0.59vw] tsm:mt-[0.94vw]">
                                             {/* dynamic rendering 시 Tailwind CSS 적용 안됨 방지 */}
                                             <div className="bg-lang-html"></div>

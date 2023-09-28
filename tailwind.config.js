@@ -44,7 +44,16 @@ module.exports = {
             },
             dropShadow: {
                 "default": "1px 2px 4px #97989C",
-            }
+            },
+            animation: {
+                "expand": "expand 0.6s both"
+            },
+            keyframes: {
+                "expand": {
+                    "0%": { width: "0%" },
+                    "100%": { width: "100%" }
+                },
+            },
         },
     },
     safelist: [
