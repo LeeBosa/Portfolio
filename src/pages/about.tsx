@@ -10,7 +10,7 @@ export default function About () {
         <>
             <NextSeo title={"T A E D O N N · 연락처"}/>
             <Header/>
-            <div className="about w-[100%] h-[100vh] relative flex flex-col justify-center items-center pt-[120px] tlg:pt-[100px] tsm:pt-[80px] bg-theme-11">
+            <div className="about w-[100%] h-[100%] absolute left-0 top-0 flex flex-col justify-center items-center pt-[120px] tlg:pt-[100px] tsm:pt-[80px] bg-theme-11">
                 <div className="flex flex-col justify-center items-center">
                     <div className="w-[152px] h-[152px] border border-theme-1 rounded-full flex flex-col justify-center items-center">
                         <span className="square-spinner"></span>
