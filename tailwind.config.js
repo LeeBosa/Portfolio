@@ -28,6 +28,7 @@ module.exports = {
                 "theme-10": "#202020",
                 "theme-11": "#000000",
                 "theme-blue": "#2F81F7",
+                "theme-green": "#40E0D0",
                 "lang-html": "#E34C26",
                 "lang-javascript": "#F1E05A",
                 "lang-typescript": "#3178C6",
