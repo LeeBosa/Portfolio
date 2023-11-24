@@ -3,7 +3,11 @@ export default function Header () {
         <>
             <header className="bg-theme-11/80 w-[100%] h-[100px] tlg:h-[80px] fixed left-0 top-0 z-20 flex flex-row justify-between items-center px-[48px] tlg:px-[36px] tsm:px-[20px] backdrop-blur">
                 <a href="/" className="group block p-[12px] tsm:p-[6px]">
-                    <h1 className="block text-[13px] text-theme-1 font-semibold">T A E D O N N</h1>
+                    <div className="flex items-center">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/logo.svg" alt="로고" className="w-[16px] mr-[8px]"/>
+                        <h1 className="block text-[13px] text-theme-1 font-semibold">T A E D O N N</h1>
+                    </div>
                     <div className="group-hover:w-[100%] tlg:group-hover:w-0 w-0 h-[2px] bg-theme-1 duration-200 mt-[2px]"></div>
                 </a>
                 <ul className="flex flex-row justify-end items-center">

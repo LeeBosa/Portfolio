@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://fonts.taedonn.com">
-      <img src="./public/logo.png" height="120">
+      <img src="./public/logo.svg" height="120">
       <h1 align="center">Taedonn Portfolio</h1>
   </a>
   <p align="center">

@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <NextSeo
                     title="T A E D O N N · 태돈"
                     description="포트폴리오 웹사이트"
-                    additionalLinkTags={[ { rel:"icon", href: "/favicon.svg" } ]}
+                    additionalLinkTags={[ { rel:"icon", href: "/favicon.ico" } ]}
                 />
                 <main>
                     <Component {...pageProps}/>
