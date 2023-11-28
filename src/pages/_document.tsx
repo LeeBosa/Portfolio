@@ -11,7 +11,7 @@ class MyDocument extends Document {
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/SUIT/SUIT.css" type="text/css"/>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
                 </Head>
-                <body style={{fontFamily: "SUIT"}}>
+                <body style={{fontFamily: "SUIT"}} className="bg-theme-11">
                     <Main/>
                     <NextScript/>
                 </body>

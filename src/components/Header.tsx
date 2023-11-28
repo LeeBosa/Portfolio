@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Header () {
     return (
         <>
-            <header className="bg-theme-11/80 w-[100%] h-[100px] tlg:h-[80px] fixed left-0 top-0 z-20 flex flex-row justify-between items-center px-[48px] tlg:px-[36px] tsm:px-[20px] backdrop-blur">
+            <header className="w-[100%] h-[100px] tlg:h-[80px] fixed left-0 top-0 z-20 flex flex-row justify-between items-center px-[48px] tlg:px-[36px] tsm:px-[20px] backdrop-blur">
                 <Link href="/" className="group block p-[12px] tsm:p-[6px]">
                     <div className="flex items-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
