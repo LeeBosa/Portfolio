@@ -18,15 +18,13 @@ import '@/css/spinner-circle.css';
 import '@/css/spinner-code.css';
 import '@/css/spinner-bar.css';
 
-// Next
-import Link from 'next/link';
-import Image from 'next/image';
-
 // Components
 import Header from '@/components/Header';
 import Logo from '@/components/Logo';
 import Menu from '@/components/Menu';
 import MenuList from '@/components/MenuList';
+import MenuOption from '@/components/MenuOption';
+import MenuLink from '@/components/MenuLink';
 
 export default function RootLayout({
 	children,
@@ -38,7 +36,7 @@ export default function RootLayout({
 			<head>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 			</head>
-			<body className={`${inter.className} tracking-widest bg-black`}>
+			<body className={`${inter.className} tracking-wider bg-black`}>
                 <Header
 					height={5}
 					heightUnit="rem"
@@ -49,31 +47,33 @@ export default function RootLayout({
 					/>
 					<Menu>
 						<MenuList
-							name="PROJECTS"
+							name="LINKS"
+							width={12}
+							widthUnit="rem"
 						>
-							<div></div>
+							<MenuOption
+								href="/"
+								target="_blank"
+							>
+								External link
+							</MenuOption>
+							<MenuOption
+								href="/"
+								icon="fa-solid fa-droplet"
+							>
+								Internal link
+							</MenuOption>
 						</MenuList>
-						<li>
-							<Link href="https://taedonn.tistory.com" target="_blank" rel="noopener noreferrer" className="group block p-3 tsm:p-1.5 font-semibold text-xs text-white text-center tracking-widest">
-								BLOG
-								<div className="group-hover:w-[100%] tlg:group-hover:w-0 w-0 h-px bg-white duration-200 mt-0.5"></div>
-							</Link>
-						</li>
-						<li>
-							<Link href="https://github.com/taedonn" target="_blank" rel="noopener noreferrer" className="group block p-3 tsm:p-1.5 font-semibold text-xs text-white text-center tracking-widest">
-								GITHUB
-								<div className="group-hover:w-[100%] tlg:group-hover:w-0 w-0 h-px bg-white duration-200 mt-0.5"></div>
-							</Link>
-						</li>
-						<li>
-							<Link href="/about" className="group block p-3 tsm:p-1.5 font-semibold text-white text-xs text-center tracking-widest">
-								ABOUT
-								<div className="group-hover:w-[100%] tlg:group-hover:w-0 w-0 h-px bg-white duration-200 mt-0.5"></div>
-							</Link>
-						</li>
+						<MenuLink
+							href="/"
+							target="_blank"
+						>
+							LINK
+						</MenuLink>
 					</Menu>
 				</Header>
 				{children}
+				<footer className="absolute bottom-4 right-5 text-xs text-white">MIT License © 2023-{new Date().getFullYear()} Alding.</footer>
 			</body>
 		</html>
 	)
