@@ -1,17 +1,17 @@
-// 컴포넌트
+// Components
 import Header from "@/components/Header";
-import Spinner from "@/components/Spinner";
+import SpinnerMain from "@/components/SpinnerMain";
 
 export default function Index () {
     return (
         <>
             <Header/>
-            <div className="w-[100%] h-[100%] absolute left-0 top-0 pt-24 tlg:pt-16">
-                <span className="square-spinner"></span>
-                <span className="circle-spinner"></span>
-                <span className="code-spinner"></span>
-                <span className="bar-spinner"></span>
-                <Spinner/>
+            <div className="w-full h-full absolute pt-16 lg:pt-24">
+                <SpinnerMain/>
+                <span className="spinner-square"></span>
+                <span className="spinner-circle"></span>
+                <span className="spinner-code"></span>
+                <span className="spinner-bar"></span>
             </div>
         </>
     );

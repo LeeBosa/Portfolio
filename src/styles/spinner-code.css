@@ -1,0 +1,29 @@
+.spinner-code {
+    color: #FFF;
+    font-family: Consolas, Menlo, Monaco, monospace;
+    font-weight: 100;
+    font-size: 32px;
+    opacity: 0.8;
+    position: absolute;
+    left: 25%;
+    bottom: 60px;
+}
+.spinner-code:before {
+    content: "{";
+    display: inline-block;
+    animation: pulse 1s alternate infinite ease-in-out;
+}
+.spinner-code:after {
+    content: "}";
+    display: inline-block;
+    animation: pulse 1s 0.8s alternate infinite ease-in-out;
+}
+@media screen and (max-width: 640px) {
+    .spinner-code { display: none; }
+}
+@keyframes pulse {
+    to {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
